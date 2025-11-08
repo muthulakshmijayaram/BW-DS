@@ -1,0 +1,49 @@
+{
+  "definitions": {
+    "sample_text": {
+      "kind": "entity",
+      "@EndUserText.label": "sample_text",
+      "@ObjectModel.modelingPattern": {
+        "#": "LANGUAGE_DEPENDENT_TEXT"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "LANGUAGE_DEPENDENT_TEXT"
+        }
+      ],
+      "elements": {
+        "Prod_ID": {
+          "@EndUserText.label": "Product ID",
+          "type": "cds.String",
+          "length": 50,
+          "key": true,
+          "notNull": true
+        },
+        "Prod_Descp": {
+          "@EndUserText.label": "Product Description",
+          "type": "cds.String",
+          "length": 50,
+          "@Semantics.text": true
+        },
+        "Langu": {
+          "@EndUserText.label": "Language",
+          "type": "cds.String",
+          "length": 50,
+          "@Semantics.language": true
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_UOVCXMFT"
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}

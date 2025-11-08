@@ -23,7 +23,7 @@ os.environ.update({
 llm = ChatOpenAI(deployment_id=os.getenv("DEPLOYMENT_ID"), temperature=0, max_tokens=4000)
 
 
-csv_path = "C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Sample_Text_u.csv"
+csv_path = "C:/Users\Muthulakshmi Jayaram/Desktop/bw_code/Sample_Text_u.csv"
 df = pd.read_csv(csv_path)
 csv_data = df.to_string(index=False)
 
@@ -119,10 +119,11 @@ Output only valid JSON (no explanations).
 
 chain = LLMChain(llm=llm, prompt=prompt_template)
 response = chain.invoke({"csv_data": csv_data})
+#print(response)
 text = response.get("text", "").strip()
+print(text)
 
-text = re.sub(r"```(?:json)?|```", "", text).strip()
-text = text[text.find("{"): text.rfind("}") + 1]
+
 
 json_output = json.loads(text)
 
@@ -133,4 +134,4 @@ with open(json_path, "w", encoding="utf-8") as f:
     json.dump(json_output, f, indent=2, ensure_ascii=False)
 
 
-print(json.dumps(json_output, indent=2, ensure_ascii=False))
+#print(json.dumps(json_output, indent=2, ensure_ascii=False))
