@@ -1,0 +1,70 @@
+{
+  "definitions": {
+    "Working_Days_1000": {
+      "kind": "entity",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@DataWarehouse.dataSource.schema": "nan",
+      "@DataWarehouse.dataSource.entity": "Description",
+      "@EndUserText.label": "nan",
+      "elements": {
+        "Employee ID": {
+          "type": "cds.String",
+          "@EndUserText.label": "Employee ID"
+        },
+        "position ID": {
+          "type": "cds.String",
+          "@EndUserText.label": "position ID"
+        },
+        "Month": {
+          "type": "cds.String",
+          "@EndUserText.label": "Month"
+        },
+        "working_days": {
+          "type": "cds.String",
+          "@EndUserText.label": "working_days"
+        },
+        "working_hours": {
+          "type": "cds.String",
+          "@EndUserText.label": "working_hours"
+        },
+        "overtime_hours": {
+          "type": "cds.String",
+          "@EndUserText.label": "overtime_hours"
+        },
+        "Claimed Benefits Amount": {
+          "type": "cds.String",
+          "@EndUserText.label": "Claimed Benefits Amount"
+        },
+        "Allocated Benefits Amount": {
+          "type": "cds.String",
+          "@EndUserText.label": "Allocated Benefits Amount"
+        },
+        "year": {
+          "type": "cds.String",
+          "@EndUserText.label": "year"
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
+ 
+ 

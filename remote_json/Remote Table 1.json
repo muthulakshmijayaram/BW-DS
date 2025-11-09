@@ -1,0 +1,115 @@
+{
+  "definitions": {
+    "Remote.BWBRIDGE.0DATE_ATTRIBUTES": {
+      "kind": "entity",
+      "@EndUserText.label": "Master Data Table: Date",
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        },
+        {
+          "#": "SQL_DATA_SOURCE"
+        }
+      ],
+      "elements": {
+        "0HALFYEAR1": {
+          "@AnalyticsDetails.infoobject": "0HALFYEAR1",
+          "@EndUserText.label": "Halfyear",
+          "type": "cds.String",
+          "length": 1,
+          "@Common.IsDigitSequence": true
+        },
+        "0CALWEEK": {
+          "@AnalyticsDetails.infoobject": "0CALWEEK",
+          "@EndUserText.label": "Calendar Year/Week",
+          "type": "cds.String",
+          "length": 6,
+          "@Semantics.calendar.yearWeek": true
+        },
+        "0CALYEAR": {
+          "@AnalyticsDetails.infoobject": "0CALYEAR",
+          "@EndUserText.label": "Calendar Year",
+          "type": "cds.String",
+          "length": 4,
+          "@Semantics.calendar.year": true
+        },
+        "0CALMONTH2": {
+          "@AnalyticsDetails.infoobject": "0CALMONTH2",
+          "@EndUserText.label": "Calendar month",
+          "type": "cds.String",
+          "length": 2,
+          "@Semantics.calendar.month": true
+        },
+        "0CALMONTH": {
+          "@AnalyticsDetails.infoobject": "0CALMONTH",
+          "@EndUserText.label": "Calendar Year/Month",
+          "type": "cds.String",
+          "length": 6,
+          "@Semantics.calendar.yearMonth": true
+        },
+        "0CALQUART1": {
+          "@AnalyticsDetails.infoobject": "0CALQUART1",
+          "@EndUserText.label": "Quarter",
+          "type": "cds.String",
+          "length": 1,
+          "@Semantics.calendar.quarter": true
+        },
+        "0DATE": {
+          "@AnalyticsDetails.infoobject": "0DATE",
+          "@EndUserText.label": "Date",
+          "type": "cds.String",
+          "length": 8,
+          "@Common.IsCalendarDate": true
+        },
+        "0CALQUARTER": {
+          "@AnalyticsDetails.infoobject": "0CALQUARTER",
+          "@EndUserText.label": "Calendar Year/Quarter",
+          "type": "cds.String",
+          "length": 5,
+          "@Semantics.calendar.yearQuarter": true
+        }
+      },
+      "@DataWarehouse.remote.connection": "BWBRIDGE",
+      "@DataWarehouse.remote.entity": "<NULL>SAPBWBRIDGE0DATE-ATTRIBUTES",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "Remote": {
+      "kind": "context",
+      "@DataWarehouse.csnContext.Type": {
+        "#": "IMPORTED_CONTENT"
+      },
+      "@DataWarehouse.csnContext.contentEditable": false,
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "Remote.BWBRIDGE": {
+      "kind": "context",
+      "@DataWarehouse.contentImport.connection": "BWBRIDGE",
+      "import_meta": {
+        "lastImportedUTC": "Wed, 28 Aug 2024 11:31:02 GMT"
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}

@@ -1,0 +1,56 @@
+{
+  "definitions": {
+    "Text_demo": {
+      "kind": "entity",
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "LANGUAGE_DEPENDENT_TEXT"
+        }
+      ],
+      "elements": {
+        "PRODUCT_ID": {
+          "@EndUserText.label": "Product Id",
+          "type": "cds.String",
+          "length": 20,
+          "key": true,
+          "notNull": true,
+          "@ObjectModel.text.element": [
+            {
+              "=": "PRODUCT_DESC"
+            }
+          ]
+        },
+        "LANGUAGE": {
+          "@EndUserText.label": "Language",
+          "type": "cds.String",
+          "length": 10,
+          "key": true,
+          "notNull": true,
+          "@Semantics.language": true
+        },
+        "PRODUCT_DESC": {
+          "@EndUserText.label": "Product Desc",
+          "type": "cds.String",
+          "length": 100,
+          "@Semantics.text": true
+        }
+      },
+      "@EndUserText.label": "Text demo",
+      "@ObjectModel.modelingPattern": {
+        "#": "LANGUAGE_DEPENDENT_TEXT"
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_GWMLCPDQ"
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
