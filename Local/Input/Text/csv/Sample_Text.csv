@@ -1,6 +1,0 @@
-Sample _Text,,,,
-,,,,
-Business Name,Technical Name,Key ,Data Type,Semantic Role
-Product ID,Prod_ID,X,String(50),None
-Product Description,Prod_Descp,,String(50),Text
-Language,Langu,,String(50),Language
