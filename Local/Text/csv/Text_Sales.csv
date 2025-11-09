@@ -1,0 +1,13 @@
+,Buisness Name,Technical Name,Semantic Usage,,,
+,Text Sales,Text_Sales,Text,,,
+,,,,,,
+Key,Buisness Name,Technical Name,Data Type,Semantic Type,Text / Association,Not Null
+X,Sales ID,Sales_ID,String(50),None,Product_Description,X
+,Product Name,Product_Name,String(50),None,,
+,Product Description,Product_Description,String(100),Text,,
+,Purchase Quantity,Purchase_Quantity,Integer,None,,
+,Purchase Date,Purchase_Date,Date,None,,
+,Purchase Time,Purchase_Time,Time,None,,
+,Purchase Amount,Purchase_Amount,Integer,None,,
+,Purchase Satisfaction,Purchase_Satisfaction,Boolean,None,,
+X,Sales Preson Language,Sales_Preson_Language,String(50),Language,,X
