@@ -4,7 +4,6 @@ You are an SAP Datasphere CDS JSON Expert.
 Your task:
 1. Infer the most appropriate **entity name** from the CSV schema provided.
    - specfied without any column names and values
-   - 
 
 2. Convert the CSV schema into a valid **SAP CDS JSON definition** using this entity name.
 
@@ -16,9 +15,9 @@ FORMAT TO FOLLOW:
 
 {{
   "definitions": {{
-    "text_demo": {{
+    "Text": {{
       "kind": "entity",
-      "@EndUserText.label": "text_demo",
+      "@EndUserText.label": "Text",
       "@ObjectModel.modelingPattern": {{
         "#": "LANGUAGE_DEPENDENT_TEXT"
       }},
@@ -28,22 +27,41 @@ FORMAT TO FOLLOW:
         }}
       ],
       "elements": {{
-        "data_1": {{
-          "@EndUserText.label": "Data 1",
+        "Sales_ID": {{
+          "@EndUserText.label": "Sales_ID",
+          "type": "cds.String",
+          "length": 50,
+          "key": true,
+          "notNull": true,
+          "@ObjectModel.text.element": [
+            {{
+              "=": "Product_Description_1"
+            }}
+          ]
+        }},
+        "Product_name_1": {{
+          "@EndUserText.label": "Product_name 1",
+          "type": "cds.String",
+          "length": 100
+        }},
+        "Product_Description_1": {{
+          "@EndUserText.label": "Product_Description 1",
           "type": "cds.String",
           "length": 100,
           "@Semantics.text": true
         }},
-        "data1": {{
-          "@EndUserText.label": "Data1",
+        "Sales_person_language__1": {{
+          "@EndUserText.label": "Sales person language  1",
           "type": "cds.String",
           "length": 100,
-          "@Semantics.text": true
+          "key": true,
+          "notNull": true,
+          "@Semantics.language": true
         }}
       }},
       "_meta": {{
         "dependencies": {{
-          "folderAssignment": "Folder_UOVCXMFT"
+          "folderAssignment": ""
         }}
       }}
     }}
@@ -62,23 +80,27 @@ CSV SCHEMA:
 
 Rules:
 - If "Key" = X → "key": true, "notNull": true
-- Use “Business Name” as @EndUserText.label
+- In text/association column the value is available then add "@ObjectModel.text.element": [
+  {{
+    "=": "AssociatedFieldName"
+  }} 
+] to the respective element.
+- Use “Business Name” as @EndUserText.label 
 - Convert:
-  - String(50) → "type": "cds.String", "length": 50
+  - String() → "type": "cds.String", "length": length_value
   - Decimal(10,2) → "type": "cds.Decimal", "precision": 10, "scale": 2
   - Integer → "type": "cds.Integer"
   - Date → "type": "cds.Date"
 - Semantics:
   - “Text” → "@Semantics.text": true
   - “Language” → "@Semantics.language": true
-- Entity Name:
-  - Derive from CSV filename (default "entity_demo")
+
 - Always include:
   - "version": {{"csn": "1.0"}}
   - "meta": {{"creator": "CDS Compiler v1.19.2"}}
   - "$version": "1.0"
-  - "_meta.dependencies.folderAssignment" with a folder name
-  - get entity name from csv only
+  - "_meta.dependencies.folderAssignment" 
+  
 
 Output only valid JSON (no explanations).
 """

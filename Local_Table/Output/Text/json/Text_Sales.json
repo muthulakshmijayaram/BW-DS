@@ -1,8 +1,8 @@
 {
     "definitions": {
-        "text_sales": {
+        "Text_Sales": {
             "kind": "entity",
-            "@EndUserText.label": "text_sales",
+            "@EndUserText.label": "Text Sales",
             "@ObjectModel.modelingPattern": {
                 "#": "LANGUAGE_DEPENDENT_TEXT"
             },
@@ -17,7 +17,12 @@
                     "type": "cds.String",
                     "length": 50,
                     "key": true,
-                    "notNull": true
+                    "notNull": true,
+                    "@ObjectModel.text.element": [
+                        {
+                            "=": "Product_Description"
+                        }
+                    ]
                 },
                 "Product_Name": {
                     "@EndUserText.label": "Product Name",
@@ -54,14 +59,14 @@
                     "@EndUserText.label": "Sales Preson Language",
                     "type": "cds.String",
                     "length": 50,
-                    "@Semantics.language": true,
                     "key": true,
-                    "notNull": true
+                    "notNull": true,
+                    "@Semantics.language": true
                 }
             },
             "_meta": {
                 "dependencies": {
-                    "folderAssignment": "Folder_UOVCXMFT"
+                    "folderAssignment": "Text_Sales_Folder"
                 }
             }
         }
