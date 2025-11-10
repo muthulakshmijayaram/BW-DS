@@ -1,0 +1,76 @@
+{
+    "definitions": {
+        "text_sales": {
+            "kind": "entity",
+            "@EndUserText.label": "text_sales",
+            "@ObjectModel.modelingPattern": {
+                "#": "LANGUAGE_DEPENDENT_TEXT"
+            },
+            "@ObjectModel.supportedCapabilities": [
+                {
+                    "#": "LANGUAGE_DEPENDENT_TEXT"
+                }
+            ],
+            "elements": {
+                "Sales_ID": {
+                    "@EndUserText.label": "Sales ID",
+                    "type": "cds.String",
+                    "length": 50,
+                    "key": true,
+                    "notNull": true
+                },
+                "Product_Name": {
+                    "@EndUserText.label": "Product Name",
+                    "type": "cds.String",
+                    "length": 50
+                },
+                "Product_Description": {
+                    "@EndUserText.label": "Product Description",
+                    "type": "cds.String",
+                    "length": 100,
+                    "@Semantics.text": true
+                },
+                "Purchase_Quantity": {
+                    "@EndUserText.label": "Purchase Quantity",
+                    "type": "cds.Integer"
+                },
+                "Purchase_Date": {
+                    "@EndUserText.label": "Purchase Date",
+                    "type": "cds.Date"
+                },
+                "Purchase_Time": {
+                    "@EndUserText.label": "Purchase Time",
+                    "type": "cds.Time"
+                },
+                "Purchase_Amount": {
+                    "@EndUserText.label": "Purchase Amount",
+                    "type": "cds.Integer"
+                },
+                "Purchase_Satisfaction": {
+                    "@EndUserText.label": "Purchase Satisfaction",
+                    "type": "cds.Boolean"
+                },
+                "Sales_Preson_Language": {
+                    "@EndUserText.label": "Sales Preson Language",
+                    "type": "cds.String",
+                    "length": 50,
+                    "@Semantics.language": true,
+                    "key": true,
+                    "notNull": true
+                }
+            },
+            "_meta": {
+                "dependencies": {
+                    "folderAssignment": "Folder_UOVCXMFT"
+                }
+            }
+        }
+    },
+    "version": {
+        "csn": "1.0"
+    },
+    "meta": {
+        "creator": "CDS Compiler v1.19.2"
+    },
+    "$version": "1.0"
+}

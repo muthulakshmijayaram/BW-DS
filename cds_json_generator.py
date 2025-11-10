@@ -16,7 +16,7 @@ deployment_id = os.getenv("DEPLOYMENT_ID")
 
 llm = ChatOpenAI(deployment_id=deployment_id, temperature=0)
 
-csv_path = r"C:\Users\LakshmanNavaneethakr\Downloads\BW-DS\Local\Input\Text\csv\Text_Sales.csv"
+csv_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Local_Table\Input\Text\csv\Text_Sales.csv"
 df = pd.read_csv(csv_path)
 csv_data = df.to_string(index=False)
 
@@ -27,14 +27,19 @@ prompt_template = PromptTemplate(
 
 chain = LLMChain(llm=llm, prompt=prompt_template)
 response = chain.invoke({"csv_data": csv_data})
-text = response.get("text", "").strip()
-print(text)
 
+text = response.get("text", "").strip()
 json_output = json.loads(text)
 
-entity_name = list(json_output.get("definitions", {}).keys())[0]
-json_path = os.path.join(os.path.dirname(csv_path) or ".", f"{entity_name}_datasphere.json")
+file_name = os.path.basename(csv_path)
+base_name = os.path.splitext(file_name)[0]  
+output_file = f"{base_name}.json"
 
-with open(json_path, "w", encoding="utf-8") as f:
-    json.dump(json_output, f, indent=2, ensure_ascii=False)
+if "Text" in csv_path:
+    output_folder = r"Local_Table\Output\Text\json"
+else:
+    output_folder = r"Local_Table\Output\json"
 
+output_path = os.path.join(output_folder, output_file)
+with open(output_path, "w", encoding="utf-8") as f:
+    json.dump(json_output, f, indent=4,ensure_ascii=False)
