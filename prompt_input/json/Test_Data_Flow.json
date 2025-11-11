@@ -1,0 +1,448 @@
+{
+  "definitions": {
+    "LT_M_0AA_ACCDET_TEXT": {
+      "kind": "entity",
+      "elements": {
+        "SPRAS": {
+          "@EndUserText.label": "Language Key",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "key": true,
+          "notNull": true,
+          "@Semantics.language": true
+        },
+        "KTOGR": {
+          "@EndUserText.label": "Account determination",
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "key": true,
+          "notNull": true,
+          "@ObjectModel.text.element": [
+            {
+              "=": "KTGRTX"
+            }
+          ]
+        },
+        "KTGRTX": {
+          "@EndUserText.label": "Description of account determination",
+          "type": "cds.String",
+          "length": 50,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false,
+          "@Semantics.text": true
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "SQL_DATA_SOURCE"
+        },
+        {
+          "#": "LANGUAGE_DEPENDENT_TEXT"
+        }
+      ],
+      "@EndUserText.label": "Account Determination",
+      "@ObjectModel.modelingPattern": {
+        "#": "LANGUAGE_DEPENDENT_TEXT"
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_HGAXVQNN"
+        }
+      }
+    },
+    "RT_M_0AA_ACCDET_TEXT": {
+      "kind": "entity",
+      "elements": {
+        "SPRAS": {
+          "@EndUserText.label": "Language Key",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "key": true,
+          "notNull": true
+        },
+        "KTOGR": {
+          "@EndUserText.label": "Account determination",
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "key": true,
+          "notNull": true
+        },
+        "KTGRTX": {
+          "@EndUserText.label": "Description of account determination",
+          "type": "cds.String",
+          "length": 50,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "SQL_DATA_SOURCE"
+        },
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@EndUserText.label": "Account Determination",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@DataWarehouse.remote.connection": "EC3",
+      "@DataWarehouse.remote.entity": "SAPI.0AA_ACCDET_TEXT",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_HGAXVQNN"
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "dataflows": {
+    "DF_0AA_ACCDET_TEXT": {
+      "kind": "sap.dis.dataflow",
+      "@EndUserText.label": "DF_0AA_ACCDET_TEXT",
+      "contents": {
+        "description": "DF_0AA_ACCDET_TEXT",
+        "processes": {
+          "source1": {
+            "component": "com.sap.database.table.consumer",
+            "metadata": {
+              "label": "RT_M_0AA_ACCDET_TEXT",
+              "x": 22,
+              "y": 123,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "RT_M_0AA_ACCDET_TEXT",
+                "dwcEntity": "RT_M_0AA_ACCDET_TEXT",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true
+              },
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                }
+              ]
+            }
+          },
+          "target1": {
+            "component": "com.sap.database.table.producer",
+            "metadata": {
+              "label": "LT_M_0AA_ACCDET_TEXT",
+              "x": 328,
+              "y": 123,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "LT_M_0AA_ACCDET_TEXT",
+                "dwcEntity": "LT_M_0AA_ACCDET_TEXT",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true,
+                "mode": "append",
+                "upsert": false,
+                "batchSize": 1000,
+                "forceBatchSize": false,
+                "attributeMappings": [
+                  {
+                    "expression": "\"SPRAS\"",
+                    "target": "SPRAS"
+                  },
+                  {
+                    "expression": "\"KTOGR\"",
+                    "target": "KTOGR"
+                  },
+                  {
+                    "expression": "\"KTGRTX\"",
+                    "target": "KTGRTX"
+                  }
+                ],
+                "hanaAdaptedDataset": {
+                  "schema": {
+                    "genericType": "TABLE",
+                    "tableBasedRepresentation": {
+                      "attributes": [
+                        {
+                          "name": "SPRAS",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "KTOGR",
+                          "templateType": "string",
+                          "length": 8
+                        },
+                        {
+                          "name": "KTGRTX",
+                          "templateType": "string",
+                          "length": 50
+                        }
+                      ],
+                      "uniqueKeys": [
+                        {
+                          "attributeReferences": [
+                            "SPRAS",
+                            "KTOGR"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          },
+          "projection1": {
+            "component": "com.sap.dataflow.projection",
+            "metadata": {
+              "label": "Projection 1",
+              "x": 170,
+              "y": 123,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "attributeMappings": [
+                  {
+                    "target": "SPRAS",
+                    "expression": "\"SPRAS\""
+                  },
+                  {
+                    "target": "KTOGR",
+                    "expression": "\"KTOGR\""
+                  },
+                  {
+                    "target": "KTGRTX",
+                    "expression": "\"KTGRTX\""
+                  }
+                ]
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                }
+              ],
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          }
+        },
+        "groups": [],
+        "connections": [
+          {
+            "metadata": {
+              "points": "142,153 166.5,153"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "source1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "projection1"
+            }
+          },
+          {
+            "metadata": {
+              "points": "295,153 323,153"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "projection1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "target1"
+            }
+          }
+        ],
+        "inports": {},
+        "outports": {},
+        "properties": {},
+        "vTypes": {
+          "scalar": {
+            "string_1": {
+              "name": "string_1",
+              "description": "String(1)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 1
+            },
+            "string_8": {
+              "name": "string_8",
+              "description": "String(8)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 8
+            },
+            "string_50": {
+              "name": "string_50",
+              "description": "String(50)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 50
+            }
+          },
+          "structure": {},
+          "table": {
+            "source1_outTable": {
+              "name": "source1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "SPRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KTOGR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "KTGRTX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_50"
+                    }
+                  }
+                ]
+              },
+              "keys": [
+                "SPRAS",
+                "KTOGR"
+              ]
+            },
+            "projection1_outTable": {
+              "name": "projection1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "SPRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KTOGR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "KTGRTX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_50"
+                    }
+                  }
+                ]
+              },
+              "keys": [
+                "SPRAS",
+                "KTOGR"
+              ]
+            }
+          }
+        },
+        "metadata": {
+          "dwc-isPrimaryKeysProcessed": true,
+          "dwc-restartOnFail": false
+        },
+        "parameters": {},
+        "parameterMapping": {}
+      },
+      "sources": {
+        "RT_M_0AA_ACCDET_TEXT": {
+          "elements": {
+            "SPRAS": {},
+            "KTOGR": {},
+            "KTGRTX": {}
+          }
+        }
+      },
+      "targets": {
+        "LT_M_0AA_ACCDET_TEXT": {
+          "elements": {
+            "SPRAS": {},
+            "KTOGR": {},
+            "KTGRTX": {}
+          }
+        }
+      },
+      "connections": {}
+    }
+  },
+  "$version": "1.0"
+}

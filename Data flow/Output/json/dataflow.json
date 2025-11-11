@@ -1,0 +1,887 @@
+{
+    "definitions": {
+        "RT_M_ACCT_TYPE_TEXT": {
+            "kind": "entity",
+            "elements": {
+                "Connection Name": {
+                    "@EndUserText.label": "Connection Name",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "EC3": {
+                    "@EndUserText.label": "EC3",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "NaN": {
+                    "@EndUserText.label": "NaN",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "NaN_1": {
+                    "@EndUserText.label": "NaN",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "NaN_2": {
+                    "@EndUserText.label": "NaN",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Projection": {
+                    "@EndUserText.label": "Projection",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 6": {
+                    "@EndUserText.label": "Unnamed: 6",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 7": {
+                    "@EndUserText.label": "Unnamed: 7",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 8": {
+                    "@EndUserText.label": "Unnamed: 8",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 9": {
+                    "@EndUserText.label": "Unnamed: 9",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "LT_M_ACCT_TYPE_TEXT": {
+                    "@EndUserText.label": "Account Type",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Account Type.1": {
+                    "@EndUserText.label": "Account Type",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 12": {
+                    "@EndUserText.label": "Unnamed: 12",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 13": {
+                    "@EndUserText.label": "Unnamed: 13",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 14": {
+                    "@EndUserText.label": "Unnamed: 14",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 15": {
+                    "@EndUserText.label": "Unnamed: 15",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                },
+                "Unnamed: 16": {
+                    "@EndUserText.label": "Unnamed: 16",
+                    "type": "cds.String",
+                    "length": 255,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": false,
+                    "notNull": false,
+                    "@Semantics.language": false
+                }
+            }
+        }
+    },
+    "dataflows": {
+        "DF_0ACCT_TYPE_TEXT": {
+            "kind": "sap.dis.dataflow",
+            "@EndUserText.label": "DF_0ACCT_TYPE_TEXT",
+            "contents": {
+                "description": "DF_0ACCT_TYPE_TEXT",
+                "processes": {
+                    "projection1": {
+                        "component": "com.sap.dataflow.projection",
+                        "metadata": {
+                            "label": "Projection 1",
+                            "x": 170,
+                            "y": 123,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "attributeMappings": [
+                                    {
+                                        "target": "Connection Name",
+                                        "expression": "\"Connection Name\""
+                                    },
+                                    {
+                                        "target": "EC3",
+                                        "expression": "\"EC3\""
+                                    },
+                                    {
+                                        "target": "NaN",
+                                        "expression": "\"NaN\""
+                                    },
+                                    {
+                                        "target": "NaN_1",
+                                        "expression": "\"NaN\""
+                                    },
+                                    {
+                                        "target": "NaN_2",
+                                        "expression": "\"NaN\""
+                                    },
+                                    {
+                                        "target": "Projection",
+                                        "expression": "\"Projection\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 6",
+                                        "expression": "\"Unnamed: 6\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 7",
+                                        "expression": "\"Unnamed: 7\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 8",
+                                        "expression": "\"Unnamed: 8\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 9",
+                                        "expression": "\"Unnamed: 9\""
+                                    },
+                                    {
+                                        "target": "LT_M_ACCT_TYPE_TEXT",
+                                        "expression": "\"LT_M_ACCT_TYPE_TEXT\""
+                                    },
+                                    {
+                                        "target": "Account Type.1",
+                                        "expression": "\"Account Type.1\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 12",
+                                        "expression": "\"Unnamed: 12\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 13",
+                                        "expression": "\"Unnamed: 13\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 14",
+                                        "expression": "\"Unnamed: 14\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 15",
+                                        "expression": "\"Unnamed: 15\""
+                                    },
+                                    {
+                                        "target": "Unnamed: 16",
+                                        "expression": "\"Unnamed: 16\""
+                                    }
+                                ]
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source_outTable"
+                                }
+                            ],
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection_outTable"
+                                }
+                            ]
+                        }
+                    },
+                    "target1": {
+                        "component": "com.sap.database.table.producer",
+                        "metadata": {
+                            "label": "LT_M_ACCT_TYPE_TEXT",
+                            "x": 328,
+                            "y": 123,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "service": "HANA",
+                                "hanaConnection": {
+                                    "configurationType": "Configuration Manager",
+                                    "connectionID": "$DWC"
+                                },
+                                "qualifiedName": "LT_M_ACCT_TYPE_TEXT",
+                                "dwcEntity": "LT_M_ACCT_TYPE_TEXT",
+                                "remoteObjectType": "TABLE",
+                                "fetchSize": 1000,
+                                "forceFetchSize": false,
+                                "failOnStringTruncation": true,
+                                "mode": "append",
+                                "upsert": false,
+                                "batchSize": 1000,
+                                "forceBatchSize": false,
+                                "attributeMappings": [
+                                    {
+                                        "expression": "\"Connection Name\"",
+                                        "target": "Connection Name"
+                                    },
+                                    {
+                                        "expression": "\"EC3\"",
+                                        "target": "EC3"
+                                    },
+                                    {
+                                        "expression": "\"NaN\"",
+                                        "target": "NaN"
+                                    },
+                                    {
+                                        "expression": "\"NaN\"",
+                                        "target": "NaN_1"
+                                    },
+                                    {
+                                        "expression": "\"NaN\"",
+                                        "target": "NaN_2"
+                                    },
+                                    {
+                                        "expression": "\"Projection\"",
+                                        "target": "Projection"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 6\"",
+                                        "target": "Unnamed: 6"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 7\"",
+                                        "target": "Unnamed: 7"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 8\"",
+                                        "target": "Unnamed: 8"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 9\"",
+                                        "target": "Unnamed: 9"
+                                    },
+                                    {
+                                        "expression": "\"LT_M_ACCT_TYPE_TEXT\"",
+                                        "target": "LT_M_ACCT_TYPE_TEXT"
+                                    },
+                                    {
+                                        "expression": "\"Account Type.1\"",
+                                        "target": "Account Type.1"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 12\"",
+                                        "target": "Unnamed: 12"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 13\"",
+                                        "target": "Unnamed: 13"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 14\"",
+                                        "target": "Unnamed: 14"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 15\"",
+                                        "target": "Unnamed: 15"
+                                    },
+                                    {
+                                        "expression": "\"Unnamed: 16\"",
+                                        "target": "Unnamed: 16"
+                                    }
+                                ],
+                                "hanaAdaptedDataset": {
+                                    "schema": {
+                                        "genericType": "TABLE",
+                                        "tableBasedRepresentation": {
+                                            "attributes": [
+                                                {
+                                                    "name": "Connection Name",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "EC3",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "NaN",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "NaN_1",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "NaN_2",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Projection",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 6",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 7",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 8",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 9",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "LT_M_ACCT_TYPE_TEXT",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Account Type.1",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 12",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 13",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 14",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 15",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                },
+                                                {
+                                                    "name": "Unnamed: 16",
+                                                    "templateType": "string",
+                                                    "length": 255
+                                                }
+                                            ],
+                                            "uniqueKeys": [
+                                                {
+                                                    "attributeReferences": [
+                                                        "Connection Name",
+                                                        "EC3"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection_outTable"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "groups": [],
+                "connections": [
+                    {
+                        "metadata": {
+                            "points": "142,153 166.5,153"
+                        },
+                        "src": {
+                            "port": "outTable",
+                            "process": "projection1"
+                        },
+                        "tgt": {
+                            "port": "inTable",
+                            "process": "target1"
+                        }
+                    }
+                ],
+                "inports": {},
+                "outports": {},
+                "properties": {},
+                "vTypes": {
+                    "scalar": {
+                        "string_1": {
+                            "name": "string_1",
+                            "description": "String(1)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 1
+                        },
+                        "string_8": {
+                            "name": "string_8",
+                            "description": "String(8)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 8
+                        },
+                        "string_50": {
+                            "name": "string_50",
+                            "description": "String(50)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 50
+                        }
+                    },
+                    "structure": {},
+                    "table": {
+                        "source_outTable": {
+                            "name": "source_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "Connection Name": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "EC3": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "NaN": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "NaN_1": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "NaN_2": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Projection": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 6": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 7": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 8": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 9": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "LT_M_ACCT_TYPE_TEXT": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Account Type.1": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 12": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 13": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 14": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 15": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 16": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    }
+                                ]
+                            },
+                            "keys": [
+                                "Connection Name",
+                                "EC3"
+                            ]
+                        },
+                        "projection_outTable": {
+                            "name": "projection_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "Connection Name": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "EC3": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "NaN": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "NaN_1": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "NaN_2": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Projection": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 6": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 7": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 8": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 9": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "LT_M_ACCT_TYPE_TEXT": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Account Type.1": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 12": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 13": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 14": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 15": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    },
+                                    {
+                                        "Unnamed: 16": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_255"
+                                        }
+                                    }
+                                ]
+                            },
+                            "keys": [
+                                "Connection Name",
+                                "EC3"
+                            ]
+                        }
+                    }
+                }
+            },
+            "$version": "1.0"
+        }
+    }
+}

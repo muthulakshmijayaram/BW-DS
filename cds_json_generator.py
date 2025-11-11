@@ -1,4 +1,6 @@
-import os, json, pandas as pd
+import os,re
+import json
+import pandas as pd
 from gen_ai_hub.proxy.langchain.openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
@@ -16,20 +18,33 @@ deployment_id = os.getenv("DEPLOYMENT_ID")
 
 llm = ChatOpenAI(deployment_id=deployment_id, temperature=0)
 
-csv_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Local_Table\Input\Text\csv\Text_Sales.csv"
+csv_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Input\csv\dataflow.csv"
 df = pd.read_csv(csv_path)
 csv_data = df.to_string(index=False)
+# print(csv_data)
+json_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\prompt_input\json\Test_Data_Flow.json"
 
+with open(json_path, "r", encoding="utf-8") as f:
+    json_input = json.load(f)
 prompt_template = PromptTemplate(
-    input_variables=["csv_data"],
+    input_variables=["csv_data","json_input"],
     template=CDS_JSON_PROMPT
 )
 
 chain = LLMChain(llm=llm, prompt=prompt_template)
-response = chain.invoke({"csv_data": csv_data})
+response = chain.invoke({
+    "csv_data": csv_data,
+    "json_input": json_input
+})
 
-text = response.get("text", "").strip()
-json_output = json.loads(text)
+llm_text = response.get("text", "").strip()  
+# print(llm_text)
+if llm_text.startswith("```json"):
+    llm_text = re.sub(r"^```[a-zA-Z]*\n", "", llm_text)
+    llm_text=re.sub(r"\n```$", "", llm_text)
+print(llm_text)
+json_output = json.loads(llm_text)
+
 
 file_name = os.path.basename(csv_path)
 base_name = os.path.splitext(file_name)[0]  
@@ -37,6 +52,8 @@ output_file = f"{base_name}.json"
 
 if "Text" in csv_path:
     output_folder = r"Local_Table\Output\Text\json"
+elif "Data flow" in csv_path:
+    output_folder = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Output\json"
 else:
     output_folder = r"Local_Table\Output\json"
 
