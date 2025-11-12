@@ -1,6 +1,6 @@
 {
     "definitions": {
-        "LT_M_ACCT_TYPE_TEXT": {
+        "LT_M_0AA_ACCDET_TEXT": {
             "kind": "entity",
             "elements": {
                 "LANGU": {
@@ -75,7 +75,7 @@
                 }
             }
         },
-        "RT_M_ACCT_TYPE_TEXT": {
+        "RT_M_0AA_ACCDET_TEXT": {
             "kind": "entity",
             "elements": {
                 "LANGU": {
@@ -116,13 +116,6 @@
                     "length": 60,
                     "@DataWarehouse.native.dataType": "NVARCHAR",
                     "@DataWarehouse.capabilities.filter.enabled": false
-                },
-                "CC_TEXT": {
-                    "@EndUserText.label": "Text Column",
-                    "type": "cds.String",
-                    "length": 20,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false
                 }
             },
             "@ObjectModel.supportedCapabilities": [
@@ -153,7 +146,7 @@
         "creator": "CDS Compiler v1.19.2"
     },
     "dataflows": {
-        "DF_ACCT_TYPE_TEXT": {
+        "DF_0AA_ACCDET_TEXT": {
             "kind": "sap.dis.dataflow",
             "@EndUserText.label": "DF_ACCT_TYPE_TEXT",
             "contents": {
@@ -364,19 +357,19 @@
                             "template": "string",
                             "value.length": 1
                         },
-                        "string_20": {
-                            "name": "string_20",
-                            "description": "String(20)",
-                            "vflow.type": "scalar",
-                            "template": "string",
-                            "value.length": 20
-                        },
                         "string_60": {
                             "name": "string_60",
                             "description": "String(60)",
                             "vflow.type": "scalar",
                             "template": "string",
                             "value.length": 60
+                        },
+                        "string_20": {
+                            "name": "string_20",
+                            "description": "String(20)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 20
                         }
                     },
                     "structure": {},
@@ -463,17 +456,16 @@
                 "parameterMapping": {}
             },
             "sources": {
-                "RT_M_ACCT_TYPE_TEXT": {
+                "RT_M_0AA_ACCDET_TEXT": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
-                        "TXTLG": {},
-                        "CC_TEXT": {}
+                        "TXTLG": {}
                     }
                 }
             },
             "targets": {
-                "LT_M_ACCT_TYPE_TEXT": {
+                "LT_M_0AA_ACCDET_TEXT": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},

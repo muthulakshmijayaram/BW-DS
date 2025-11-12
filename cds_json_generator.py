@@ -17,7 +17,7 @@ resource_group = os.getenv("AICORE_RESOURCE_GROUP")
 base_url = os.getenv("AICORE_BASE_URL")
 deployment_id = os.getenv("DEPLOYMENT_ID")
 
-llm = ChatOpenAI(deployment_id=deployment_id, temperature=0)
+llm = ChatOpenAI(deployment_id=deployment_id)
 
 csv_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Input\csv\dataflow.csv"
 df = pd.read_csv(csv_path)
