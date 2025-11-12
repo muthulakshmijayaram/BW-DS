@@ -7,6 +7,7 @@ from langchain.chains import LLMChain
 from dotenv import load_dotenv
 from CDS_JSON_PROMPT import CDS_JSON_PROMPT
 
+
 load_dotenv()
 
 client_id = os.getenv("AICORE_CLIENT_ID")
@@ -38,7 +39,7 @@ response = chain.invoke({
 })
 
 llm_text = response.get("text", "").strip()  
-# print(llm_text)
+
 if llm_text.startswith("```json"):
     llm_text = re.sub(r"^```[a-zA-Z]*\n", "", llm_text)
     llm_text=re.sub(r"\n```$", "", llm_text)
