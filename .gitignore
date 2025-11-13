@@ -1,18 +1,4 @@
 # Credential files
 .env
 *.env
-credentials.json
-*.pem
-*.key
-*.crt
-secrets/
-config/
-__pycache__/
 
-# IDE and OS files
-.vscode/
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log

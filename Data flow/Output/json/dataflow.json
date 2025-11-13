@@ -1,13 +1,13 @@
 {
     "definitions": {
-        "LT_M_0AA_ACCDET_TEXT": {
+        "LT_M_ACCT_TYPE_TEXT": {
             "kind": "entity",
             "elements": {
                 "LANGU": {
                     "@EndUserText.label": "Language Key",
                     "type": "cds.String",
                     "length": 1,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.native.dataType": "String(1)",
                     "@DataWarehouse.capabilities.filter.allowedExpressions": [
                         {
                             "#": "EQUAL"
@@ -24,7 +24,7 @@
                     "@EndUserText.label": "Key Field for DataSource for Text",
                     "type": "cds.String",
                     "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.native.dataType": "String(60)",
                     "@DataWarehouse.capabilities.filter.allowedExpressions": [
                         {
                             "#": "EQUAL"
@@ -45,7 +45,7 @@
                     "@EndUserText.label": "Long description",
                     "type": "cds.String",
                     "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.native.dataType": "String(60)",
                     "@DataWarehouse.capabilities.filter.enabled": false,
                     "@Semantics.text": true
                 },
@@ -53,7 +53,7 @@
                     "@EndUserText.label": "Text Column",
                     "type": "cds.String",
                     "length": 20,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.native.dataType": "String(20)",
                     "@DataWarehouse.capabilities.filter.enabled": false
                 }
             },
@@ -71,18 +71,18 @@
             },
             "_meta": {
                 "dependencies": {
-                    "folderAssignment": "Folder_HGAXVQNN"
+                    "folderAssignment": ""
                 }
             }
         },
-        "RT_M_0AA_ACCDET_TEXT": {
+        "RT_M_ACCT_TYPE_TEXT": {
             "kind": "entity",
             "elements": {
                 "LANGU": {
                     "@EndUserText.label": "Language Key",
                     "type": "cds.String",
                     "length": 1,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.native.dataType": "String(1)",
                     "@DataWarehouse.capabilities.filter.allowedExpressions": [
                         {
                             "#": "EQUAL"
@@ -98,7 +98,7 @@
                     "@EndUserText.label": "Key Field for DataSource for Text",
                     "type": "cds.String",
                     "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.native.dataType": "String(60)",
                     "@DataWarehouse.capabilities.filter.allowedExpressions": [
                         {
                             "#": "EQUAL"
@@ -114,7 +114,14 @@
                     "@EndUserText.label": "Long description",
                     "type": "cds.String",
                     "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.native.dataType": "String(60)",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                },
+                "CC_TEXT": {
+                    "@EndUserText.label": "Text Column",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "String(20)",
                     "@DataWarehouse.capabilities.filter.enabled": false
                 }
             },
@@ -134,7 +141,7 @@
             "@DataWarehouse.remote.entity": "SAPI.0ACCT_TYPE_TEXT",
             "_meta": {
                 "dependencies": {
-                    "folderAssignment": "Folder_HGAXVQNN"
+                    "folderAssignment": ""
                 }
             }
         }
@@ -143,10 +150,10 @@
         "csn": "1.0"
     },
     "meta": {
-        "creator": "CDS Compiler v1.19.2"
+        "creator": ""
     },
     "dataflows": {
-        "DF_0AA_ACCDET_TEXT": {
+        "DF_ACCT_TYPE_TEXT": {
             "kind": "sap.dis.dataflow",
             "@EndUserText.label": "DF_ACCT_TYPE_TEXT",
             "contents": {
@@ -456,16 +463,17 @@
                 "parameterMapping": {}
             },
             "sources": {
-                "RT_M_0AA_ACCDET_TEXT": {
+                "RT_M_ACCT_TYPE_TEXT": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
-                        "TXTLG": {}
+                        "TXTLG": {},
+                        "CC_TEXT": {}
                     }
                 }
             },
             "targets": {
-                "LT_M_0AA_ACCDET_TEXT": {
+                "LT_M_ACCT_TYPE_TEXT": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
