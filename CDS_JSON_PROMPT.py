@@ -77,6 +77,8 @@ Populate each JSON table as follows:
     }}
   ]
 }}
+
+
 3️⃣ FIELD ISOLATION & TABLE SCOPING
 Each JSON table must reflect only its corresponding CSV table.
 
@@ -85,6 +87,20 @@ Do not merge, mix, or cross-populate fields between tables.
 Fields that exist in CSV but not in the reference JSON structure → ignore.
 
 Fields in JSON not present in CSV → remove.
+### 2. 🧱 Table-Level Field Isolation
+For each table/entity node:
+- Populate **only** the fields that belong to that table in the CSV.
+- Never include fields belonging to other tables.
+
+Example logic:
+- If CSV has:
+  - Table A → 2 fields  
+  - Table B → 3 fields  
+  → Then in JSON:
+    - Table A shows only its 2 fields.
+    - Table B shows only its 3 fields.
+    ** Strictytly no cross-table field mixing. ** and corretly update the presented values based on the CSV data on table (sourceType, semanticUsage, fields, relationships, etc.)
+- **Do not cross-populate. Do not add unrelated fields.**
 
 4️⃣ DATA TYPE ENFORCEMENT
 Every "dataType" must exactly match the CSV.
@@ -202,4 +218,4 @@ Syntactically perfect and ready for production use.
 
 ---
 
-Would you like me to make a **“LangChain-optimized” version** next — same logic, but formatted for `PromptTemplate` (with placeholders and compact formatting for faster token processing)? It’s perfect if you’re calling SAP AI Core or OpenAI models via LangChain."""
+"""

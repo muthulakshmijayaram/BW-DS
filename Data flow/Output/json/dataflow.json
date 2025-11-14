@@ -153,11 +153,11 @@
         "creator": ""
     },
     "dataflows": {
-        "DF_ACCT_TYPE_TEXT": {
+        "DF_M_ACCT_TYPE_TEXT": {
             "kind": "sap.dis.dataflow",
-            "@EndUserText.label": "DF_ACCT_TYPE_TEXT",
+            "@EndUserText.label": "DF_M_ACCT_TYPE_TEXT",
             "contents": {
-                "description": "DF_ACCT_TYPE_TEXT",
+                "description": "DF_M_ACCT_TYPE_TEXT",
                 "processes": {
                     "source1": {
                         "component": "com.sap.database.table.consumer",
