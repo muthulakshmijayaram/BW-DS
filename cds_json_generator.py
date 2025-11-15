@@ -41,6 +41,7 @@ prompt_template = PromptTemplate(
 chain = prompt_template | llm 
 with open(json_path, "r", encoding="utf-8") as f:
     json_input = json.load(f)
+
 response = chain.invoke({
     "csv_data": csv_data,
     "json_input": json_input
