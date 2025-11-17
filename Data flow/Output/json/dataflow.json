@@ -1,65 +1,6 @@
 {
     "definitions": {
-        "RT_M_ACCT_TYPE_TEXT_2": {
-            "kind": "entity",
-            "elements": {
-                "LANGU": {
-                    "@EndUserText.label": "Language Key",
-                    "type": "cds.String",
-                    "length": 1,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
-                        {
-                            "#": "EQUAL"
-                        },
-                        {
-                            "#": "BETWEEN"
-                        }
-                    ]
-                },
-                "KEY1": {
-                    "@EndUserText.label": "Key Field for DataSource for Text",
-                    "type": "cds.String",
-                    "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
-                        {
-                            "#": "EQUAL"
-                        },
-                        {
-                            "#": "BETWEEN"
-                        }
-                    ]
-                },
-                "TXTLG": {
-                    "@EndUserText.label": "Long description",
-                    "type": "cds.String",
-                    "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false
-                }
-            },
-            "@ObjectModel.supportedCapabilities": [
-                {
-                    "#": "SQL_DATA_SOURCE"
-                },
-                {
-                    "#": "DATA_STRUCTURE"
-                }
-            ],
-            "@EndUserText.label": "Account Type",
-            "@ObjectModel.modelingPattern": {
-                "#": "DATA_STRUCTURE"
-            },
-            "@DataWarehouse.remote.connection": "EC3",
-            "@DataWarehouse.remote.entity": "SAPI.0ACCT_TYPE_TEXT",
-            "_meta": {
-                "dependencies": {
-                    "folderAssignment": "Folder_ACCT_TYPE"
-                }
-            }
-        },
-        "LT_M_ACCT_TYPE_TEXT_2": {
+        "LT_M_ACCT_TYPE_TEXT_3": {
             "kind": "entity",
             "elements": {
                 "LANGU": {
@@ -133,6 +74,76 @@
                     "folderAssignment": "Folder_ACCT_TYPE"
                 }
             }
+        },
+        "RT_M_ACCT_TYPE_TEXT_3": {
+            "kind": "entity",
+            "elements": {
+                "LANGU": {
+                    "@EndUserText.label": "Language Key",
+                    "type": "cds.String",
+                    "length": 1,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true
+                },
+                "KEY1": {
+                    "@EndUserText.label": "Key Field for DataSource for Text",
+                    "type": "cds.String",
+                    "length": 60,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true
+                },
+                "TXTLG": {
+                    "@EndUserText.label": "Long description",
+                    "type": "cds.String",
+                    "length": 60,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                },
+                "CC_TEXT": {
+                    "@EndUserText.label": "Text Column",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                }
+            },
+            "@ObjectModel.supportedCapabilities": [
+                {
+                    "#": "SQL_DATA_SOURCE"
+                },
+                {
+                    "#": "DATA_STRUCTURE"
+                }
+            ],
+            "@EndUserText.label": "Account Type",
+            "@ObjectModel.modelingPattern": {
+                "#": "DATA_STRUCTURE"
+            },
+            "@DataWarehouse.remote.connection": "EC3",
+            "@DataWarehouse.remote.entity": "SAPI.0ACCT_TYPE_TEXT",
+            "_meta": {
+                "dependencies": {
+                    "folderAssignment": "Folder_ACCT_TYPE"
+                }
+            }
         }
     },
     "version": {
@@ -142,16 +153,16 @@
         "creator": "CDS Compiler v1.19.2"
     },
     "dataflows": {
-        "DF_M_ACCT_TYPE_TEXT_2": {
+        "DF_ACCT_TYPE_TEXT": {
             "kind": "sap.dis.dataflow",
-            "@EndUserText.label": "DF_M_ACCT_TYPE_TEXT_2",
+            "@EndUserText.label": "DF_ACCT_TYPE_TEXT",
             "contents": {
-                "description": "DF_M_ACCT_TYPE_TEXT_2",
+                "description": "DF_ACCT_TYPE_TEXT",
                 "processes": {
                     "source1": {
                         "component": "com.sap.database.table.consumer",
                         "metadata": {
-                            "label": "RT_M_ACCT_TYPE_TEXT_2",
+                            "label": "RT_M_ACCT_TYPE_TEXT_3",
                             "x": 22,
                             "y": 123,
                             "height": 60,
@@ -162,8 +173,8 @@
                                     "configurationType": "Configuration Manager",
                                     "connectionID": "$DWC"
                                 },
-                                "qualifiedName": "RT_M_ACCT_TYPE_TEXT_2",
-                                "dwcEntity": "RT_M_ACCT_TYPE_TEXT_2",
+                                "qualifiedName": "RT_M_ACCT_TYPE_TEXT_3",
+                                "dwcEntity": "RT_M_ACCT_TYPE_TEXT_3",
                                 "remoteObjectType": "TABLE",
                                 "fetchSize": 1000,
                                 "forceFetchSize": false,
@@ -181,7 +192,7 @@
                     "target1": {
                         "component": "com.sap.database.table.producer",
                         "metadata": {
-                            "label": "LT_M_ACCT_TYPE_TEXT_2",
+                            "label": "LT_M_ACCT_TYPE_TEXT_3",
                             "x": 328,
                             "y": 123,
                             "height": 60,
@@ -192,14 +203,14 @@
                                     "configurationType": "Configuration Manager",
                                     "connectionID": "$DWC"
                                 },
-                                "qualifiedName": "LT_M_ACCT_TYPE_TEXT_2",
-                                "dwcEntity": "LT_M_ACCT_TYPE_TEXT_2",
+                                "qualifiedName": "LT_M_ACCT_TYPE_TEXT_3",
+                                "dwcEntity": "LT_M_ACCT_TYPE_TEXT_3",
                                 "remoteObjectType": "TABLE",
                                 "fetchSize": 1000,
                                 "forceFetchSize": false,
                                 "failOnStringTruncation": true,
                                 "mode": "append",
-                                "upsert": true,
+                                "upsert": false,
                                 "batchSize": 1000,
                                 "forceBatchSize": false,
                                 "attributeMappings": [
@@ -443,16 +454,16 @@
                             ]
                         }
                     }
-                }
+                },
+                "metadata": {
+                    "dwc-isPrimaryKeysProcessed": true,
+                    "dwc-restartOnFail": false
+                },
+                "parameters": {},
+                "parameterMapping": {}
             },
-            "metadata": {
-                "dwc-isPrimaryKeysProcessed": true,
-                "dwc-restartOnFail": false
-            },
-            "parameters": {},
-            "parameterMapping": {},
             "sources": {
-                "RT_M_ACCT_TYPE_TEXT_2": {
+                "RT_M_ACCT_TYPE_TEXT_3": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
@@ -462,7 +473,7 @@
                 }
             },
             "targets": {
-                "LT_M_ACCT_TYPE_TEXT_2": {
+                "LT_M_ACCT_TYPE_TEXT_3": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
