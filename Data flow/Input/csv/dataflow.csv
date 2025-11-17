@@ -1,4 +1,4 @@
-RT_M_ACCT_TYPE_TEXT,Account Type,,,,Projection,,,,,LT_M_ACCT_TYPE_TEXT,Account Type,,,,,
+RT_M_ACCT_TYPE_TEXT_2,Account Type,,,,Projection,,,,,LT_M_ACCT_TYPE_TEXT_2,Account Type,,,,,
 Connection Name,EC3,,,,,,,,,,,,,,,
 Datasource Name,SAPI.0ACCT_TYPE_TEXT,,,,Label,Columns,,Filter,,Business Name,Technical Name,Key,Data Type,Semantic Type,Text/Association,Not Null
 ,,,,,Projection 1,LANGU,,,,Language Key,LANGU,X,String(1),Language,,X
@@ -10,4 +10,4 @@ Long description,TXTLG,String(60),,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
 Source,,,,,,,,,,,,,,,,
-,,,,,Projection,,,,,Target ,,,,,,
+,,,,,Projection,,,,,"Target ",,,,,,
