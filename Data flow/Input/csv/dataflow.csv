@@ -1,12 +1,12 @@
 RT_M_ACCT_TYPE_TEXT_3,Account Type,,,,Projection,,,,,LT_M_ACCT_TYPE_TEXT_3,Account Type,,,,,
 Connection Name,EC3,,,,,,,,,,,,,,,
-Datasource Name,SAPI.0ACCT_TYPE_TEXT,,,,Label,Columns,,Filter,,Business Name,Technical Name,Key,Data Type,Semantic Type,Text/Association,Not Null
-,,,,,Projection 1,LANGU,,,,Language Key,LANGU,X,String(1),Language,,X
-Business Name,Technical Name,Data Type,,,,KEY1,,,,Key Field for DataSource for Text,KEY1,X,String(60),,TXTLG,X
-Language Key,LANGU,String(1),,,,TXTLG,,,,Long description,TXTLG,,String(60),Text,,
-Key Field for DataSource for Text,KEY1,String(60),,,,CC_TEXT,Calculated Column,,,Text Column,CC_TEXT,,String(20),,,
-Long description,TXTLG,String(60),,,,,,,,,,,,,,
+Datasource Name,SAPI.0ACCT_TYPE_TEXT,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
+Business Name,Technical Name,Data Type,,,Label,Columns,,Filter,,Business Name,Technical Name,Key,Data Type,Semantic Type,Text/Association,Not Null
+Language Key,LANGU,String(1),,,Projection 1,LANGU,,,,Language Key,LANGU,X,String(1),Language,,X
+Key Field for DataSource for Text,KEY1,String(60),,,,KEY1,,,,Key Field for DataSource for Text,KEY1,X,String(60),,TXTLG,X
+Long description,TXTLG,String(60),,,,TXTLG,,,,Long description,TXTLG,,String(60),Text,,
+,,,,,,CC_TEXT,Calculated Column,,,Text Column,CC_TEXT,,String(20),,,
 ,,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
 Source,,,,,,,,,,,,,,,,
