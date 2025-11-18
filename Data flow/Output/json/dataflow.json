@@ -1,6 +1,6 @@
 {
     "definitions": {
-        "RT_M_ACCT_TYPE_TEXT_3": {
+        "RT_M_ACCT_TYPE_TEXT_2": {
             "kind": "entity",
             "elements": {
                 "LANGU": {
@@ -15,7 +15,10 @@
                         {
                             "#": "BETWEEN"
                         }
-                    ]
+                    ],
+                    "key": true,
+                    "notNull": true,
+                    "@Semantics.language": true
                 },
                 "KEY1": {
                     "@EndUserText.label": "Key Field for DataSource for Text",
@@ -29,12 +32,21 @@
                         {
                             "#": "BETWEEN"
                         }
-                    ]
+                    ],
+                    "key": true,
+                    "notNull": true
                 },
                 "TXTLG": {
                     "@EndUserText.label": "Long description",
                     "type": "cds.String",
                     "length": 60,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                },
+                "CC_TEXT": {
+                    "@EndUserText.label": "Text Column",
+                    "type": "cds.String",
+                    "length": 20,
                     "@DataWarehouse.native.dataType": "NVARCHAR",
                     "@DataWarehouse.capabilities.filter.enabled": false
                 }
@@ -47,7 +59,7 @@
                     "#": "DATA_STRUCTURE"
                 }
             ],
-            "@EndUserText.label": "Account Type Text",
+            "@EndUserText.label": "Account Type",
             "@ObjectModel.modelingPattern": {
                 "#": "DATA_STRUCTURE"
             },
@@ -55,11 +67,11 @@
             "@DataWarehouse.remote.entity": "SAPI.0ACCT_TYPE_TEXT",
             "_meta": {
                 "dependencies": {
-                    "folderAssignment": "Folder_BYHLVUXL"
+                    "folderAssignment": "Folder_XXXXXXX"
                 }
             }
         },
-        "LT_M_ACCT_TYPE_TEXT_3": {
+        "LT_M_ACCT_TYPE_TEXT_2": {
             "kind": "entity",
             "elements": {
                 "LANGU": {
@@ -75,20 +87,12 @@
                     "type": "cds.String",
                     "length": 60,
                     "key": true,
-                    "notNull": true,
-                    "@ObjectModel.text.element": [
-                        {
-                            "=": "TXTLG"
-                        }
-                    ]
+                    "notNull": true
                 },
                 "TXTLG": {
                     "@EndUserText.label": "Long description",
                     "type": "cds.String",
-                    "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false,
-                    "@Semantics.text": true
+                    "length": 60
                 },
                 "CC_TEXT": {
                     "@EndUserText.label": "Text Column",
@@ -104,13 +108,13 @@
                     "#": "LANGUAGE_DEPENDENT_TEXT"
                 }
             ],
-            "@EndUserText.label": "Account Type Text",
+            "@EndUserText.label": "Account Type",
             "@ObjectModel.modelingPattern": {
                 "#": "LANGUAGE_DEPENDENT_TEXT"
             },
             "_meta": {
                 "dependencies": {
-                    "folderAssignment": "Folder_JPJGTDPT"
+                    "folderAssignment": "Folder_XXXXXXX"
                 }
             }
         }
@@ -122,18 +126,18 @@
         "creator": "CDS Compiler v1.19.2"
     },
     "dataflows": {
-        "DF_M_ACCT_TYPE_TEXT_3": {
+        "DF_M_ACCT_TYPE_TEXT_2": {
             "kind": "sap.dis.dataflow",
-            "@EndUserText.label": "Account Type Text Data Flow",
+            "@EndUserText.label": "Account Type Data Flow",
             "contents": {
-                "description": "DF_M_ACCT_TYPE_TEXT_3",
+                "description": "DF_M_ACCT_TYPE_TEXT_2",
                 "processes": {
                     "source1": {
                         "component": "com.sap.database.table.consumer",
                         "metadata": {
-                            "label": "RT_M_ACCT_TYPE_TEXT_3",
-                            "x": 57,
-                            "y": 165,
+                            "label": "RT_M_ACCT_TYPE_TEXT_2",
+                            "x": 22,
+                            "y": 123,
                             "height": 60,
                             "width": 120,
                             "config": {
@@ -142,8 +146,8 @@
                                     "configurationType": "Configuration Manager",
                                     "connectionID": "$DWC"
                                 },
-                                "qualifiedName": "RT_M_ACCT_TYPE_TEXT_3",
-                                "dwcEntity": "RT_M_ACCT_TYPE_TEXT_3",
+                                "qualifiedName": "RT_M_ACCT_TYPE_TEXT_2",
+                                "dwcEntity": "RT_M_ACCT_TYPE_TEXT_2",
                                 "remoteObjectType": "TABLE",
                                 "fetchSize": 1000,
                                 "forceFetchSize": false,
@@ -161,9 +165,9 @@
                     "target1": {
                         "component": "com.sap.database.table.producer",
                         "metadata": {
-                            "label": "LT_M_ACCT_TYPE_TEXT_3",
-                            "x": 428,
-                            "y": 160,
+                            "label": "LT_M_ACCT_TYPE_TEXT_2",
+                            "x": 328,
+                            "y": 123,
                             "height": 60,
                             "width": 120,
                             "config": {
@@ -172,14 +176,14 @@
                                     "configurationType": "Configuration Manager",
                                     "connectionID": "$DWC"
                                 },
-                                "qualifiedName": "LT_M_ACCT_TYPE_TEXT_3",
-                                "dwcEntity": "LT_M_ACCT_TYPE_TEXT_3",
+                                "qualifiedName": "LT_M_ACCT_TYPE_TEXT_2",
+                                "dwcEntity": "LT_M_ACCT_TYPE_TEXT_2",
                                 "remoteObjectType": "TABLE",
                                 "fetchSize": 1000,
                                 "forceFetchSize": false,
                                 "failOnStringTruncation": true,
                                 "mode": "append",
-                                "upsert": true,
+                                "upsert": false,
                                 "batchSize": 1000,
                                 "forceBatchSize": false,
                                 "attributeMappings": [
@@ -229,8 +233,8 @@
                                             "uniqueKeys": [
                                                 {
                                                     "attributeReferences": [
-                                                        "KEY1",
-                                                        "LANGU"
+                                                        "LANGU",
+                                                        "KEY1"
                                                     ]
                                                 }
                                             ]
@@ -251,8 +255,8 @@
                         "component": "com.sap.dataflow.projection",
                         "metadata": {
                             "label": "Projection 1",
-                            "x": 218,
-                            "y": 165,
+                            "x": 170,
+                            "y": 123,
                             "height": 60,
                             "width": 120,
                             "config": {
@@ -271,7 +275,7 @@
                                     },
                                     {
                                         "target": "CC_TEXT",
-                                        "expression": "'EN'"
+                                        "expression": "\"CC_TEXT\""
                                     }
                                 ]
                             },
@@ -296,7 +300,7 @@
                 "connections": [
                     {
                         "metadata": {
-                            "points": "177.5,195 214.5,195"
+                            "points": "142,153 166.5,153"
                         },
                         "src": {
                             "port": "outTable",
@@ -309,7 +313,7 @@
                     },
                     {
                         "metadata": {
-                            "points": "343,195 383,195 383,190 423,190"
+                            "points": "295,153 323,153"
                         },
                         "src": {
                             "port": "outTable",
@@ -372,9 +376,19 @@
                                             "vflow.type": "scalar",
                                             "vtype-ID": "$INLINE.string_60"
                                         }
+                                    },
+                                    {
+                                        "CC_TEXT": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_20"
+                                        }
                                     }
                                 ]
-                            }
+                            },
+                            "keys": [
+                                "LANGU",
+                                "KEY1"
+                            ]
                         },
                         "projection1_outTable": {
                             "name": "projection1_outTable",
@@ -406,7 +420,11 @@
                                         }
                                     }
                                 ]
-                            }
+                            },
+                            "keys": [
+                                "LANGU",
+                                "KEY1"
+                            ]
                         }
                     }
                 },
@@ -418,16 +436,17 @@
                 "parameterMapping": {}
             },
             "sources": {
-                "RT_M_ACCT_TYPE_TEXT_3": {
+                "RT_M_ACCT_TYPE_TEXT_2": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
-                        "TXTLG": {}
+                        "TXTLG": {},
+                        "CC_TEXT": {}
                     }
                 }
             },
             "targets": {
-                "LT_M_ACCT_TYPE_TEXT_3": {
+                "LT_M_ACCT_TYPE_TEXT_2": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
