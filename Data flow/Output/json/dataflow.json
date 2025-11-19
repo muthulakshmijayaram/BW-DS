@@ -2,43 +2,6 @@
     "definitions": {
         "RT_M_ACCT_TYPE_TEXT_3": {
             "kind": "entity",
-            "elements": {
-                "LANGU": {
-                    "@EndUserText.label": "Language Key",
-                    "type": "cds.String",
-                    "length": 1,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
-                        {
-                            "#": "EQUAL"
-                        },
-                        {
-                            "#": "BETWEEN"
-                        }
-                    ]
-                },
-                "KEY1": {
-                    "@EndUserText.label": "Key Field for DataSource for Text",
-                    "type": "cds.String",
-                    "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
-                        {
-                            "#": "EQUAL"
-                        },
-                        {
-                            "#": "BETWEEN"
-                        }
-                    ]
-                },
-                "TXTLG": {
-                    "@EndUserText.label": "Long description",
-                    "type": "cds.String",
-                    "length": 60,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false
-                }
-            },
             "@ObjectModel.supportedCapabilities": [
                 {
                     "#": "SQL_DATA_SOURCE"
@@ -53,6 +16,50 @@
             },
             "@DataWarehouse.remote.connection": "EC3",
             "@DataWarehouse.remote.entity": "SAPI.0ACCT_TYPE_TEXT",
+            "elements": {
+                "LANGU": {
+                    "@EndUserText.label": "Language Key",
+                    "type": "cds.String",
+                    "length": 1,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "KEY1": {
+                    "@EndUserText.label": "Key Field for DataSource for Text",
+                    "type": "cds.String",
+                    "length": 60,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "TXTLG": {
+                    "@EndUserText.label": "Long description",
+                    "type": "cds.String",
+                    "length": 60,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                },
+                "CC_TEXT": {
+                    "@EndUserText.label": "Text Column",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                }
+            },
             "_meta": {
                 "dependencies": {
                     "folderAssignment": "Folder_BYHLVUXL"
@@ -61,41 +68,6 @@
         },
         "LT_M_ACCT_TYPE_TEXT_3": {
             "kind": "entity",
-            "elements": {
-                "LANGU": {
-                    "@EndUserText.label": "Language Key",
-                    "type": "cds.String",
-                    "length": 1,
-                    "key": true,
-                    "notNull": true,
-                    "@Semantics.language": true
-                },
-                "KEY1": {
-                    "@EndUserText.label": "Key Field for DataSource for Text",
-                    "type": "cds.String",
-                    "length": 60,
-                    "key": true,
-                    "notNull": true,
-                    "@ObjectModel.text.element": [
-                        {
-                            "=": "TXTLG"
-                        }
-                    ]
-                },
-                "TXTLG": {
-                    "@EndUserText.label": "Long description",
-                    "type": "cds.String",
-                    "length": 60,
-                    "@Semantics.text": true,
-                    "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false
-                },
-                "CC_TEXT": {
-                    "@EndUserText.label": "Text Column",
-                    "type": "cds.String",
-                    "length": 20
-                }
-            },
             "@ObjectModel.supportedCapabilities": [
                 {
                     "#": "SQL_DATA_SOURCE"
@@ -107,6 +79,60 @@
             "@EndUserText.label": "Account Type Text",
             "@ObjectModel.modelingPattern": {
                 "#": "LANGUAGE_DEPENDENT_TEXT"
+            },
+            "elements": {
+                "LANGU": {
+                    "@EndUserText.label": "Language Key",
+                    "type": "cds.String",
+                    "length": 1,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true,
+                    "@Analytics.dimension": true,
+                    "@Semantics.language": true
+                },
+                "KEY1": {
+                    "@EndUserText.label": "Key Field for DataSource for Text",
+                    "type": "cds.String",
+                    "length": 60,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true,
+                    "@Analytics.dimension": true
+                },
+                "TXTLG": {
+                    "@EndUserText.label": "Long description",
+                    "type": "cds.String",
+                    "length": 60,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false,
+                    "@Analytics.dimension": true,
+                    "@Semantics.text": true
+                },
+                "CC_TEXT": {
+                    "@EndUserText.label": "Text Column",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false,
+                    "@Analytics.dimension": true
+                }
             },
             "_meta": {
                 "dependencies": {
@@ -126,14 +152,21 @@
             "kind": "sap.dis.dataflow",
             "@EndUserText.label": "Account Type Text Data Flow",
             "contents": {
+                "properties": {},
+                "metadata": {
+                    "dwc-isPrimaryKeysProcessed": true,
+                    "dwc-restartOnFail": false
+                },
+                "parameters": {},
+                "parameterMapping": {},
                 "description": "DF_M_ACCT_TYPE_TEXT_3",
                 "processes": {
                     "source1": {
                         "component": "com.sap.database.table.consumer",
                         "metadata": {
                             "label": "RT_M_ACCT_TYPE_TEXT_3",
-                            "x": 57,
-                            "y": 165,
+                            "x": 12,
+                            "y": 12,
                             "height": 60,
                             "width": 120,
                             "config": {
@@ -158,12 +191,56 @@
                             ]
                         }
                     },
+                    "projection1": {
+                        "component": "com.sap.dataflow.projection",
+                        "metadata": {
+                            "label": "Projection 1",
+                            "x": 182,
+                            "y": 12,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "attributeMappings": [
+                                    {
+                                        "target": "LANGU",
+                                        "expression": "\"LANGU\""
+                                    },
+                                    {
+                                        "target": "KEY1",
+                                        "expression": "\"KEY1\""
+                                    },
+                                    {
+                                        "target": "TXTLG",
+                                        "expression": "\"TXTLG\""
+                                    },
+                                    {
+                                        "target": "CC_TEXT",
+                                        "expression": "\"CC_TEXT\""
+                                    }
+                                ]
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source1_outTable"
+                                }
+                            ],
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection1_outTable"
+                                }
+                            ]
+                        }
+                    },
                     "target1": {
                         "component": "com.sap.database.table.producer",
                         "metadata": {
                             "label": "LT_M_ACCT_TYPE_TEXT_3",
-                            "x": 428,
-                            "y": 160,
+                            "x": 352,
+                            "y": 12,
                             "height": 60,
                             "width": 120,
                             "config": {
@@ -196,7 +273,7 @@
                                         "target": "TXTLG"
                                     },
                                     {
-                                        "expression": "'EN'",
+                                        "expression": "\"CC_TEXT\"",
                                         "target": "CC_TEXT"
                                     }
                                 ],
@@ -229,8 +306,8 @@
                                             "uniqueKeys": [
                                                 {
                                                     "attributeReferences": [
-                                                        "KEY1",
-                                                        "LANGU"
+                                                        "LANGU",
+                                                        "KEY1"
                                                     ]
                                                 }
                                             ]
@@ -246,57 +323,13 @@
                                 }
                             ]
                         }
-                    },
-                    "projection1": {
-                        "component": "com.sap.dataflow.projection",
-                        "metadata": {
-                            "label": "Projection 1",
-                            "x": 218,
-                            "y": 165,
-                            "height": 60,
-                            "width": 120,
-                            "config": {
-                                "attributeMappings": [
-                                    {
-                                        "target": "LANGU",
-                                        "expression": "\"LANGU\""
-                                    },
-                                    {
-                                        "target": "KEY1",
-                                        "expression": "\"KEY1\""
-                                    },
-                                    {
-                                        "target": "TXTLG",
-                                        "expression": "\"TXTLG\""
-                                    },
-                                    {
-                                        "target": "CC_TEXT",
-                                        "expression": "'EN'"
-                                    }
-                                ]
-                            },
-                            "inports": [
-                                {
-                                    "name": "inTable",
-                                    "type": "table",
-                                    "vtype-ID": "$INLINE.source1_outTable"
-                                }
-                            ],
-                            "outports": [
-                                {
-                                    "name": "outTable",
-                                    "type": "table",
-                                    "vtype-ID": "$INLINE.projection1_outTable"
-                                }
-                            ]
-                        }
                     }
                 },
                 "groups": [],
                 "connections": [
                     {
                         "metadata": {
-                            "points": "177.5,195 214.5,195"
+                            "points": "132,42 178.5,42"
                         },
                         "src": {
                             "port": "outTable",
@@ -309,7 +342,7 @@
                     },
                     {
                         "metadata": {
-                            "points": "343,195 383,195 383,190 423,190"
+                            "points": "302,42 348.5,42"
                         },
                         "src": {
                             "port": "outTable",
@@ -323,7 +356,6 @@
                 ],
                 "inports": {},
                 "outports": {},
-                "properties": {},
                 "vTypes": {
                     "scalar": {
                         "string_1": {
@@ -372,6 +404,12 @@
                                             "vflow.type": "scalar",
                                             "vtype-ID": "$INLINE.string_60"
                                         }
+                                    },
+                                    {
+                                        "CC_TEXT": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_20"
+                                        }
                                     }
                                 ]
                             }
@@ -409,20 +447,15 @@
                             }
                         }
                     }
-                },
-                "metadata": {
-                    "dwc-isPrimaryKeysProcessed": true,
-                    "dwc-restartOnFail": false
-                },
-                "parameters": {},
-                "parameterMapping": {}
+                }
             },
             "sources": {
                 "RT_M_ACCT_TYPE_TEXT_3": {
                     "elements": {
                         "LANGU": {},
                         "KEY1": {},
-                        "TXTLG": {}
+                        "TXTLG": {},
+                        "CC_TEXT": {}
                     }
                 }
             },

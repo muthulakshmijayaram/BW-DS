@@ -1,0 +1,734 @@
+{
+    "definitions": {
+        "RT_M_0COSTCENTER_TEXT_2": {
+            "kind": "entity",
+            "elements": {
+                "LANGU": {
+                    "@EndUserText.label": "Language Key",
+                    "type": "cds.String",
+                    "length": 1,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "KOKRS": {
+                    "@EndUserText.label": "Controlling Area",
+                    "type": "cds.String",
+                    "length": 4,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "KOSTL": {
+                    "@EndUserText.label": "Cost Center",
+                    "type": "cds.String",
+                    "length": 10,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "DATETO": {
+                    "@EndUserText.label": "Valid-to date",
+                    "type": "cds.String",
+                    "length": 8,
+                    "@DataWarehouse.native.dataType": "VARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "DATEFROM": {
+                    "@EndUserText.label": "Valid-From Date",
+                    "type": "cds.String",
+                    "length": 8,
+                    "@DataWarehouse.native.dataType": "VARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "TXTSH": {
+                    "@EndUserText.label": "Short description",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                },
+                "TXTMD": {
+                    "@EndUserText.label": "Medium description",
+                    "type": "cds.String",
+                    "length": 40,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                },
+                "TXTMC": {
+                    "@EndUserText.label": "Search term for matchcode use",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                }
+            },
+            "@ObjectModel.supportedCapabilities": [
+                {
+                    "#": "SQL_DATA_SOURCE"
+                },
+                {
+                    "#": "DATA_STRUCTURE"
+                }
+            ],
+            "@EndUserText.label": "Cost Center Text",
+            "@ObjectModel.modelingPattern": {
+                "#": "DATA_STRUCTURE"
+            },
+            "@DataWarehouse.remote.connection": "EC3",
+            "@DataWarehouse.remote.entity": "SAPI.0COSTCENTER_TEXT",
+            "_meta": {
+                "dependencies": {
+                    "folderAssignment": "Folder_BYHLVUXL"
+                }
+            }
+        },
+        "LT_M_0COSTCENTER_TEXT_2": {
+            "kind": "entity",
+            "elements": {
+                "LANGU": {
+                    "@EndUserText.label": "Language Key",
+                    "type": "cds.String",
+                    "length": 1,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true,
+                    "@Analytics.dimension": true,
+                    "@Semantics.language": true
+                },
+                "KOKRS": {
+                    "@EndUserText.label": "Controlling Area",
+                    "type": "cds.String",
+                    "length": 4,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true,
+                    "@Analytics.dimension": true
+                },
+                "KOSTL": {
+                    "@EndUserText.label": "Cost Center",
+                    "type": "cds.String",
+                    "length": 10,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true,
+                    "@Analytics.dimension": true,
+                    "@ObjectModel.text.element": [
+                        {
+                            "=": "TXTMD"
+                        }
+                    ]
+                },
+                "DATETO": {
+                    "@EndUserText.label": "Valid-to date",
+                    "type": "cds.Date",
+                    "@DataWarehouse.native.dataType": "VARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "key": true,
+                    "notNull": true,
+                    "@Analytics.dimension": true
+                },
+                "DATEFROM": {
+                    "@EndUserText.label": "Valid-From Date",
+                    "type": "cds.Date",
+                    "@DataWarehouse.native.dataType": "VARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ],
+                    "@Analytics.dimension": true
+                },
+                "TXTSH": {
+                    "@EndUserText.label": "Short description",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false,
+                    "@Analytics.dimension": true
+                },
+                "TXTMD": {
+                    "@EndUserText.label": "Medium description",
+                    "type": "cds.String",
+                    "length": 40,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false,
+                    "@Analytics.dimension": true,
+                    "@Semantics.text": true
+                },
+                "TXTMC": {
+                    "@EndUserText.label": "Search term for matchcode use",
+                    "type": "cds.String",
+                    "length": 20,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false,
+                    "@Analytics.dimension": true
+                }
+            },
+            "@ObjectModel.supportedCapabilities": [
+                {
+                    "#": "SQL_DATA_SOURCE"
+                },
+                {
+                    "#": "LANGUAGE_DEPENDENT_TEXT"
+                }
+            ],
+            "@EndUserText.label": "Cost Center Text",
+            "@ObjectModel.modelingPattern": {
+                "#": "LANGUAGE_DEPENDENT_TEXT"
+            },
+            "_meta": {
+                "dependencies": {
+                    "folderAssignment": "Folder_JPJGTDPT"
+                }
+            }
+        }
+    },
+    "version": {
+        "csn": "1.0"
+    },
+    "meta": {
+        "creator": "CDS Compiler v1.19.2"
+    },
+    "dataflows": {
+        "DF_M_0COSTCENTER_TEXT_2": {
+            "kind": "sap.dis.dataflow",
+            "@EndUserText.label": "Cost center text data flow",
+            "contents": {
+                "properties": {},
+                "metadata": {
+                    "dwc-isPrimaryKeysProcessed": true,
+                    "dwc-restartOnFail": false
+                },
+                "parameters": {},
+                "parameterMapping": {},
+                "description": "DF_M_0COSTCENTER_TEXT_2",
+                "processes": {
+                    "source1": {
+                        "component": "com.sap.database.table.consumer",
+                        "metadata": {
+                            "label": "RT_M_0COSTCENTER_TEXT_2",
+                            "x": 12,
+                            "y": 12,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "service": "HANA",
+                                "hanaConnection": {
+                                    "configurationType": "Configuration Manager",
+                                    "connectionID": "$DWC"
+                                },
+                                "qualifiedName": "RT_M_0COSTCENTER_TEXT_2",
+                                "dwcEntity": "RT_M_0COSTCENTER_TEXT_2",
+                                "remoteObjectType": "TABLE",
+                                "fetchSize": 1000,
+                                "forceFetchSize": false,
+                                "failOnStringTruncation": true
+                            },
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source1_outTable"
+                                }
+                            ]
+                        }
+                    },
+                    "projection1": {
+                        "component": "com.sap.dataflow.projection",
+                        "metadata": {
+                            "label": "Projection 1",
+                            "x": 182,
+                            "y": 12,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "attributeMappings": [
+                                    {
+                                        "target": "LANGU",
+                                        "expression": "\"LANGU\""
+                                    },
+                                    {
+                                        "target": "KOKRS",
+                                        "expression": "\"KOKRS\""
+                                    },
+                                    {
+                                        "target": "KOSTL",
+                                        "expression": "\"KOSTL\""
+                                    },
+                                    {
+                                        "target": "DATETO",
+                                        "expression": "\"DATETO\""
+                                    },
+                                    {
+                                        "target": "DATEFROM",
+                                        "expression": "\"DATEFROM\""
+                                    },
+                                    {
+                                        "target": "TXTSH",
+                                        "expression": "\"TXTSH\""
+                                    },
+                                    {
+                                        "target": "TXTMD",
+                                        "expression": "\"TXTMD\""
+                                    },
+                                    {
+                                        "target": "TXTMC",
+                                        "expression": "\"TXTMC\""
+                                    },
+                                    {
+                                        "target": "CC_DATE_FROM",
+                                        "expression": "TO_DATE(\"DATEFROM\")"
+                                    },
+                                    {
+                                        "target": "CC_DATE_TO",
+                                        "expression": "TO_DATE(\"DATETO\")"
+                                    }
+                                ]
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source1_outTable"
+                                }
+                            ],
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection1_outTable"
+                                }
+                            ]
+                        }
+                    },
+                    "target1": {
+                        "component": "com.sap.database.table.producer",
+                        "metadata": {
+                            "label": "LT_M_0COSTCENTER_TEXT_2",
+                            "x": 352,
+                            "y": 12,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "service": "HANA",
+                                "hanaConnection": {
+                                    "configurationType": "Configuration Manager",
+                                    "connectionID": "$DWC"
+                                },
+                                "qualifiedName": "LT_M_0COSTCENTER_TEXT_2",
+                                "dwcEntity": "LT_M_0COSTCENTER_TEXT_2",
+                                "remoteObjectType": "TABLE",
+                                "fetchSize": 1000,
+                                "forceFetchSize": false,
+                                "failOnStringTruncation": true,
+                                "mode": "append",
+                                "upsert": true,
+                                "batchSize": 1000,
+                                "forceBatchSize": false,
+                                "attributeMappings": [
+                                    {
+                                        "expression": "\"LANGU\"",
+                                        "target": "LANGU"
+                                    },
+                                    {
+                                        "expression": "\"KOKRS\"",
+                                        "target": "KOKRS"
+                                    },
+                                    {
+                                        "expression": "\"KOSTL\"",
+                                        "target": "KOSTL"
+                                    },
+                                    {
+                                        "expression": "\"TXTSH\"",
+                                        "target": "TXTSH"
+                                    },
+                                    {
+                                        "expression": "\"TXTMD\"",
+                                        "target": "TXTMD"
+                                    },
+                                    {
+                                        "expression": "\"TXTMC\"",
+                                        "target": "TXTMC"
+                                    },
+                                    {
+                                        "expression": "\"CC_DATE_FROM\"",
+                                        "target": "DATEFROM"
+                                    },
+                                    {
+                                        "expression": "\"CC_DATE_TO\"",
+                                        "target": "DATETO"
+                                    }
+                                ],
+                                "hanaAdaptedDataset": {
+                                    "schema": {
+                                        "genericType": "TABLE",
+                                        "tableBasedRepresentation": {
+                                            "attributes": [
+                                                {
+                                                    "name": "LANGU",
+                                                    "templateType": "string",
+                                                    "length": 1
+                                                },
+                                                {
+                                                    "name": "KOKRS",
+                                                    "templateType": "string",
+                                                    "length": 4
+                                                },
+                                                {
+                                                    "name": "KOSTL",
+                                                    "templateType": "string",
+                                                    "length": 10
+                                                },
+                                                {
+                                                    "name": "DATETO",
+                                                    "templateType": "date"
+                                                },
+                                                {
+                                                    "name": "DATEFROM",
+                                                    "templateType": "date"
+                                                },
+                                                {
+                                                    "name": "TXTSH",
+                                                    "templateType": "string",
+                                                    "length": 20
+                                                },
+                                                {
+                                                    "name": "TXTMD",
+                                                    "templateType": "string",
+                                                    "length": 40
+                                                },
+                                                {
+                                                    "name": "TXTMC",
+                                                    "templateType": "string",
+                                                    "length": 20
+                                                }
+                                            ],
+                                            "uniqueKeys": [
+                                                {
+                                                    "attributeReferences": [
+                                                        "LANGU",
+                                                        "KOKRS",
+                                                        "KOSTL",
+                                                        "DATETO"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection1_outTable"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "groups": [],
+                "connections": [
+                    {
+                        "metadata": {
+                            "points": "132,42 178.5,42"
+                        },
+                        "src": {
+                            "port": "outTable",
+                            "process": "source1"
+                        },
+                        "tgt": {
+                            "port": "inTable",
+                            "process": "projection1"
+                        }
+                    },
+                    {
+                        "metadata": {
+                            "points": "302,42 348.5,42"
+                        },
+                        "src": {
+                            "port": "outTable",
+                            "process": "projection1"
+                        },
+                        "tgt": {
+                            "port": "inTable",
+                            "process": "target1"
+                        }
+                    }
+                ],
+                "inports": {},
+                "outports": {},
+                "vTypes": {
+                    "scalar": {
+                        "string_1": {
+                            "name": "string_1",
+                            "description": "String(1)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 1
+                        },
+                        "string_4": {
+                            "name": "string_4",
+                            "description": "String(4)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 4
+                        },
+                        "string_10": {
+                            "name": "string_10",
+                            "description": "String(10)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 10
+                        },
+                        "string_8": {
+                            "name": "string_8",
+                            "description": "String(8)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 8
+                        },
+                        "string_20": {
+                            "name": "string_20",
+                            "description": "String(20)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 20
+                        },
+                        "string_40": {
+                            "name": "string_40",
+                            "description": "String(40)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 40
+                        }
+                    },
+                    "structure": {},
+                    "table": {
+                        "source1_outTable": {
+                            "name": "source1_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "LANGU": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_1"
+                                        }
+                                    },
+                                    {
+                                        "KOKRS": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_4"
+                                        }
+                                    },
+                                    {
+                                        "KOSTL": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "DATETO": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "DATEFROM": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "TXTSH": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_20"
+                                        }
+                                    },
+                                    {
+                                        "TXTMD": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_40"
+                                        }
+                                    },
+                                    {
+                                        "TXTMC": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_20"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "projection1_outTable": {
+                            "name": "projection1_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "LANGU": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_1"
+                                        }
+                                    },
+                                    {
+                                        "KOKRS": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_4"
+                                        }
+                                    },
+                                    {
+                                        "KOSTL": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "DATETO": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "DATEFROM": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "TXTSH": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_20"
+                                        }
+                                    },
+                                    {
+                                        "TXTMD": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_40"
+                                        }
+                                    },
+                                    {
+                                        "TXTMC": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_20"
+                                        }
+                                    },
+                                    {
+                                        "CC_DATE_FROM": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "com.sap.core.date"
+                                        }
+                                    },
+                                    {
+                                        "CC_DATE_TO": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "com.sap.core.date"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "sources": {
+                "RT_M_0COSTCENTER_TEXT_2": {
+                    "elements": {
+                        "LANGU": {},
+                        "KOKRS": {},
+                        "KOSTL": {},
+                        "DATETO": {},
+                        "DATEFROM": {},
+                        "TXTSH": {},
+                        "TXTMD": {},
+                        "TXTMC": {}
+                    }
+                }
+            },
+            "targets": {
+                "LT_M_0COSTCENTER_TEXT_2": {
+                    "elements": {
+                        "LANGU": {},
+                        "KOKRS": {},
+                        "KOSTL": {},
+                        "TXTSH": {},
+                        "TXTMD": {},
+                        "TXTMC": {},
+                        "DATEFROM": {},
+                        "DATETO": {}
+                    }
+                }
+            },
+            "connections": {}
+        }
+    },
+    "$version": "1.0"
+}
