@@ -1,0 +1,125 @@
+import os
+import re
+import json
+import pandas as pd
+from flask import Flask, request, jsonify
+from dotenv import load_dotenv
+from langchain.prompts import PromptTemplate
+from gen_ai_hub.proxy.langchain.openai import ChatOpenAI
+from CDS_JSON_PROMPT import CDS_JSON_PROMPT
+
+# Load environment variables
+load_dotenv()
+
+client_id = os.getenv("AICORE_CLIENT_ID")
+auth_url = os.getenv("AICORE_AUTH_URL")
+client_secret = os.getenv("AICORE_CLIENT_SECRET")
+resource_group = os.getenv("AICORE_RESOURCE_GROUP")
+base_url = os.getenv("AICORE_BASE_URL")
+deployment_id = os.getenv("DEPLOYMENT_ID")
+
+# Initialize Flask
+app = Flask(__name__)
+
+# Initialize LLM
+llm = ChatOpenAI(deployment_id=deployment_id)
+
+# ---------- API ROUTE ----------
+@app.route("/generate-json", methods=["POST"])
+def generate_json():
+    csv_path = None
+    output_path = None
+
+    try:
+        # --------------------------
+        # 1. Read Input Parameters
+        # --------------------------
+        csv_path = request.json.get("csv_path")
+        
+
+        if not csv_path:
+            return jsonify({"error": "csv_path required"}), 400
+
+
+        json_path1 = r"C:\Users\laksh\Downloads\BW-DS\prompt_input\json\DF_M_0COSTCENTER_TEXT.json"
+        json_path2 = r"C:\Users\laksh\Downloads\BW-DS\prompt_input\json\DF_M_0FUNCT_LOC_TEXT.json"
+        # --------------------------
+        # 2. Read CSV + JSON Inputs
+        # --------------------------
+        df = pd.read_csv(csv_path)
+        csv_data = df.to_string(index=False)
+
+        with open(json_path1, "r", encoding="utf-8") as f:
+            json_input1 = json.load(f)
+
+        with open(json_path2, "r", encoding="utf-8") as f:
+            json_input2 = json.load(f)
+
+        # --------------------------
+        # 3. Build Prompt
+        # --------------------------
+        prompt_template = PromptTemplate(
+            input_variables=["csv_data", "json_input1", "json_input2"],
+            template=CDS_JSON_PROMPT
+        )
+
+        chain = prompt_template | llm
+
+        response = chain.invoke({
+            "csv_data": csv_data,
+            "json_input1": json_input1,
+            "json_input2": json_input2
+        })
+
+        llm_text = response.content.strip()
+
+        # Remove surrounding ```json ``` blocks if present
+        if llm_text.startswith("```json"):
+            llm_text = re.sub(r"^```[a-zA-Z]*\n", "", llm_text)
+            llm_text = re.sub(r"\n```$", "", llm_text)
+
+        json_output = json.loads(llm_text)
+
+        # --------------------------
+        # 4. Save Output JSON
+        # --------------------------
+        file_name = os.path.basename(csv_path)
+        base_name = os.path.splitext(file_name)[0]
+        output_file = f"{base_name}.json"
+
+        if "Data flow" in csv_path:
+            output_folder = r"C:\Users\laksh\Downloads\route_bw\BW\Data flow\Output\json"
+        else:
+            output_folder = r"C:\Users\laksh\Downloads\route_bw\BW\Output"
+
+        os.makedirs(output_folder, exist_ok=True)
+        output_path = os.path.join(output_folder, output_file)
+
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(json_output, f, indent=4, ensure_ascii=False)
+
+
+        response_data = {
+            "message": "JSON generated successfully",
+            "output_path": output_path,
+            "output_json": json_output
+        }
+        status_code = 200
+
+    except Exception as e:
+        response_data = {"error": str(e)}
+        status_code = 500
+
+    finally:
+        print("Request completed.")
+        if csv_path:
+            print(f"Processed CSV: {csv_path}")
+        if output_path:
+            print(f"Output saved to: {output_path}")
+
+        return jsonify(response_data), status_code
+    
+
+# Run the Flask server
+if __name__ == "__main__":
+    app.run(port=5001, debug=True)

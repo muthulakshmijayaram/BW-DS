@@ -1,0 +1,569 @@
+{
+  "definitions": {
+    "LT_M_0FUNCT_LOC_TEXT": {
+      "kind": "entity",
+      "elements": {
+        "LANGU": {
+          "@EndUserText.label": "Language Key",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "key": true,
+          "notNull": true,
+          "@Semantics.language": true
+        },
+        "TPLNR": {
+          "@EndUserText.label": "Functional Location",
+          "type": "cds.String",
+          "length": 30,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "key": true,
+          "notNull": true,
+          "@ObjectModel.text.element": [
+            {
+              "=": "TXTMD"
+            }
+          ]
+        },
+        "TXTMD": {
+          "@EndUserText.label": "Description of functional location",
+          "type": "cds.String",
+          "length": 40,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false,
+          "@Semantics.text": true
+        },
+        "ERDAT": {
+          "@EndUserText.label": "Date on Which Record Was Created",
+          "type": "cds.Date",
+          "@DataWarehouse.native.dataType": "VARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "AEDAT": {
+          "@EndUserText.label": "Date of Last Change",
+          "type": "cds.Date",
+          "@DataWarehouse.native.dataType": "VARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "SQL_DATA_SOURCE"
+        },
+        {
+          "#": "LANGUAGE_DEPENDENT_TEXT"
+        }
+      ],
+      "@EndUserText.label": "Functional Location Text",
+      "@ObjectModel.modelingPattern": {
+        "#": "LANGUAGE_DEPENDENT_TEXT"
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_JPJGTDPT"
+        }
+      }
+    },
+    "RT_M_0FUNCT_LOC_TEXT": {
+      "kind": "entity",
+      "@DataWarehouse.remote.connection": "EC3",
+      "@DataWarehouse.remote.entity": "SAPI.0FUNCT_LOC_TEXT",
+      "elements": {
+        "LANGU": {
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "@EndUserText.label": "Language Key",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "TPLNR": {
+          "type": "cds.String",
+          "length": 30,
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "@EndUserText.label": "Functional Location",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "TXTMD": {
+          "type": "cds.String",
+          "length": 40,
+          "@DataWarehouse.capabilities.filter.enabled": false,
+          "@EndUserText.label": "Description of functional location",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "ERDAT": {
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "@EndUserText.label": "Date on Which Record Was Created",
+          "@DataWarehouse.native.dataType": "VARCHAR"
+        },
+        "AEDAT": {
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ],
+          "@EndUserText.label": "Date of Last Change",
+          "@DataWarehouse.native.dataType": "VARCHAR"
+        }
+      },
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        },
+        {
+          "#": "SQL_DATA_SOURCE"
+        }
+      ],
+      "@EndUserText.label": "Functional Location Text",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_BYHLVUXL"
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "dataflows": {
+    "DF_M_0FUNCT_LOC_TEXT": {
+      "kind": "sap.dis.dataflow",
+      "@EndUserText.label": "Function Location Text Data Flow",
+      "contents": {
+        "properties": {},
+        "metadata": {
+          "dwc-isPrimaryKeysProcessed": true,
+          "dwc-restartOnFail": false
+        },
+        "parameters": {},
+        "parameterMapping": {},
+        "description": "DF_M_0FUNCT_LOC_TEXT",
+        "processes": {
+          "source1": {
+            "component": "com.sap.database.table.consumer",
+            "metadata": {
+              "label": "RT_M_0FUNCT_LOC_TEXT",
+              "x": 12,
+              "y": 12,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "RT_M_0FUNCT_LOC_TEXT",
+                "dwcEntity": "RT_M_0FUNCT_LOC_TEXT",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true
+              },
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                }
+              ]
+            }
+          },
+          "projection1": {
+            "component": "com.sap.dataflow.projection",
+            "metadata": {
+              "label": "Projection 1",
+              "x": 182,
+              "y": 12,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "attributeMappings": [
+                  {
+                    "target": "LANGU",
+                    "expression": "\"LANGU\""
+                  },
+                  {
+                    "target": "TPLNR",
+                    "expression": "\"TPLNR\""
+                  },
+                  {
+                    "target": "TXTMD",
+                    "expression": "\"TXTMD\""
+                  },
+                  {
+                    "target": "ERDAT",
+                    "expression": "\"ERDAT\""
+                  },
+                  {
+                    "target": "AEDAT",
+                    "expression": "\"AEDAT\""
+                  },
+                  {
+                    "target": "CC_ERDAT",
+                    "expression": "TO_DATE(\"ERDAT\")"
+                  },
+                  {
+                    "target": "CC_AEDAT",
+                    "expression": "TO_DATE(\"AEDAT\")"
+                  }
+                ]
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                }
+              ],
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          },
+          "target1": {
+            "component": "com.sap.database.table.producer",
+            "metadata": {
+              "label": "LT_M_0FUNCT_LOC_TEXT",
+              "x": 352,
+              "y": 12,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "LT_M_0FUNCT_LOC_TEXT",
+                "dwcEntity": "LT_M_0FUNCT_LOC_TEXT",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true,
+                "mode": "append",
+                "upsert": true,
+                "batchSize": 1000,
+                "forceBatchSize": false,
+                "attributeMappings": [
+                  {
+                    "expression": "\"LANGU\"",
+                    "target": "LANGU"
+                  },
+                  {
+                    "expression": "\"TPLNR\"",
+                    "target": "TPLNR"
+                  },
+                  {
+                    "expression": "\"TXTMD\"",
+                    "target": "TXTMD"
+                  },
+                  {
+                    "expression": "\"CC_ERDAT\"",
+                    "target": "ERDAT"
+                  },
+                  {
+                    "expression": "\"CC_AEDAT\"",
+                    "target": "AEDAT"
+                  }
+                ],
+                "hanaAdaptedDataset": {
+                  "schema": {
+                    "genericType": "TABLE",
+                    "tableBasedRepresentation": {
+                      "attributes": [
+                        {
+                          "name": "LANGU",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "TPLNR",
+                          "templateType": "string",
+                          "length": 30
+                        },
+                        {
+                          "name": "TXTMD",
+                          "templateType": "string",
+                          "length": 40
+                        },
+                        {
+                          "name": "ERDAT",
+                          "templateType": "date"
+                        },
+                        {
+                          "name": "AEDAT",
+                          "templateType": "date"
+                        }
+                      ],
+                      "uniqueKeys": [
+                        {
+                          "attributeReferences": [
+                            "LANGU",
+                            "TPLNR"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          }
+        },
+        "groups": [],
+        "connections": [
+          {
+            "metadata": {
+              "points": "132,42 178.5,42"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "source1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "projection1"
+            }
+          },
+          {
+            "metadata": {
+              "points": "302.5,42 348.5,42"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "projection1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "target1"
+            }
+          }
+        ],
+        "inports": {},
+        "outports": {},
+        "vTypes": {
+          "scalar": {
+            "string_1": {
+              "name": "string_1",
+              "description": "String(1)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 1
+            },
+            "string_30": {
+              "name": "string_30",
+              "description": "String(30)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 30
+            },
+            "string_40": {
+              "name": "string_40",
+              "description": "String(40)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 40
+            },
+            "string_8": {
+              "name": "string_8",
+              "description": "String(8)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 8
+            }
+          },
+          "structure": {},
+          "table": {
+            "source1_outTable": {
+              "name": "source1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "LANGU": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "TPLNR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "TXTMD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_40"
+                    }
+                  },
+                  {
+                    "ERDAT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "AEDAT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  }
+                ]
+              }
+            },
+            "projection1_outTable": {
+              "name": "projection1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "LANGU": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "TPLNR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "TXTMD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_40"
+                    }
+                  },
+                  {
+                    "ERDAT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "AEDAT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "CC_ERDAT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "com.sap.core.date"
+                    }
+                  },
+                  {
+                    "CC_AEDAT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "com.sap.core.date"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "sources": {
+        "RT_M_0FUNCT_LOC_TEXT": {
+          "elements": {
+            "LANGU": {},
+            "TPLNR": {},
+            "TXTMD": {},
+            "ERDAT": {},
+            "AEDAT": {}
+          }
+        }
+      },
+      "targets": {
+        "LT_M_0FUNCT_LOC_TEXT": {
+          "elements": {
+            "LANGU": {},
+            "TPLNR": {},
+            "TXTMD": {},
+            "ERDAT": {},
+            "AEDAT": {}
+          }
+        }
+      },
+      "connections": {}
+    }
+  },
+  "$version": "1.0"
+}
