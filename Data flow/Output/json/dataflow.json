@@ -86,9 +86,9 @@
                     "@EndUserText.label": "Long description",
                     "type": "cds.String",
                     "length": 60,
+                    "@Semantics.text": true,
                     "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false,
-                    "@Semantics.text": true
+                    "@DataWarehouse.capabilities.filter.enabled": false
                 },
                 "CC_TEXT": {
                     "@EndUserText.label": "Text Column",
@@ -196,7 +196,7 @@
                                         "target": "TXTLG"
                                     },
                                     {
-                                        "expression": "\"CC_TEXT\"",
+                                        "expression": "'EN'",
                                         "target": "CC_TEXT"
                                     }
                                 ],

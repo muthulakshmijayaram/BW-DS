@@ -1,0 +1,17 @@
+Source,,,,Projection,,,,,,,Target,,,,,
+,,,,,,,,,,,,,,,,
+Business Name,Job Text,,,,,,,,,Busniess Name,Job Text,,,,,
+Technical Name,RT_M_0JOB_TEXT_2,,,,,,,,,Technical Name,LT_M_0JOB_TEXT_2,,,,,
+,,,,,,,,,,,,,,,,
+Connection Name,EC3,,,,,,,,,,,,,,,
+DataSource Name,SAPI.0JOB_TEXT,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+Busniness Name,Technical Name,Data Type,,Label,Columns,Data Type,,,,Key,Business Name,Technical Name,Data Type,Semantic Type,Text/Association,Not Null
+Language Key,LANGU,String(1),,Projetion 1,LANGU,String(1),,,,X,Language Key,LANGU,String(1),Language,,X
+Key Field for DataSource for Text,KEY1,String(60),,,KEY1,String(60),,,,X,Key Field for DataSource for Text,KEY1,String(60),,TXTMD,X
+Valid-to date,DATETO,String(8),,,DATETO,String(8),,,,X,Valid-to date,DATETO,Date,,,X
+Valid-From Date,DATEFROM,String(8),,,DATEFROM,String(8),,,,,Valid-From Date,DATEFROM,Date,,,
+Short description,TXTSH,String(20),,,TXTSH,String(20),,,,,Short description,TXTSH,String(20),,,
+Medium description,TXTMD,String(40),,,TXTMD,String(40),,,,,Medium description,TXTMD,String(40),Text,,
+,,,,,CC_DATETO,Date,Calculated Columns,"To_Date(""DATETO"")",,,,,,,,
+,,,,,CC_DATEFROM,Date,Calculated Columns,"To_Date(""DATEFROM"")",,,,,,,,

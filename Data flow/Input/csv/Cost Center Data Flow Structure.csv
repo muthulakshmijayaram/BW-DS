@@ -1,0 +1,19 @@
+Source,,,,Projection,,,,,,,Target,,,,,
+,,,,,,,,,,,,,,,,
+Business Name,Cost Center Text,,,,,,,,,Busniess Name,Cost Center Text,,,,,
+Technical Name,RT_M_0COSTCENTER_TEXT_2,,,,,,,,,Technical Name,LT_M_0COSTCENTER_TEXT_2,,,,,
+,,,,,,,,,,,,,,,,
+Connection Name,EC3,,,,,,,,,,,,,,,
+DataSource Name,SAPI.0COSTCENTER_TEXT,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+Busniness Name,Technical Name,Data Type,,Label,Columns,Data Type,,,,Key,Business Name,Technical Name,Data Type,Semantic Type,Text/Association,Not Null
+Language Key,LANGU,String(1),,Projetion 1,LANGU,String(1),,,,X,Language Key,LANGU,String(1),Language,,X
+Controlling Area,KOKRS,String(4),,,KOKRS,String(4),,,,X,Controlling Area,KOKRS,String(4),,,X
+Cost Center,KOSTL,String(10),,,KOSTL,String(10),,,,X,Cost Center,KOSTL,String(10),,TXTMD,X
+Valid-to date,DATETO,String(8),,,DATETO,String(8),,,,X,Valid-to date,DATETO,Date,,,X
+Valid-From Date,DATEFROM,String(8),,,DATEFROM,String(8),,,,,Valid-From Date,DATEFROM,Date,,,
+Short description,TXTSH,String(20),,,TXTSH,String(20),,,,,Short description,TXTSH,String(20),,,
+Medium description,TXTMD,String(40),,,TXTMD,String(40),,,,,Medium description,TXTMD,String(40),Text,,
+Search term for matchcode use,TXTMC,String(20),,,TXTMC,String(20),,,,,Search term for matchcode use,TXTMC,String(20),,,
+,,,,,CC_DATE_FROM,Date,Calculated Columns,"TO_DATE(""DATEFROM"")",,,,,,,,
+,,,,,CC_DATE_TO,Date,Calculated Columns,"TO_DATE(""DATEFROM"")",,,,,,,,

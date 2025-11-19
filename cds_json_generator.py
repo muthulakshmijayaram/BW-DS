@@ -20,16 +20,16 @@ deployment_id = os.getenv("DEPLOYMENT_ID")
 
 llm = ChatOpenAI(deployment_id=deployment_id)
 #Output CSV
-csv_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Input\csv\dataflow.csv"
+csv_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Input\csv\Job Text Data Flow Structure.csv"
 df1=pd.read_csv(csv_path)
 csv_output = df1.to_string(index=False)
 #Input JSON
 
-json_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Input\json\DF_M_0SALARYTY_TEXT.json"
+json_path = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\prompt_input\json\DF_M_0COSTCENTER_TEXT.json"
 with open(json_path, "r", encoding="utf-8") as f:
     json_input = json.load(f)
 #Input CSV
-csv_inp = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Input\csv\Data Flow Structure.csv"
+csv_inp = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Input\csv\Cost Center Data Flow Structure.csv"
 df = pd.read_csv(csv_inp)
 csv_input = df.to_string(index=False)
 
@@ -69,12 +69,8 @@ file_name = os.path.basename(csv_path)
 base_name = os.path.splitext(file_name)[0]
 output_file = f"{base_name}.json"
 
-if "Text" in csv_path:
-    output_folder = r"Local_Table\Output\Text\json"
-elif "Data flow" in csv_path:
-    output_folder = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Output\json"
-else:
-    output_folder = r"Local_Table\Output\json"
+output_folder = r"C:\Users\Muthulakshmi Jayaram\Desktop\bw_code\Data flow\Output\json"
+
 
 os.makedirs(output_folder, exist_ok=True)
 output_path = os.path.join(output_folder, output_file)
