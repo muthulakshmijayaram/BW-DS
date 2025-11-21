@@ -1,0 +1,430 @@
+{
+  "definitions": {
+    "RT_M_ACCT_TYPE_TEXT_2": {
+      "kind": "entity",
+      "@EndUserText.label": "Account Type",
+      "@ObjectModel.supportedCapabilities": [
+        { "#": "SQL_DATA_SOURCE" },
+        { "#": "DATA_STRUCTURE" }
+      ],
+      "@ObjectModel.modelingPattern": { "#": "DATA_STRUCTURE" },
+      "@DataWarehouse.remote.connection": "EC3",
+      "@DataWarehouse.remote.entity": "SAPI.0ACCT_TYPE_TEXT",
+      "elements": {
+        "LANGU": {
+          "@EndUserText.label": "Language Key",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            { "#": "EQUAL" },
+            { "#": "BETWEEN" }
+          ]
+        },
+        "KEY1": {
+          "@EndUserText.label": "Key Field for DataSource for Text",
+          "type": "cds.String",
+          "length": 60,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            { "#": "EQUAL" },
+            { "#": "BETWEEN" }
+          ]
+        },
+        "TXTLG": {
+          "@EndUserText.label": "Long description",
+          "type": "cds.String",
+          "length": 60,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_BYHLVUXL"
+        }
+      }
+    },
+    "LT_M_ACCT_TYPE_TEXT_2": {
+      "kind": "entity",
+      "@EndUserText.label": "Account Type",
+      "@ObjectModel.supportedCapabilities": [
+        { "#": "SQL_DATA_SOURCE" },
+        { "#": "LANGUAGE_DEPENDENT_TEXT" }
+      ],
+      "@ObjectModel.modelingPattern": { "#": "LANGUAGE_DEPENDENT_TEXT" },
+      "elements": {
+        "LANGU": {
+          "@EndUserText.label": "Language Key",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            { "#": "EQUAL" },
+            { "#": "BETWEEN" }
+          ],
+          "key": true,
+          "notNull": true,
+          "@Semantics.language": true
+        },
+        "KEY1": {
+          "@EndUserText.label": "Key Field for DataSource for Text",
+          "type": "cds.String",
+          "length": 60,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            { "#": "EQUAL" },
+            { "#": "BETWEEN" }
+          ],
+          "key": true,
+          "notNull": true
+        },
+        "TXTLG": {
+          "@EndUserText.label": "Long description",
+          "type": "cds.String",
+          "length": 60,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false,
+          "@Semantics.text": true
+        },
+        "CC_TEXT": {
+          "@EndUserText.label": "Text Column",
+          "type": "cds.String",
+          "length": 20,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        }
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_JPJGTDPT"
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "dataflows": {
+    "DF_M_ACCT_TYPE_TEXT_2": {
+      "kind": "sap.dis.dataflow",
+      "@EndUserText.label": "Account Type Text Data Flow",
+      "contents": {
+        "properties": {},
+        "metadata": {
+          "dwc-isPrimaryKeysProcessed": true,
+          "dwc-restartOnFail": false
+        },
+        "parameters": {},
+        "parameterMapping": {},
+        "description": "DF_M_ACCT_TYPE_TEXT_2",
+        "processes": {
+          "source1": {
+            "component": "com.sap.database.table.consumer",
+            "metadata": {
+              "label": "RT_M_ACCT_TYPE_TEXT_2",
+              "x": 12,
+              "y": 12,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "RT_M_ACCT_TYPE_TEXT_2",
+                "dwcEntity": "RT_M_ACCT_TYPE_TEXT_2",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true
+              },
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                }
+              ]
+            }
+          },
+          "projection1": {
+            "component": "com.sap.dataflow.projection",
+            "metadata": {
+              "label": "Projection 1",
+              "x": 182,
+              "y": 12,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "attributeMappings": [
+                  {
+                    "target": "LANGU",
+                    "expression": "\"LANGU\""
+                  },
+                  {
+                    "target": "KEY1",
+                    "expression": "\"KEY1\""
+                  },
+                  {
+                    "target": "TXTLG",
+                    "expression": "\"TXTLG\""
+                  },
+                  {
+                    "target": "CC_TEXT",
+                    "expression": "\"CC_TEXT\""
+                  }
+                ]
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                }
+              ],
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          },
+          "target1": {
+            "component": "com.sap.database.table.producer",
+            "metadata": {
+              "label": "LT_M_ACCT_TYPE_TEXT_2",
+              "x": 352,
+              "y": 12,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "LT_M_ACCT_TYPE_TEXT_2",
+                "dwcEntity": "LT_M_ACCT_TYPE_TEXT_2",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true,
+                "mode": "append",
+                "upsert": true,
+                "batchSize": 1000,
+                "forceBatchSize": false,
+                "attributeMappings": [
+                  {
+                    "expression": "\"LANGU\"",
+                    "target": "LANGU"
+                  },
+                  {
+                    "expression": "\"KEY1\"",
+                    "target": "KEY1"
+                  },
+                  {
+                    "expression": "\"TXTLG\"",
+                    "target": "TXTLG"
+                  },
+                  {
+                    "expression": "\"CC_TEXT\"",
+                    "target": "CC_TEXT"
+                  }
+                ],
+                "hanaAdaptedDataset": {
+                  "schema": {
+                    "genericType": "TABLE",
+                    "tableBasedRepresentation": {
+                      "attributes": [
+                        {
+                          "name": "LANGU",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "KEY1",
+                          "templateType": "string",
+                          "length": 60
+                        },
+                        {
+                          "name": "TXTLG",
+                          "templateType": "string",
+                          "length": 60
+                        },
+                        {
+                          "name": "CC_TEXT",
+                          "templateType": "string",
+                          "length": 20
+                        }
+                      ],
+                      "uniqueKeys": [
+                        {
+                          "attributeReferences": [
+                            "LANGU",
+                            "KEY1"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          }
+        },
+        "groups": [],
+        "connections": [
+          {
+            "metadata": {
+              "points": "132,42 178.5,42"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "source1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "projection1"
+            }
+          },
+          {
+            "metadata": {
+              "points": "302,42 348.5,42"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "projection1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "target1"
+            }
+          }
+        ],
+        "inports": {},
+        "outports": {},
+        "vTypes": {
+          "scalar": {
+            "string_1": {
+              "name": "string_1",
+              "description": "String(1)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 1
+            },
+            "string_60": {
+              "name": "string_60",
+              "description": "String(60)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 60
+            },
+            "string_20": {
+              "name": "string_20",
+              "description": "String(20)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 20
+            }
+          },
+          "structure": {},
+          "table": {
+            "source1_outTable": {
+              "name": "source1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "LANGU": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KEY1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_60"
+                    }
+                  },
+                  {
+                    "TXTLG": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_60"
+                    }
+                  }
+                ]
+              }
+            },
+            "projection1_outTable": {
+              "name": "projection1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "LANGU": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KEY1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_60"
+                    }
+                  },
+                  {
+                    "TXTLG": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_60"
+                    }
+                  },
+                  {
+                    "CC_TEXT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "sources": {
+        "RT_M_ACCT_TYPE_TEXT_2": {
+          "elements": {
+            "LANGU": {},
+            "KEY1": {},
+            "TXTLG": {}
+          }
+        }
+      },
+      "targets": {
+        "LT_M_ACCT_TYPE_TEXT_2": {
+          "elements": {
+            "LANGU": {},
+            "KEY1": {},
+            "TXTLG": {},
+            "CC_TEXT": {}
+          }
+        }
+      },
+      "connections": {}
+    }
+  },
+  "$version": "1.0"
+}

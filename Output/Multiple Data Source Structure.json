@@ -1,0 +1,920 @@
+{
+    "definitions": {
+        "RT_M_0GM_SPNSR_ATTR": {
+            "kind": "entity",
+            "@DataWarehouse.remote.connection": "EC3",
+            "@DataWarehouse.remote.entity": "SAPI.0GM_SPNSR_ATTR",
+            "elements": {
+                "UPDATES": {
+                    "@EndUserText.label": "Dates of Last Change",
+                    "type": "cds.String",
+                    "length": 8,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "SPONSOR": {
+                    "@EndUserText.label": "Grant Sponsor",
+                    "type": "cds.String",
+                    "length": 10,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "PARTNER": {
+                    "@EndUserText.label": "Business Partner Number",
+                    "type": "cds.String",
+                    "length": 10,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "CUSTOMER": {
+                    "@EndUserText.label": "Customer Number",
+                    "type": "cds.String",
+                    "length": 10,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "CURRENCY": {
+                    "@EndUserText.label": "Currency Key",
+                    "type": "cds.String",
+                    "length": 5,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "FISCVARNT": {
+                    "@EndUserText.label": "Fiscal Year Variant",
+                    "type": "cds.String",
+                    "length": 2,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "LD_CODE": {
+                    "@EndUserText.label": "Legislative District Code",
+                    "type": "cds.String",
+                    "length": 6,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                }
+            },
+            "@ObjectModel.supportedCapabilities": [
+                {
+                    "#": "SQL_DATA_SOURCE"
+                },
+                {
+                    "#": "DATA_STRUCTURE"
+                }
+            ],
+            "@EndUserText.label": "Sponsor Attr",
+            "@ObjectModel.modelingPattern": {
+                "#": "DATA_STRUCTURE"
+            },
+            "_meta": {
+                "dependencies": {
+                    "folderAssignment": "Folder_BYHLVUXL"
+                }
+            }
+        },
+        "RT_M_0GM_SPNSR_TEXT": {
+            "kind": "entity",
+            "@DataWarehouse.remote.connection": "EC3",
+            "@DataWarehouse.remote.entity": "SAPI.0GM_SPNSR_TEXT",
+            "elements": {
+                "UPDATES": {
+                    "@EndUserText.label": "Dates of Last Change",
+                    "type": "cds.String",
+                    "length": 8,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "SPONSOR": {
+                    "@EndUserText.label": "Grant Sponsor",
+                    "type": "cds.String",
+                    "length": 10,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.allowedExpressions": [
+                        {
+                            "#": "EQUAL"
+                        },
+                        {
+                            "#": "BETWEEN"
+                        }
+                    ]
+                },
+                "DESCRIPTION": {
+                    "@EndUserText.label": "Sponsor Description",
+                    "type": "cds.String",
+                    "length": 80,
+                    "@DataWarehouse.native.dataType": "NVARCHAR",
+                    "@DataWarehouse.capabilities.filter.enabled": false
+                }
+            },
+            "@ObjectModel.supportedCapabilities": [
+                {
+                    "#": "SQL_DATA_SOURCE"
+                },
+                {
+                    "#": "DATA_STRUCTURE"
+                }
+            ],
+            "@EndUserText.label": "Sponsor Text",
+            "@ObjectModel.modelingPattern": {
+                "#": "DATA_STRUCTURE"
+            },
+            "_meta": {
+                "dependencies": {
+                    "folderAssignment": "Folder_BYHLVUXL"
+                }
+            }
+        },
+        "SPONSER_EN": {
+            "kind": "entity",
+            "@ObjectModel.supportedCapabilities": [
+                {
+                    "#": "LANGUAGE_DEPENDENT_TEXT"
+                }
+            ],
+            "elements": {
+                "UPDATES": {
+                    "@EndUserText.label": "Dates of Last Change",
+                    "type": "cds.String",
+                    "length": 8,
+                    "key": true,
+                    "notNull": true
+                },
+                "SPONSOR": {
+                    "@EndUserText.label": "Grant Sponsor",
+                    "type": "cds.String",
+                    "length": 10,
+                    "key": true,
+                    "notNull": true
+                },
+                "PARTNER": {
+                    "@EndUserText.label": "Business Partner Number",
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "CUSTOMER": {
+                    "@EndUserText.label": "Customer Number",
+                    "type": "cds.String",
+                    "length": 10
+                },
+                "CURRENCY": {
+                    "@EndUserText.label": "Currency Key",
+                    "type": "cds.String",
+                    "length": 5
+                },
+                "FISCVARNT": {
+                    "@EndUserText.label": "Fiscal Year Variant",
+                    "type": "cds.String",
+                    "length": 2
+                },
+                "LD_CODE": {
+                    "@EndUserText.label": "Legislative District Code",
+                    "type": "cds.String",
+                    "length": 6
+                },
+                "DESCRIPTION": {
+                    "@EndUserText.label": "Sponsor Description",
+                    "type": "cds.String",
+                    "length": 80,
+                    "@Semantics.text": true
+                },
+                "LANGU": {
+                    "@EndUserText.label": "Language",
+                    "type": "cds.String",
+                    "length": 1,
+                    "key": true,
+                    "notNull": true,
+                    "@Semantics.language": true
+                }
+            },
+            "@EndUserText.label": "Sponsor Enrich",
+            "@ObjectModel.modelingPattern": {
+                "#": "LANGUAGE_DEPENDENT_TEXT"
+            },
+            "_meta": {
+                "dependencies": {
+                    "folderAssignment": null
+                }
+            }
+        }
+    },
+    "version": {
+        "csn": "1.0"
+    },
+    "meta": {
+        "creator": "CDS Compiler v1.19.2"
+    },
+    "dataflows": {
+        "DF_M_0GM_SPONSOR_EN": {
+            "kind": "sap.dis.dataflow",
+            "@EndUserText.label": "Sponsor Enrich Data Flow",
+            "contents": {
+                "properties": {},
+                "metadata": {
+                    "dwc-isPrimaryKeysProcessed": true,
+                    "dwc-restartOnFail": false
+                },
+                "parameters": {},
+                "parameterMapping": {},
+                "description": "DF_M_0GM_SPONSOR_EN",
+                "processes": {
+                    "source1": {
+                        "component": "com.sap.database.table.consumer",
+                        "metadata": {
+                            "label": "RT_M_0GM_SPNSR_ATTR",
+                            "x": 12,
+                            "y": 24,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "service": "HANA",
+                                "hanaConnection": {
+                                    "configurationType": "Configuration Manager",
+                                    "connectionID": "$DWC"
+                                },
+                                "qualifiedName": "RT_M_0GM_SPNSR_ATTR",
+                                "dwcEntity": "RT_M_0GM_SPNSR_ATTR",
+                                "remoteObjectType": "TABLE",
+                                "fetchSize": 1000,
+                                "forceFetchSize": false,
+                                "failOnStringTruncation": true
+                            },
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source1_outTable"
+                                }
+                            ]
+                        }
+                    },
+                    "source2": {
+                        "component": "com.sap.database.table.consumer",
+                        "metadata": {
+                            "label": "RT_M_0GM_SPNSR_TEXT",
+                            "x": 12,
+                            "y": 124,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "service": "HANA",
+                                "hanaConnection": {
+                                    "configurationType": "Configuration Manager",
+                                    "connectionID": "$DWC"
+                                },
+                                "qualifiedName": "RT_M_0GM_SPNSR_TEXT",
+                                "dwcEntity": "RT_M_0GM_SPNSR_TEXT",
+                                "remoteObjectType": "TABLE",
+                                "fetchSize": 1000,
+                                "forceFetchSize": false,
+                                "failOnStringTruncation": true
+                            },
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source2_outTable"
+                                }
+                            ]
+                        }
+                    },
+                    "join1": {
+                        "component": "com.sap.dataflow.join",
+                        "metadata": {
+                            "label": "Join 1",
+                            "x": 130,
+                            "y": 75,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "tableMappings": [
+                                    {
+                                        "source": "inTable1",
+                                        "attributeMappings": [
+                                            {
+                                                "source": "UPDATES",
+                                                "target": "UPDATES"
+                                            },
+                                            {
+                                                "source": "SPONSOR",
+                                                "target": "SPONSOR"
+                                            },
+                                            {
+                                                "source": "PARTNER",
+                                                "target": "PARTNER"
+                                            },
+                                            {
+                                                "source": "CUSTOMER",
+                                                "target": "CUSTOMER"
+                                            },
+                                            {
+                                                "source": "CURRENCY",
+                                                "target": "CURRENCY"
+                                            },
+                                            {
+                                                "source": "FISCVARNT",
+                                                "target": "FISCVARNT"
+                                            },
+                                            {
+                                                "source": "LD_CODE",
+                                                "target": "LD_CODE"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "source": "inTable2",
+                                        "attributeMappings": [
+                                            {
+                                                "source": "DESCRIPTION",
+                                                "target": "DESCRIPTION"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "joinDefinitions": [
+                                    {
+                                        "left": "inTable1",
+                                        "right": "inTable2",
+                                        "type": "INNER",
+                                        "joinOptions": {
+                                            "leftCache": "automatic",
+                                            "rightCache": "automatic",
+                                            "leftRank": 0,
+                                            "rightRank": 0
+                                        },
+                                        "condition": "\"inTable1\".\"UPDATES\" = \"inTable2\".\"UPDATES\" AND \"inTable1\".\"SPONSOR\" = \"inTable2\".\"SPONSOR\"",
+                                        "joinOptimizationType": "Automatic"
+                                    }
+                                ]
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable1",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source1_outTable"
+                                },
+                                {
+                                    "name": "inTable2",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source2_outTable"
+                                }
+                            ],
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.join1_outTable"
+                                }
+                            ]
+                        }
+                    },
+                    "projection1": {
+                        "component": "com.sap.dataflow.projection",
+                        "metadata": {
+                            "label": "Projection 1",
+                            "x": 265,
+                            "y": 75,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "attributeMappings": [
+                                    {
+                                        "target": "UPDATES",
+                                        "expression": "\"UPDATES\""
+                                    },
+                                    {
+                                        "target": "SPONSOR",
+                                        "expression": "\"SPONSOR\""
+                                    },
+                                    {
+                                        "target": "PARTNER",
+                                        "expression": "\"PARTNER\""
+                                    },
+                                    {
+                                        "target": "CUSTOMER",
+                                        "expression": "\"CUSTOMER\""
+                                    },
+                                    {
+                                        "target": "CURRENCY",
+                                        "expression": "\"CURRENCY\""
+                                    },
+                                    {
+                                        "target": "FISCVARNT",
+                                        "expression": "\"FISCVARNT\""
+                                    },
+                                    {
+                                        "target": "LD_CODE",
+                                        "expression": "\"LD_CODE\""
+                                    },
+                                    {
+                                        "target": "DESCRIPTION",
+                                        "expression": "\"DESCRIPTION\""
+                                    },
+                                    {
+                                        "target": "LANGU",
+                                        "expression": "'EN'"
+                                    }
+                                ]
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.join1_outTable"
+                                }
+                            ],
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection1_outTable"
+                                }
+                            ]
+                        }
+                    },
+                    "target1": {
+                        "component": "com.sap.database.table.producer",
+                        "metadata": {
+                            "label": "SPONSER_EN",
+                            "x": 400,
+                            "y": 75,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "service": "HANA",
+                                "hanaConnection": {
+                                    "configurationType": "Configuration Manager",
+                                    "connectionID": "$DWC"
+                                },
+                                "qualifiedName": "SPONSER_EN",
+                                "dwcEntity": "SPONSER_EN",
+                                "remoteObjectType": "TABLE",
+                                "fetchSize": 1000,
+                                "forceFetchSize": false,
+                                "failOnStringTruncation": true,
+                                "mode": "append",
+                                "upsert": true,
+                                "batchSize": 1000,
+                                "forceBatchSize": false,
+                                "attributeMappings": [
+                                    {
+                                        "expression": "\"UPDATES\"",
+                                        "target": "UPDATES"
+                                    },
+                                    {
+                                        "expression": "\"SPONSOR\"",
+                                        "target": "SPONSOR"
+                                    },
+                                    {
+                                        "expression": "\"PARTNER\"",
+                                        "target": "PARTNER"
+                                    },
+                                    {
+                                        "expression": "\"CUSTOMER\"",
+                                        "target": "CUSTOMER"
+                                    },
+                                    {
+                                        "expression": "\"CURRENCY\"",
+                                        "target": "CURRENCY"
+                                    },
+                                    {
+                                        "expression": "\"FISCVARNT\"",
+                                        "target": "FISCVARNT"
+                                    },
+                                    {
+                                        "expression": "\"LD_CODE\"",
+                                        "target": "LD_CODE"
+                                    },
+                                    {
+                                        "expression": "\"DESCRIPTION\"",
+                                        "target": "DESCRIPTION"
+                                    },
+                                    {
+                                        "expression": "\"LANGU\"",
+                                        "target": "LANGU"
+                                    }
+                                ],
+                                "hanaAdaptedDataset": {
+                                    "schema": {
+                                        "genericType": "TABLE",
+                                        "tableBasedRepresentation": {
+                                            "attributes": [
+                                                {
+                                                    "name": "UPDATES",
+                                                    "templateType": "string",
+                                                    "length": 8
+                                                },
+                                                {
+                                                    "name": "SPONSOR",
+                                                    "templateType": "string",
+                                                    "length": 10
+                                                },
+                                                {
+                                                    "name": "PARTNER",
+                                                    "templateType": "string",
+                                                    "length": 10
+                                                },
+                                                {
+                                                    "name": "CUSTOMER",
+                                                    "templateType": "string",
+                                                    "length": 10
+                                                },
+                                                {
+                                                    "name": "CURRENCY",
+                                                    "templateType": "string",
+                                                    "length": 5
+                                                },
+                                                {
+                                                    "name": "FISCVARNT",
+                                                    "templateType": "string",
+                                                    "length": 2
+                                                },
+                                                {
+                                                    "name": "LD_CODE",
+                                                    "templateType": "string",
+                                                    "length": 6
+                                                },
+                                                {
+                                                    "name": "DESCRIPTION",
+                                                    "templateType": "string",
+                                                    "length": 80
+                                                },
+                                                {
+                                                    "name": "LANGU",
+                                                    "templateType": "string",
+                                                    "length": 1
+                                                }
+                                            ],
+                                            "uniqueKeys": [
+                                                {
+                                                    "attributeReferences": [
+                                                        "UPDATES",
+                                                        "SPONSOR",
+                                                        "LANGU"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection1_outTable"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "groups": [],
+                "connections": {},
+                "inports": {},
+                "outports": {},
+                "vTypes": {
+                    "scalar": {
+                        "string_8": {
+                            "name": "string_8",
+                            "description": "String(8)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 8
+                        },
+                        "string_10": {
+                            "name": "string_10",
+                            "description": "String(10)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 10
+                        },
+                        "string_5": {
+                            "name": "string_5",
+                            "description": "String(5)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 5
+                        },
+                        "string_2": {
+                            "name": "string_2",
+                            "description": "String(2)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 2
+                        },
+                        "string_6": {
+                            "name": "string_6",
+                            "description": "String(6)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 6
+                        },
+                        "string_80": {
+                            "name": "string_80",
+                            "description": "String(80)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 80
+                        },
+                        "string_1": {
+                            "name": "string_1",
+                            "description": "String(1)",
+                            "vflow.type": "scalar",
+                            "template": "string",
+                            "value.length": 1
+                        }
+                    },
+                    "structure": {},
+                    "table": {
+                        "source1_outTable": {
+                            "name": "source1_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "UPDATES": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "SPONSOR": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "PARTNER": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "CUSTOMER": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "CURRENCY": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_5"
+                                        }
+                                    },
+                                    {
+                                        "FISCVARNT": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_2"
+                                        }
+                                    },
+                                    {
+                                        "LD_CODE": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_6"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "source2_outTable": {
+                            "name": "source2_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "UPDATES": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "SPONSOR": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "DESCRIPTION": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_80"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "join1_outTable": {
+                            "name": "join1_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "UPDATES": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "SPONSOR": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "PARTNER": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "CUSTOMER": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "CURRENCY": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_5"
+                                        }
+                                    },
+                                    {
+                                        "FISCVARNT": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_2"
+                                        }
+                                    },
+                                    {
+                                        "LD_CODE": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_6"
+                                        }
+                                    },
+                                    {
+                                        "DESCRIPTION": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_80"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "projection1_outTable": {
+                            "name": "projection1_outTable",
+                            "vflow.type": "table",
+                            "rows": {
+                                "components": [
+                                    {
+                                        "UPDATES": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_8"
+                                        }
+                                    },
+                                    {
+                                        "SPONSOR": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "PARTNER": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "CUSTOMER": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_10"
+                                        }
+                                    },
+                                    {
+                                        "CURRENCY": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_5"
+                                        }
+                                    },
+                                    {
+                                        "FISCVARNT": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_2"
+                                        }
+                                    },
+                                    {
+                                        "LD_CODE": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_6"
+                                        }
+                                    },
+                                    {
+                                        "DESCRIPTION": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_80"
+                                        }
+                                    },
+                                    {
+                                        "LANGU": {
+                                            "vflow.type": "scalar",
+                                            "vtype-ID": "$INLINE.string_1"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "sources": {
+                    "RT_M_0GM_SPNSR_ATTR": {
+                        "elements": {
+                            "UPDATES": {},
+                            "SPONSOR": {},
+                            "PARTNER": {},
+                            "CUSTOMER": {},
+                            "CURRENCY": {},
+                            "FISCVARNT": {},
+                            "LD_CODE": {}
+                        }
+                    },
+                    "RT_M_0GM_SPNSR_TEXT": {
+                        "elements": {
+                            "UPDATES": {},
+                            "SPONSOR": {},
+                            "DESCRIPTION": {}
+                        }
+                    }
+                },
+                "targets": {
+                    "SPONSER_EN": {
+                        "elements": {
+                            "UPDATES": {},
+                            "SPONSOR": {},
+                            "PARTNER": {},
+                            "CUSTOMER": {},
+                            "CURRENCY": {},
+                            "FISCVARNT": {},
+                            "LD_CODE": {},
+                            "DESCRIPTION": {},
+                            "LANGU": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "$version": "1.0"
+}

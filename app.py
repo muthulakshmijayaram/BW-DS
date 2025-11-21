@@ -40,17 +40,26 @@ def generate_json():
         if not csv_path:
             return jsonify({"error": "csv_path required"}), 400
 
+        csv_path1 = r"C:\Users\laksh\Downloads\BW-DS\Data flow\Input\csv\Data Flow Structure.csv"
+        json_path1 = r"C:\Users\laksh\Downloads\BW-DS\prompt_input\json\DF_M_0SALARYTY_TEXT.json"
+        csv_path2 = r"C:\Users\laksh\Downloads\BW-DS\Data flow\Input\csv\Job Text Data Flow Structure.csv"
+        json_path2 = r"C:\Users\laksh\Downloads\BW-DS\prompt_input\json\DF_M_0JOB_TEXT (1).json"
 
-        json_path1 = r"C:\Users\laksh\Downloads\BW-DS\prompt_input\json\DF_M_0COSTCENTER_TEXT.json"
-        json_path2 = r"C:\Users\laksh\Downloads\BW-DS\prompt_input\json\DF_M_0FUNCT_LOC_TEXT.json"
+        
         # --------------------------
         # 2. Read CSV + JSON Inputs
         # --------------------------
         df = pd.read_csv(csv_path)
         csv_data = df.to_string(index=False)
 
+        df = pd.read_csv(csv_path1)
+        csv_data1 = df.to_string(index=False)
+
         with open(json_path1, "r", encoding="utf-8") as f:
             json_input1 = json.load(f)
+
+        df = pd.read_csv(csv_path2)
+        csv_data2 = df.to_string(index=False)
 
         with open(json_path2, "r", encoding="utf-8") as f:
             json_input2 = json.load(f)
@@ -59,15 +68,29 @@ def generate_json():
         # 3. Build Prompt
         # --------------------------
         prompt_template = PromptTemplate(
-            input_variables=["csv_data", "json_input1", "json_input2"],
+            input_variables=["csv_data", "csv_data1", "json_input1", "csv_data2", "json_input2"],
             template=CDS_JSON_PROMPT
         )
+
+        # tiny = CDS_JSON_PROMPT.format(csv_data=csv_data, json_input1=json_input1, json_input2=json_input2, json_input3=json_input3, json_input4=json_input4)
+        # print(tiny)
+        
+        # filename = "format.txt"
+        
+        # try:
+        #     with open(filename, 'w', encoding='utf-8') as f:
+        #         f.write(tiny)
+        #     print(f"Successfully wrote the content of 'tiny' to {filename}")
+        # except Exception as e:
+        #     print(f"Error writing to file {filename}: {e}")
 
         chain = prompt_template | llm
 
         response = chain.invoke({
             "csv_data": csv_data,
+            "csv_data1": csv_data1,
             "json_input1": json_input1,
+            "csv_data2": csv_data2,
             "json_input2": json_input2
         })
 
@@ -86,11 +109,8 @@ def generate_json():
         file_name = os.path.basename(csv_path)
         base_name = os.path.splitext(file_name)[0]
         output_file = f"{base_name}.json"
-
-        if "Data flow" in csv_path:
-            output_folder = r"C:\Users\laksh\Downloads\route_bw\BW\Data flow\Output\json"
-        else:
-            output_folder = r"C:\Users\laksh\Downloads\route_bw\BW\Output"
+       
+        output_folder = r"C:\Users\laksh\Downloads\BW-DS\Output"
 
         os.makedirs(output_folder, exist_ok=True)
         output_path = os.path.join(output_folder, output_file)

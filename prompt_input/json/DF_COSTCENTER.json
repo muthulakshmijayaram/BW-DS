@@ -1,0 +1,4402 @@
+{
+  "definitions": {
+    "Cost_Center_Enrich_Data": {
+      "kind": "entity",
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "LANGUAGE_DEPENDENT_TEXT"
+        }
+      ],
+      "elements": {
+        "LANGU": {
+          "@EndUserText.label": "LANGU",
+          "type": "cds.String",
+          "length": 1,
+          "key": true,
+          "notNull": true,
+          "@Semantics.language": true
+        },
+        "KOKRS": {
+          "@EndUserText.label": "KOKRS",
+          "type": "cds.String",
+          "length": 4,
+          "key": true,
+          "notNull": true
+        },
+        "KOSTL": {
+          "@EndUserText.label": "KOSTL",
+          "type": "cds.String",
+          "length": 10,
+          "key": true,
+          "notNull": true,
+          "@ObjectModel.text.element": [
+            {
+              "=": "TXTMD"
+            }
+          ]
+        },
+        "DATETO": {
+          "@EndUserText.label": "DATETO",
+          "type": "cds.String",
+          "length": 8
+        },
+        "DATEFROM": {
+          "@EndUserText.label": "DATEFROM",
+          "type": "cds.String",
+          "length": 8
+        },
+        "TXTSH": {
+          "@EndUserText.label": "TXTSH",
+          "type": "cds.String",
+          "length": 20
+        },
+        "TXTMD": {
+          "@EndUserText.label": "TXTMD",
+          "type": "cds.String",
+          "length": 40,
+          "@Semantics.text": true
+        },
+        "TXTMC": {
+          "@EndUserText.label": "TXTMC",
+          "type": "cds.String",
+          "length": 20
+        },
+        "VERAK": {
+          "@EndUserText.label": "VERAK",
+          "type": "cds.String",
+          "length": 20
+        },
+        "BUKRS": {
+          "@EndUserText.label": "BUKRS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "GSBER": {
+          "@EndUserText.label": "GSBER",
+          "type": "cds.String",
+          "length": 4
+        },
+        "KOSAR": {
+          "@EndUserText.label": "KOSAR",
+          "type": "cds.String",
+          "length": 1
+        },
+        "WAERS": {
+          "@EndUserText.label": "WAERS",
+          "type": "cds.String",
+          "length": 5
+        },
+        "PRCTR": {
+          "@EndUserText.label": "PRCTR",
+          "type": "cds.String",
+          "length": 10
+        },
+        "BKZKP": {
+          "@EndUserText.label": "BKZKP",
+          "type": "cds.String",
+          "length": 1
+        },
+        "PKZKP": {
+          "@EndUserText.label": "PKZKP",
+          "type": "cds.String",
+          "length": 1
+        },
+        "VERAK_USER": {
+          "@EndUserText.label": "VERAK_USER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "KALSM": {
+          "@EndUserText.label": "KALSM",
+          "type": "cds.String",
+          "length": 6
+        },
+        "TXJCD": {
+          "@EndUserText.label": "TXJCD",
+          "type": "cds.String",
+          "length": 15
+        },
+        "WERKS": {
+          "@EndUserText.label": "WERKS",
+          "type": "cds.String",
+          "length": 4
+        },
+        "LOGSYSTEM": {
+          "@EndUserText.label": "LOGSYSTEM",
+          "type": "cds.String",
+          "length": 10
+        },
+        "ERSDA": {
+          "@EndUserText.label": "ERSDA",
+          "type": "cds.String",
+          "length": 8
+        },
+        "USNAM": {
+          "@EndUserText.label": "USNAM",
+          "type": "cds.String",
+          "length": 12
+        },
+        "BKZKS": {
+          "@EndUserText.label": "BKZKS",
+          "type": "cds.String",
+          "length": 1
+        },
+        "BKZER": {
+          "@EndUserText.label": "BKZER",
+          "type": "cds.String",
+          "length": 1
+        },
+        "BKZOB": {
+          "@EndUserText.label": "BKZOB",
+          "type": "cds.String",
+          "length": 1
+        },
+        "PKZKS": {
+          "@EndUserText.label": "PKZKS",
+          "type": "cds.String",
+          "length": 1
+        },
+        "PKZER": {
+          "@EndUserText.label": "PKZER",
+          "type": "cds.String",
+          "length": 1
+        },
+        "VMETH": {
+          "@EndUserText.label": "VMETH",
+          "type": "cds.String",
+          "length": 2
+        },
+        "MGEFL": {
+          "@EndUserText.label": "MGEFL",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ABTEI": {
+          "@EndUserText.label": "ABTEI",
+          "type": "cds.String",
+          "length": 12
+        },
+        "NKOST": {
+          "@EndUserText.label": "NKOST",
+          "type": "cds.String",
+          "length": 10
+        },
+        "KVEWE": {
+          "@EndUserText.label": "KVEWE",
+          "type": "cds.String",
+          "length": 1
+        },
+        "KAPPL": {
+          "@EndUserText.label": "KAPPL",
+          "type": "cds.String",
+          "length": 2
+        },
+        "KOSZSCHL": {
+          "@EndUserText.label": "KOSZSCHL",
+          "type": "cds.String",
+          "length": 6
+        },
+        "LAND1": {
+          "@EndUserText.label": "LAND1",
+          "type": "cds.String",
+          "length": 3
+        },
+        "ANRED": {
+          "@EndUserText.label": "ANRED",
+          "type": "cds.String",
+          "length": 15
+        },
+        "NAME1": {
+          "@EndUserText.label": "NAME1",
+          "type": "cds.String",
+          "length": 35
+        },
+        "NAME2": {
+          "@EndUserText.label": "NAME2",
+          "type": "cds.String",
+          "length": 35
+        },
+        "NAME3": {
+          "@EndUserText.label": "NAME3",
+          "type": "cds.String",
+          "length": 35
+        },
+        "NAME4": {
+          "@EndUserText.label": "NAME4",
+          "type": "cds.String",
+          "length": 35
+        },
+        "ORT01": {
+          "@EndUserText.label": "ORT01",
+          "type": "cds.String",
+          "length": 35
+        },
+        "ORT02": {
+          "@EndUserText.label": "ORT02",
+          "type": "cds.String",
+          "length": 35
+        },
+        "STRAS": {
+          "@EndUserText.label": "STRAS",
+          "type": "cds.String",
+          "length": 35
+        },
+        "PFACH": {
+          "@EndUserText.label": "PFACH",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PSTLZ": {
+          "@EndUserText.label": "PSTLZ",
+          "type": "cds.String",
+          "length": 10
+        },
+        "PSTL2": {
+          "@EndUserText.label": "PSTL2",
+          "type": "cds.String",
+          "length": 10
+        },
+        "REGIO": {
+          "@EndUserText.label": "REGIO",
+          "type": "cds.String",
+          "length": 3
+        },
+        "SPRAS": {
+          "@EndUserText.label": "SPRAS",
+          "type": "cds.String",
+          "length": 1
+        },
+        "TELBX": {
+          "@EndUserText.label": "TELBX",
+          "type": "cds.String",
+          "length": 15
+        },
+        "TELF1": {
+          "@EndUserText.label": "TELF1",
+          "type": "cds.String",
+          "length": 16
+        },
+        "TELF2": {
+          "@EndUserText.label": "TELF2",
+          "type": "cds.String",
+          "length": 16
+        },
+        "TELFX": {
+          "@EndUserText.label": "TELFX",
+          "type": "cds.String",
+          "length": 31
+        },
+        "TELTX": {
+          "@EndUserText.label": "TELTX",
+          "type": "cds.String",
+          "length": 30
+        },
+        "TELX1": {
+          "@EndUserText.label": "TELX1",
+          "type": "cds.String",
+          "length": 30
+        },
+        "DATLT": {
+          "@EndUserText.label": "DATLT",
+          "type": "cds.String",
+          "length": 14
+        },
+        "DRNAM": {
+          "@EndUserText.label": "DRNAM",
+          "type": "cds.String",
+          "length": 4
+        },
+        "KHINR": {
+          "@EndUserText.label": "KHINR",
+          "type": "cds.String",
+          "length": 12
+        },
+        "CCKEY": {
+          "@EndUserText.label": "CCKEY",
+          "type": "cds.String",
+          "length": 23
+        },
+        "KOMPL": {
+          "@EndUserText.label": "KOMPL",
+          "type": "cds.String",
+          "length": 1
+        },
+        "STAKZ": {
+          "@EndUserText.label": "STAKZ",
+          "type": "cds.String",
+          "length": 1
+        },
+        "OBJNR": {
+          "@EndUserText.label": "OBJNR",
+          "type": "cds.String",
+          "length": 22
+        },
+        "FUNKT": {
+          "@EndUserText.label": "FUNKT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "AFUNK": {
+          "@EndUserText.label": "AFUNK",
+          "type": "cds.String",
+          "length": 3
+        },
+        "CPI_TEMPL": {
+          "@EndUserText.label": "CPI_TEMPL",
+          "type": "cds.String",
+          "length": 10
+        },
+        "CPD_TEMPL": {
+          "@EndUserText.label": "CPD_TEMPL",
+          "type": "cds.String",
+          "length": 10
+        },
+        "FUNC_AREA": {
+          "@EndUserText.label": "FUNC_AREA",
+          "type": "cds.String",
+          "length": 16
+        },
+        "SCI_TEMPL": {
+          "@EndUserText.label": "SCI_TEMPL",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SCD_TEMPL": {
+          "@EndUserText.label": "SCD_TEMPL",
+          "type": "cds.String",
+          "length": 10
+        },
+        "VNAME": {
+          "@EndUserText.label": "VNAME",
+          "type": "cds.String",
+          "length": 6
+        },
+        "RECID": {
+          "@EndUserText.label": "RECID",
+          "type": "cds.String",
+          "length": 2
+        },
+        "ETYPE": {
+          "@EndUserText.label": "ETYPE",
+          "type": "cds.String",
+          "length": 3
+        },
+        "JV_OTYPE": {
+          "@EndUserText.label": "JV_OTYPE",
+          "type": "cds.String",
+          "length": 4
+        },
+        "JV_JIBCL": {
+          "@EndUserText.label": "JV_JIBCL",
+          "type": "cds.String",
+          "length": 3
+        },
+        "JV_JIBSA": {
+          "@EndUserText.label": "JV_JIBSA",
+          "type": "cds.String",
+          "length": 5
+        },
+        "CC_DATETO": {
+          "@EndUserText.label": "CC_DATETO",
+          "type": "cds.Date",
+          "key": true,
+          "notNull": true
+        },
+        "CC_DATEFROM": {
+          "@EndUserText.label": "CC_DATEFROM",
+          "type": "cds.Date"
+        }
+      },
+      "@EndUserText.label": "Cost Center Enrich Data",
+      "@ObjectModel.modelingPattern": {
+        "#": "LANGUAGE_DEPENDENT_TEXT"
+      },
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": null
+        }
+      }
+    },
+    "RT_M_0COSTCENTER_ATTR": {
+      "kind": "entity",
+      "elements": {
+        "KOKRS": {
+          "@EndUserText.label": "Controlling Area",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "KOSTL": {
+          "@EndUserText.label": "Cost Center",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "DATETO": {
+          "@EndUserText.label": "Valid To Date",
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.native.dataType": "VARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "DATEFROM": {
+          "@EndUserText.label": "Valid-From Date",
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.native.dataType": "VARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "VERAK": {
+          "@EndUserText.label": "Person Responsible",
+          "type": "cds.String",
+          "length": 20,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "BUKRS": {
+          "@EndUserText.label": "Company Code",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "GSBER": {
+          "@EndUserText.label": "Business Area",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "KOSAR": {
+          "@EndUserText.label": "Cost Center Category",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "WAERS": {
+          "@EndUserText.label": "Currency Key",
+          "type": "cds.String",
+          "length": 5,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "PRCTR": {
+          "@EndUserText.label": "Profit Center",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "BKZKP": {
+          "@EndUserText.label": "Lock Indicator for Actual Primary Postings",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "PKZKP": {
+          "@EndUserText.label": "Lock Indicator for Plan Primary Costs",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "VERAK_USER": {
+          "@EndUserText.label": "User Responsible",
+          "type": "cds.String",
+          "length": 12,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "KALSM": {
+          "@EndUserText.label": "Costing Sheet",
+          "type": "cds.String",
+          "length": 6,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TXJCD": {
+          "@EndUserText.label": "Tax Jurisdiction",
+          "type": "cds.String",
+          "length": 15,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "WERKS": {
+          "@EndUserText.label": "Plant",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "LOGSYSTEM": {
+          "@EndUserText.label": "Logical System",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "ERSDA": {
+          "@EndUserText.label": "Created on",
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.native.dataType": "VARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "USNAM": {
+          "@EndUserText.label": "Entered by",
+          "type": "cds.String",
+          "length": 12,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "BKZKS": {
+          "@EndUserText.label": "Lock Indicator for Actual Secondary Costs",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "BKZER": {
+          "@EndUserText.label": "Lock Indicator for Actual Revenue Postings",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "BKZOB": {
+          "@EndUserText.label": "Lock Indicator for Commitment Update",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "PKZKS": {
+          "@EndUserText.label": "Lock Indicator for Plan Secondary Costs",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "PKZER": {
+          "@EndUserText.label": "Lock Indicator for Planning Revenues",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "VMETH": {
+          "@EndUserText.label": "Indicator for Allowed Allocation Methods",
+          "type": "cds.String",
+          "length": 2,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "MGEFL": {
+          "@EndUserText.label": "Indicator for Recording Consumption Quantities",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "ABTEI": {
+          "@EndUserText.label": "Department",
+          "type": "cds.String",
+          "length": 12,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "NKOST": {
+          "@EndUserText.label": "Subsequent cost center",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "KVEWE": {
+          "@EndUserText.label": "Usage of the condition table",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "KAPPL": {
+          "@EndUserText.label": "Application",
+          "type": "cds.String",
+          "length": 2,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "KOSZSCHL": {
+          "@EndUserText.label": "CO-CCA Overhead Key",
+          "type": "cds.String",
+          "length": 6,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "LAND1": {
+          "@EndUserText.label": "Country Key",
+          "type": "cds.String",
+          "length": 3,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "ANRED": {
+          "@EndUserText.label": "Title",
+          "type": "cds.String",
+          "length": 15,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "NAME1": {
+          "@EndUserText.label": "Name 1",
+          "type": "cds.String",
+          "length": 35,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "NAME2": {
+          "@EndUserText.label": "Name 2",
+          "type": "cds.String",
+          "length": 35,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "NAME3": {
+          "@EndUserText.label": "Name 3",
+          "type": "cds.String",
+          "length": 35,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "NAME4": {
+          "@EndUserText.label": "Name 4",
+          "type": "cds.String",
+          "length": 35,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "ORT01": {
+          "@EndUserText.label": "City",
+          "type": "cds.String",
+          "length": 35,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "ORT02": {
+          "@EndUserText.label": "District",
+          "type": "cds.String",
+          "length": 35,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "STRAS": {
+          "@EndUserText.label": "Street and House Number",
+          "type": "cds.String",
+          "length": 35,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "PFACH": {
+          "@EndUserText.label": "PO Box",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "PSTLZ": {
+          "@EndUserText.label": "Postal Code",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "PSTL2": {
+          "@EndUserText.label": "P.O. Box Postal Code",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "REGIO": {
+          "@EndUserText.label": "Region (State, Province, County)",
+          "type": "cds.String",
+          "length": 3,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "SPRAS": {
+          "@EndUserText.label": "Language Key",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TELBX": {
+          "@EndUserText.label": "Telebox number",
+          "type": "cds.String",
+          "length": 15,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TELF1": {
+          "@EndUserText.label": "First telephone number",
+          "type": "cds.String",
+          "length": 16,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TELF2": {
+          "@EndUserText.label": "Second telephone number",
+          "type": "cds.String",
+          "length": 16,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TELFX": {
+          "@EndUserText.label": "Fax Number",
+          "type": "cds.String",
+          "length": 31,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TELTX": {
+          "@EndUserText.label": "Teletex number",
+          "type": "cds.String",
+          "length": 30,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TELX1": {
+          "@EndUserText.label": "Telex number",
+          "type": "cds.String",
+          "length": 30,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "DATLT": {
+          "@EndUserText.label": "Data communication line no.",
+          "type": "cds.String",
+          "length": 14,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "DRNAM": {
+          "@EndUserText.label": "Printer destination for CCtr report",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "KHINR": {
+          "@EndUserText.label": "Standard Hierarchy Area",
+          "type": "cds.String",
+          "length": 12,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "CCKEY": {
+          "@EndUserText.label": "Cost collector key",
+          "type": "cds.String",
+          "length": 23,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "KOMPL": {
+          "@EndUserText.label": "Completion flag for the cost center master record",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "STAKZ": {
+          "@EndUserText.label": "Indicator. object is statistical",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "OBJNR": {
+          "@EndUserText.label": "Object number",
+          "type": "cds.String",
+          "length": 22,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "FUNKT": {
+          "@EndUserText.label": "Function of cost center",
+          "type": "cds.String",
+          "length": 3,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "AFUNK": {
+          "@EndUserText.label": "Alternative function of cost center",
+          "type": "cds.String",
+          "length": 3,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "CPI_TEMPL": {
+          "@EndUserText.label": "Template for Activity-Independent Formula Planning",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "CPD_TEMPL": {
+          "@EndUserText.label": "Template for Activity-Dependent Formula Planning",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "FUNC_AREA": {
+          "@EndUserText.label": "Functional Area",
+          "type": "cds.String",
+          "length": 16,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "SCI_TEMPL": {
+          "@EndUserText.label": "Template: Activity-Independent Allocation to Cost Center",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "SCD_TEMPL": {
+          "@EndUserText.label": "Template: Activity-Dependent Allocation to Cost Center",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "VNAME": {
+          "@EndUserText.label": "Joint venture",
+          "type": "cds.String",
+          "length": 6,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "RECID": {
+          "@EndUserText.label": "Recovery Indicator",
+          "type": "cds.String",
+          "length": 2,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "ETYPE": {
+          "@EndUserText.label": "Equity type",
+          "type": "cds.String",
+          "length": 3,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "JV_OTYPE": {
+          "@EndUserText.label": "Joint Venture Object Type",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "JV_JIBCL": {
+          "@EndUserText.label": "JIB/JIBE Class",
+          "type": "cds.String",
+          "length": 3,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "JV_JIBSA": {
+          "@EndUserText.label": "JIB/JIBE Subclass A",
+          "type": "cds.String",
+          "length": 5,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "SQL_DATA_SOURCE"
+        },
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@EndUserText.label": "Cost center Attr",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@DataWarehouse.remote.connection": "EC3",
+      "@DataWarehouse.remote.entity": "SAPI.0COSTCENTER_ATTR",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_BYHLVUXL"
+        }
+      }
+    },
+    "RT_M_0COSTCENTER_TEXT": {
+      "kind": "entity",
+      "elements": {
+        "LANGU": {
+          "@EndUserText.label": "Language Key",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "KOKRS": {
+          "@EndUserText.label": "Controlling Area",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "KOSTL": {
+          "@EndUserText.label": "Cost Center",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "DATETO": {
+          "@EndUserText.label": "Valid-to date",
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.native.dataType": "VARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "DATEFROM": {
+          "@EndUserText.label": "Valid-From Date",
+          "type": "cds.String",
+          "length": 8,
+          "@DataWarehouse.native.dataType": "VARCHAR",
+          "@DataWarehouse.capabilities.filter.allowedExpressions": [
+            {
+              "#": "EQUAL"
+            },
+            {
+              "#": "BETWEEN"
+            }
+          ]
+        },
+        "TXTSH": {
+          "@EndUserText.label": "Short description",
+          "type": "cds.String",
+          "length": 20,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TXTMD": {
+          "@EndUserText.label": "Medium description",
+          "type": "cds.String",
+          "length": 40,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        },
+        "TXTMC": {
+          "@EndUserText.label": "Search term for matchcode use",
+          "type": "cds.String",
+          "length": 20,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "@DataWarehouse.capabilities.filter.enabled": false
+        }
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "SQL_DATA_SOURCE"
+        },
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "@EndUserText.label": "Cost Center Text",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@DataWarehouse.remote.connection": "EC3",
+      "@DataWarehouse.remote.entity": "SAPI.0COSTCENTER_TEXT",
+      "_meta": {
+        "dependencies": {
+          "folderAssignment": "Folder_BYHLVUXL"
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "dataflows": {
+    "DF_COSTCENTER": {
+      "kind": "sap.dis.dataflow",
+      "@EndUserText.label": "Cost Center Text Data Flow",
+      "contents": {
+        "properties": {},
+        "metadata": {
+          "dwc-isPrimaryKeysProcessed": true,
+          "dwc-restartOnFail": false
+        },
+        "parameters": {},
+        "parameterMapping": {},
+        "description": "DF_COSTCENTER",
+        "processes": {
+          "source1": {
+            "component": "com.sap.database.table.consumer",
+            "metadata": {
+              "label": "RT_M_0COSTCENTER_TEXT",
+              "x": 48,
+              "y": 112,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "RT_M_0COSTCENTER_TEXT",
+                "dwcEntity": "RT_M_0COSTCENTER_TEXT",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true
+              },
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                }
+              ]
+            }
+          },
+          "source2": {
+            "component": "com.sap.database.table.consumer",
+            "metadata": {
+              "label": "RT_M_0COSTCENTER_ATTR",
+              "x": 48,
+              "y": 210,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "service": "HANA",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "qualifiedName": "RT_M_0COSTCENTER_ATTR",
+                "dwcEntity": "RT_M_0COSTCENTER_ATTR",
+                "remoteObjectType": "TABLE",
+                "fetchSize": 1000,
+                "forceFetchSize": false,
+                "failOnStringTruncation": true
+              },
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source2_outTable"
+                }
+              ]
+            }
+          },
+          "join1": {
+            "component": "com.sap.dataflow.join",
+            "metadata": {
+              "label": "Join 1",
+              "x": 205,
+              "y": 142,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "tableMappings": [
+                  {
+                    "source": "inTable1",
+                    "attributeMappings": [
+                      {
+                        "source": "LANGU",
+                        "target": "LANGU"
+                      },
+                      {
+                        "source": "KOKRS",
+                        "target": "KOKRS"
+                      },
+                      {
+                        "source": "KOSTL",
+                        "target": "KOSTL"
+                      },
+                      {
+                        "source": "DATETO",
+                        "target": "DATETO"
+                      },
+                      {
+                        "source": "DATEFROM",
+                        "target": "DATEFROM"
+                      },
+                      {
+                        "source": "TXTSH",
+                        "target": "TXTSH"
+                      },
+                      {
+                        "source": "TXTMD",
+                        "target": "TXTMD"
+                      },
+                      {
+                        "source": "TXTMC",
+                        "target": "TXTMC"
+                      }
+                    ]
+                  },
+                  {
+                    "source": "inTable2",
+                    "attributeMappings": [
+                      {
+                        "source": "VERAK",
+                        "target": "VERAK"
+                      },
+                      {
+                        "source": "BUKRS",
+                        "target": "BUKRS"
+                      },
+                      {
+                        "source": "GSBER",
+                        "target": "GSBER"
+                      },
+                      {
+                        "source": "KOSAR",
+                        "target": "KOSAR"
+                      },
+                      {
+                        "source": "WAERS",
+                        "target": "WAERS"
+                      },
+                      {
+                        "source": "PRCTR",
+                        "target": "PRCTR"
+                      },
+                      {
+                        "source": "BKZKP",
+                        "target": "BKZKP"
+                      },
+                      {
+                        "source": "PKZKP",
+                        "target": "PKZKP"
+                      },
+                      {
+                        "source": "VERAK_USER",
+                        "target": "VERAK_USER"
+                      },
+                      {
+                        "source": "KALSM",
+                        "target": "KALSM"
+                      },
+                      {
+                        "source": "TXJCD",
+                        "target": "TXJCD"
+                      },
+                      {
+                        "source": "WERKS",
+                        "target": "WERKS"
+                      },
+                      {
+                        "source": "LOGSYSTEM",
+                        "target": "LOGSYSTEM"
+                      },
+                      {
+                        "source": "ERSDA",
+                        "target": "ERSDA"
+                      },
+                      {
+                        "source": "USNAM",
+                        "target": "USNAM"
+                      },
+                      {
+                        "source": "BKZKS",
+                        "target": "BKZKS"
+                      },
+                      {
+                        "source": "BKZER",
+                        "target": "BKZER"
+                      },
+                      {
+                        "source": "BKZOB",
+                        "target": "BKZOB"
+                      },
+                      {
+                        "source": "PKZKS",
+                        "target": "PKZKS"
+                      },
+                      {
+                        "source": "PKZER",
+                        "target": "PKZER"
+                      },
+                      {
+                        "source": "VMETH",
+                        "target": "VMETH"
+                      },
+                      {
+                        "source": "MGEFL",
+                        "target": "MGEFL"
+                      },
+                      {
+                        "source": "ABTEI",
+                        "target": "ABTEI"
+                      },
+                      {
+                        "source": "NKOST",
+                        "target": "NKOST"
+                      },
+                      {
+                        "source": "KVEWE",
+                        "target": "KVEWE"
+                      },
+                      {
+                        "source": "KAPPL",
+                        "target": "KAPPL"
+                      },
+                      {
+                        "source": "KOSZSCHL",
+                        "target": "KOSZSCHL"
+                      },
+                      {
+                        "source": "LAND1",
+                        "target": "LAND1"
+                      },
+                      {
+                        "source": "ANRED",
+                        "target": "ANRED"
+                      },
+                      {
+                        "source": "NAME1",
+                        "target": "NAME1"
+                      },
+                      {
+                        "source": "NAME2",
+                        "target": "NAME2"
+                      },
+                      {
+                        "source": "NAME3",
+                        "target": "NAME3"
+                      },
+                      {
+                        "source": "NAME4",
+                        "target": "NAME4"
+                      },
+                      {
+                        "source": "ORT01",
+                        "target": "ORT01"
+                      },
+                      {
+                        "source": "ORT02",
+                        "target": "ORT02"
+                      },
+                      {
+                        "source": "STRAS",
+                        "target": "STRAS"
+                      },
+                      {
+                        "source": "PFACH",
+                        "target": "PFACH"
+                      },
+                      {
+                        "source": "PSTLZ",
+                        "target": "PSTLZ"
+                      },
+                      {
+                        "source": "PSTL2",
+                        "target": "PSTL2"
+                      },
+                      {
+                        "source": "REGIO",
+                        "target": "REGIO"
+                      },
+                      {
+                        "source": "SPRAS",
+                        "target": "SPRAS"
+                      },
+                      {
+                        "source": "TELBX",
+                        "target": "TELBX"
+                      },
+                      {
+                        "source": "TELF1",
+                        "target": "TELF1"
+                      },
+                      {
+                        "source": "TELF2",
+                        "target": "TELF2"
+                      },
+                      {
+                        "source": "TELFX",
+                        "target": "TELFX"
+                      },
+                      {
+                        "source": "TELTX",
+                        "target": "TELTX"
+                      },
+                      {
+                        "source": "TELX1",
+                        "target": "TELX1"
+                      },
+                      {
+                        "source": "DATLT",
+                        "target": "DATLT"
+                      },
+                      {
+                        "source": "DRNAM",
+                        "target": "DRNAM"
+                      },
+                      {
+                        "source": "KHINR",
+                        "target": "KHINR"
+                      },
+                      {
+                        "source": "CCKEY",
+                        "target": "CCKEY"
+                      },
+                      {
+                        "source": "KOMPL",
+                        "target": "KOMPL"
+                      },
+                      {
+                        "source": "STAKZ",
+                        "target": "STAKZ"
+                      },
+                      {
+                        "source": "OBJNR",
+                        "target": "OBJNR"
+                      },
+                      {
+                        "source": "FUNKT",
+                        "target": "FUNKT"
+                      },
+                      {
+                        "source": "AFUNK",
+                        "target": "AFUNK"
+                      },
+                      {
+                        "source": "CPI_TEMPL",
+                        "target": "CPI_TEMPL"
+                      },
+                      {
+                        "source": "CPD_TEMPL",
+                        "target": "CPD_TEMPL"
+                      },
+                      {
+                        "source": "FUNC_AREA",
+                        "target": "FUNC_AREA"
+                      },
+                      {
+                        "source": "SCI_TEMPL",
+                        "target": "SCI_TEMPL"
+                      },
+                      {
+                        "source": "SCD_TEMPL",
+                        "target": "SCD_TEMPL"
+                      },
+                      {
+                        "source": "VNAME",
+                        "target": "VNAME"
+                      },
+                      {
+                        "source": "RECID",
+                        "target": "RECID"
+                      },
+                      {
+                        "source": "ETYPE",
+                        "target": "ETYPE"
+                      },
+                      {
+                        "source": "JV_OTYPE",
+                        "target": "JV_OTYPE"
+                      },
+                      {
+                        "source": "JV_JIBCL",
+                        "target": "JV_JIBCL"
+                      },
+                      {
+                        "source": "JV_JIBSA",
+                        "target": "JV_JIBSA"
+                      }
+                    ]
+                  }
+                ],
+                "joinDefinitions": [
+                  {
+                    "left": "inTable1",
+                    "right": "inTable2",
+                    "type": "INNER",
+                    "joinOptions": {
+                      "leftCache": "automatic",
+                      "rightCache": "automatic",
+                      "leftRank": 0,
+                      "rightRank": 0
+                    },
+                    "condition": "\"inTable1\".\"KOKRS\" = \"inTable2\".\"KOKRS\" AND \"inTable1\".\"KOSTL\" = \"inTable2\".\"KOSTL\" AND \"inTable1\".\"DATETO\" = \"inTable2\".\"DATETO\" AND \"inTable1\".\"DATEFROM\" = \"inTable2\".\"DATEFROM\"",
+                    "joinOptimizationType": "Automatic"
+                  }
+                ]
+              },
+              "inports": [
+                {
+                  "name": "inTable1",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source1_outTable"
+                },
+                {
+                  "name": "inTable2",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.source2_outTable"
+                }
+              ],
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.join1_outTable"
+                }
+              ]
+            }
+          },
+          "projection1": {
+            "component": "com.sap.dataflow.projection",
+            "metadata": {
+              "label": "Projection 1",
+              "x": 348,
+              "y": 142,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "attributeMappings": [
+                  {
+                    "target": "LANGU",
+                    "expression": "\"LANGU\""
+                  },
+                  {
+                    "target": "KOKRS",
+                    "expression": "\"KOKRS\""
+                  },
+                  {
+                    "target": "KOSTL",
+                    "expression": "\"KOSTL\""
+                  },
+                  {
+                    "target": "DATETO",
+                    "expression": "\"DATETO\""
+                  },
+                  {
+                    "target": "DATEFROM",
+                    "expression": "\"DATEFROM\""
+                  },
+                  {
+                    "target": "TXTSH",
+                    "expression": "\"TXTSH\""
+                  },
+                  {
+                    "target": "TXTMD",
+                    "expression": "\"TXTMD\""
+                  },
+                  {
+                    "target": "TXTMC",
+                    "expression": "\"TXTMC\""
+                  },
+                  {
+                    "target": "VERAK",
+                    "expression": "\"VERAK\""
+                  },
+                  {
+                    "target": "BUKRS",
+                    "expression": "\"BUKRS\""
+                  },
+                  {
+                    "target": "GSBER",
+                    "expression": "\"GSBER\""
+                  },
+                  {
+                    "target": "KOSAR",
+                    "expression": "\"KOSAR\""
+                  },
+                  {
+                    "target": "WAERS",
+                    "expression": "\"WAERS\""
+                  },
+                  {
+                    "target": "PRCTR",
+                    "expression": "\"PRCTR\""
+                  },
+                  {
+                    "target": "BKZKP",
+                    "expression": "\"BKZKP\""
+                  },
+                  {
+                    "target": "PKZKP",
+                    "expression": "\"PKZKP\""
+                  },
+                  {
+                    "target": "VERAK_USER",
+                    "expression": "\"VERAK_USER\""
+                  },
+                  {
+                    "target": "KALSM",
+                    "expression": "\"KALSM\""
+                  },
+                  {
+                    "target": "TXJCD",
+                    "expression": "\"TXJCD\""
+                  },
+                  {
+                    "target": "WERKS",
+                    "expression": "\"WERKS\""
+                  },
+                  {
+                    "target": "LOGSYSTEM",
+                    "expression": "\"LOGSYSTEM\""
+                  },
+                  {
+                    "target": "ERSDA",
+                    "expression": "\"ERSDA\""
+                  },
+                  {
+                    "target": "USNAM",
+                    "expression": "\"USNAM\""
+                  },
+                  {
+                    "target": "BKZKS",
+                    "expression": "\"BKZKS\""
+                  },
+                  {
+                    "target": "BKZER",
+                    "expression": "\"BKZER\""
+                  },
+                  {
+                    "target": "BKZOB",
+                    "expression": "\"BKZOB\""
+                  },
+                  {
+                    "target": "PKZKS",
+                    "expression": "\"PKZKS\""
+                  },
+                  {
+                    "target": "PKZER",
+                    "expression": "\"PKZER\""
+                  },
+                  {
+                    "target": "VMETH",
+                    "expression": "\"VMETH\""
+                  },
+                  {
+                    "target": "MGEFL",
+                    "expression": "\"MGEFL\""
+                  },
+                  {
+                    "target": "ABTEI",
+                    "expression": "\"ABTEI\""
+                  },
+                  {
+                    "target": "NKOST",
+                    "expression": "\"NKOST\""
+                  },
+                  {
+                    "target": "KVEWE",
+                    "expression": "\"KVEWE\""
+                  },
+                  {
+                    "target": "KAPPL",
+                    "expression": "\"KAPPL\""
+                  },
+                  {
+                    "target": "KOSZSCHL",
+                    "expression": "\"KOSZSCHL\""
+                  },
+                  {
+                    "target": "LAND1",
+                    "expression": "\"LAND1\""
+                  },
+                  {
+                    "target": "ANRED",
+                    "expression": "\"ANRED\""
+                  },
+                  {
+                    "target": "NAME1",
+                    "expression": "\"NAME1\""
+                  },
+                  {
+                    "target": "NAME2",
+                    "expression": "\"NAME2\""
+                  },
+                  {
+                    "target": "NAME3",
+                    "expression": "\"NAME3\""
+                  },
+                  {
+                    "target": "NAME4",
+                    "expression": "\"NAME4\""
+                  },
+                  {
+                    "target": "ORT01",
+                    "expression": "\"ORT01\""
+                  },
+                  {
+                    "target": "ORT02",
+                    "expression": "\"ORT02\""
+                  },
+                  {
+                    "target": "STRAS",
+                    "expression": "\"STRAS\""
+                  },
+                  {
+                    "target": "PFACH",
+                    "expression": "\"PFACH\""
+                  },
+                  {
+                    "target": "PSTLZ",
+                    "expression": "\"PSTLZ\""
+                  },
+                  {
+                    "target": "PSTL2",
+                    "expression": "\"PSTL2\""
+                  },
+                  {
+                    "target": "REGIO",
+                    "expression": "\"REGIO\""
+                  },
+                  {
+                    "target": "SPRAS",
+                    "expression": "\"SPRAS\""
+                  },
+                  {
+                    "target": "TELBX",
+                    "expression": "\"TELBX\""
+                  },
+                  {
+                    "target": "TELF1",
+                    "expression": "\"TELF1\""
+                  },
+                  {
+                    "target": "TELF2",
+                    "expression": "\"TELF2\""
+                  },
+                  {
+                    "target": "TELFX",
+                    "expression": "\"TELFX\""
+                  },
+                  {
+                    "target": "TELTX",
+                    "expression": "\"TELTX\""
+                  },
+                  {
+                    "target": "TELX1",
+                    "expression": "\"TELX1\""
+                  },
+                  {
+                    "target": "DATLT",
+                    "expression": "\"DATLT\""
+                  },
+                  {
+                    "target": "DRNAM",
+                    "expression": "\"DRNAM\""
+                  },
+                  {
+                    "target": "KHINR",
+                    "expression": "\"KHINR\""
+                  },
+                  {
+                    "target": "CCKEY",
+                    "expression": "\"CCKEY\""
+                  },
+                  {
+                    "target": "KOMPL",
+                    "expression": "\"KOMPL\""
+                  },
+                  {
+                    "target": "STAKZ",
+                    "expression": "\"STAKZ\""
+                  },
+                  {
+                    "target": "OBJNR",
+                    "expression": "\"OBJNR\""
+                  },
+                  {
+                    "target": "FUNKT",
+                    "expression": "\"FUNKT\""
+                  },
+                  {
+                    "target": "AFUNK",
+                    "expression": "\"AFUNK\""
+                  },
+                  {
+                    "target": "CPI_TEMPL",
+                    "expression": "\"CPI_TEMPL\""
+                  },
+                  {
+                    "target": "CPD_TEMPL",
+                    "expression": "\"CPD_TEMPL\""
+                  },
+                  {
+                    "target": "FUNC_AREA",
+                    "expression": "\"FUNC_AREA\""
+                  },
+                  {
+                    "target": "SCI_TEMPL",
+                    "expression": "\"SCI_TEMPL\""
+                  },
+                  {
+                    "target": "SCD_TEMPL",
+                    "expression": "\"SCD_TEMPL\""
+                  },
+                  {
+                    "target": "VNAME",
+                    "expression": "\"VNAME\""
+                  },
+                  {
+                    "target": "RECID",
+                    "expression": "\"RECID\""
+                  },
+                  {
+                    "target": "ETYPE",
+                    "expression": "\"ETYPE\""
+                  },
+                  {
+                    "target": "JV_OTYPE",
+                    "expression": "\"JV_OTYPE\""
+                  },
+                  {
+                    "target": "JV_JIBCL",
+                    "expression": "\"JV_JIBCL\""
+                  },
+                  {
+                    "target": "JV_JIBSA",
+                    "expression": "\"JV_JIBSA\""
+                  },
+                  {
+                    "target": "CC_DATETO",
+                    "expression": "TO_DATE(\"DATETO\")"
+                  },
+                  {
+                    "target": "CC_DATEFROM",
+                    "expression": "TO_DATE(\"DATEFROM\")"
+                  }
+                ]
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.join1_outTable"
+                }
+              ],
+              "outports": [
+                {
+                  "name": "outTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          },
+          "producer1": {
+            "component": "com.sap.database.table.producer",
+            "metadata": {
+              "label": "Cost_Center_Enrich_Data",
+              "x": 513,
+              "y": 147,
+              "height": 60,
+              "width": 120,
+              "config": {
+                "dwcEntity": "Cost_Center_Enrich_Data",
+                "hanaConnection": {
+                  "configurationType": "Configuration Manager",
+                  "connectionID": "$DWC"
+                },
+                "mode": "append",
+                "qualifiedName": "Cost_Center_Enrich_Data",
+                "remoteObjectType": "TABLE",
+                "service": "HANA",
+                "forceBatchSize": false,
+                "batchSize": 1000,
+                "upsert": true,
+                "attributeMappings": [
+                  {
+                    "expression": "\"LANGU\"",
+                    "target": "LANGU"
+                  },
+                  {
+                    "expression": "\"KOKRS\"",
+                    "target": "KOKRS"
+                  },
+                  {
+                    "expression": "\"KOSTL\"",
+                    "target": "KOSTL"
+                  },
+                  {
+                    "expression": "\"DATETO\"",
+                    "target": "DATETO"
+                  },
+                  {
+                    "expression": "\"DATEFROM\"",
+                    "target": "DATEFROM"
+                  },
+                  {
+                    "expression": "\"TXTSH\"",
+                    "target": "TXTSH"
+                  },
+                  {
+                    "expression": "\"TXTMD\"",
+                    "target": "TXTMD"
+                  },
+                  {
+                    "expression": "\"TXTMC\"",
+                    "target": "TXTMC"
+                  },
+                  {
+                    "expression": "\"VERAK\"",
+                    "target": "VERAK"
+                  },
+                  {
+                    "expression": "\"BUKRS\"",
+                    "target": "BUKRS"
+                  },
+                  {
+                    "expression": "\"GSBER\"",
+                    "target": "GSBER"
+                  },
+                  {
+                    "expression": "\"KOSAR\"",
+                    "target": "KOSAR"
+                  },
+                  {
+                    "expression": "\"WAERS\"",
+                    "target": "WAERS"
+                  },
+                  {
+                    "expression": "\"PRCTR\"",
+                    "target": "PRCTR"
+                  },
+                  {
+                    "expression": "\"BKZKP\"",
+                    "target": "BKZKP"
+                  },
+                  {
+                    "expression": "\"PKZKP\"",
+                    "target": "PKZKP"
+                  },
+                  {
+                    "expression": "\"VERAK_USER\"",
+                    "target": "VERAK_USER"
+                  },
+                  {
+                    "expression": "\"KALSM\"",
+                    "target": "KALSM"
+                  },
+                  {
+                    "expression": "\"TXJCD\"",
+                    "target": "TXJCD"
+                  },
+                  {
+                    "expression": "\"WERKS\"",
+                    "target": "WERKS"
+                  },
+                  {
+                    "expression": "\"LOGSYSTEM\"",
+                    "target": "LOGSYSTEM"
+                  },
+                  {
+                    "expression": "\"ERSDA\"",
+                    "target": "ERSDA"
+                  },
+                  {
+                    "expression": "\"USNAM\"",
+                    "target": "USNAM"
+                  },
+                  {
+                    "expression": "\"BKZKS\"",
+                    "target": "BKZKS"
+                  },
+                  {
+                    "expression": "\"BKZER\"",
+                    "target": "BKZER"
+                  },
+                  {
+                    "expression": "\"BKZOB\"",
+                    "target": "BKZOB"
+                  },
+                  {
+                    "expression": "\"PKZKS\"",
+                    "target": "PKZKS"
+                  },
+                  {
+                    "expression": "\"PKZER\"",
+                    "target": "PKZER"
+                  },
+                  {
+                    "expression": "\"VMETH\"",
+                    "target": "VMETH"
+                  },
+                  {
+                    "expression": "\"MGEFL\"",
+                    "target": "MGEFL"
+                  },
+                  {
+                    "expression": "\"ABTEI\"",
+                    "target": "ABTEI"
+                  },
+                  {
+                    "expression": "\"NKOST\"",
+                    "target": "NKOST"
+                  },
+                  {
+                    "expression": "\"KVEWE\"",
+                    "target": "KVEWE"
+                  },
+                  {
+                    "expression": "\"KAPPL\"",
+                    "target": "KAPPL"
+                  },
+                  {
+                    "expression": "\"KOSZSCHL\"",
+                    "target": "KOSZSCHL"
+                  },
+                  {
+                    "expression": "\"LAND1\"",
+                    "target": "LAND1"
+                  },
+                  {
+                    "expression": "\"ANRED\"",
+                    "target": "ANRED"
+                  },
+                  {
+                    "expression": "\"NAME1\"",
+                    "target": "NAME1"
+                  },
+                  {
+                    "expression": "\"NAME2\"",
+                    "target": "NAME2"
+                  },
+                  {
+                    "expression": "\"NAME3\"",
+                    "target": "NAME3"
+                  },
+                  {
+                    "expression": "\"NAME4\"",
+                    "target": "NAME4"
+                  },
+                  {
+                    "expression": "\"ORT01\"",
+                    "target": "ORT01"
+                  },
+                  {
+                    "expression": "\"ORT02\"",
+                    "target": "ORT02"
+                  },
+                  {
+                    "expression": "\"STRAS\"",
+                    "target": "STRAS"
+                  },
+                  {
+                    "expression": "\"PFACH\"",
+                    "target": "PFACH"
+                  },
+                  {
+                    "expression": "\"PSTLZ\"",
+                    "target": "PSTLZ"
+                  },
+                  {
+                    "expression": "\"PSTL2\"",
+                    "target": "PSTL2"
+                  },
+                  {
+                    "expression": "\"REGIO\"",
+                    "target": "REGIO"
+                  },
+                  {
+                    "expression": "\"SPRAS\"",
+                    "target": "SPRAS"
+                  },
+                  {
+                    "expression": "\"TELBX\"",
+                    "target": "TELBX"
+                  },
+                  {
+                    "expression": "\"TELF1\"",
+                    "target": "TELF1"
+                  },
+                  {
+                    "expression": "\"TELF2\"",
+                    "target": "TELF2"
+                  },
+                  {
+                    "expression": "\"TELFX\"",
+                    "target": "TELFX"
+                  },
+                  {
+                    "expression": "\"TELTX\"",
+                    "target": "TELTX"
+                  },
+                  {
+                    "expression": "\"TELX1\"",
+                    "target": "TELX1"
+                  },
+                  {
+                    "expression": "\"DATLT\"",
+                    "target": "DATLT"
+                  },
+                  {
+                    "expression": "\"DRNAM\"",
+                    "target": "DRNAM"
+                  },
+                  {
+                    "expression": "\"KHINR\"",
+                    "target": "KHINR"
+                  },
+                  {
+                    "expression": "\"CCKEY\"",
+                    "target": "CCKEY"
+                  },
+                  {
+                    "expression": "\"KOMPL\"",
+                    "target": "KOMPL"
+                  },
+                  {
+                    "expression": "\"STAKZ\"",
+                    "target": "STAKZ"
+                  },
+                  {
+                    "expression": "\"OBJNR\"",
+                    "target": "OBJNR"
+                  },
+                  {
+                    "expression": "\"FUNKT\"",
+                    "target": "FUNKT"
+                  },
+                  {
+                    "expression": "\"AFUNK\"",
+                    "target": "AFUNK"
+                  },
+                  {
+                    "expression": "\"CPI_TEMPL\"",
+                    "target": "CPI_TEMPL"
+                  },
+                  {
+                    "expression": "\"CPD_TEMPL\"",
+                    "target": "CPD_TEMPL"
+                  },
+                  {
+                    "expression": "\"FUNC_AREA\"",
+                    "target": "FUNC_AREA"
+                  },
+                  {
+                    "expression": "\"SCI_TEMPL\"",
+                    "target": "SCI_TEMPL"
+                  },
+                  {
+                    "expression": "\"SCD_TEMPL\"",
+                    "target": "SCD_TEMPL"
+                  },
+                  {
+                    "expression": "\"VNAME\"",
+                    "target": "VNAME"
+                  },
+                  {
+                    "expression": "\"RECID\"",
+                    "target": "RECID"
+                  },
+                  {
+                    "expression": "\"ETYPE\"",
+                    "target": "ETYPE"
+                  },
+                  {
+                    "expression": "\"JV_OTYPE\"",
+                    "target": "JV_OTYPE"
+                  },
+                  {
+                    "expression": "\"JV_JIBCL\"",
+                    "target": "JV_JIBCL"
+                  },
+                  {
+                    "expression": "\"JV_JIBSA\"",
+                    "target": "JV_JIBSA"
+                  },
+                  {
+                    "expression": "\"CC_DATETO\"",
+                    "target": "CC_DATETO"
+                  },
+                  {
+                    "expression": "\"CC_DATEFROM\"",
+                    "target": "CC_DATEFROM"
+                  }
+                ],
+                "hanaAdaptedDataset": {
+                  "schema": {
+                    "genericType": "TABLE",
+                    "tableBasedRepresentation": {
+                      "attributes": [
+                        {
+                          "name": "LANGU",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "KOKRS",
+                          "templateType": "string",
+                          "length": 4
+                        },
+                        {
+                          "name": "KOSTL",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "DATETO",
+                          "templateType": "string",
+                          "length": 8
+                        },
+                        {
+                          "name": "DATEFROM",
+                          "templateType": "string",
+                          "length": 8
+                        },
+                        {
+                          "name": "TXTSH",
+                          "templateType": "string",
+                          "length": 20
+                        },
+                        {
+                          "name": "TXTMD",
+                          "templateType": "string",
+                          "length": 40
+                        },
+                        {
+                          "name": "TXTMC",
+                          "templateType": "string",
+                          "length": 20
+                        },
+                        {
+                          "name": "VERAK",
+                          "templateType": "string",
+                          "length": 20
+                        },
+                        {
+                          "name": "BUKRS",
+                          "templateType": "string",
+                          "length": 4
+                        },
+                        {
+                          "name": "GSBER",
+                          "templateType": "string",
+                          "length": 4
+                        },
+                        {
+                          "name": "KOSAR",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "WAERS",
+                          "templateType": "string",
+                          "length": 5
+                        },
+                        {
+                          "name": "PRCTR",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "BKZKP",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "PKZKP",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "VERAK_USER",
+                          "templateType": "string",
+                          "length": 12
+                        },
+                        {
+                          "name": "KALSM",
+                          "templateType": "string",
+                          "length": 6
+                        },
+                        {
+                          "name": "TXJCD",
+                          "templateType": "string",
+                          "length": 15
+                        },
+                        {
+                          "name": "WERKS",
+                          "templateType": "string",
+                          "length": 4
+                        },
+                        {
+                          "name": "LOGSYSTEM",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "ERSDA",
+                          "templateType": "string",
+                          "length": 8
+                        },
+                        {
+                          "name": "USNAM",
+                          "templateType": "string",
+                          "length": 12
+                        },
+                        {
+                          "name": "BKZKS",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "BKZER",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "BKZOB",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "PKZKS",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "PKZER",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "VMETH",
+                          "templateType": "string",
+                          "length": 2
+                        },
+                        {
+                          "name": "MGEFL",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "ABTEI",
+                          "templateType": "string",
+                          "length": 12
+                        },
+                        {
+                          "name": "NKOST",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "KVEWE",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "KAPPL",
+                          "templateType": "string",
+                          "length": 2
+                        },
+                        {
+                          "name": "KOSZSCHL",
+                          "templateType": "string",
+                          "length": 6
+                        },
+                        {
+                          "name": "LAND1",
+                          "templateType": "string",
+                          "length": 3
+                        },
+                        {
+                          "name": "ANRED",
+                          "templateType": "string",
+                          "length": 15
+                        },
+                        {
+                          "name": "NAME1",
+                          "templateType": "string",
+                          "length": 35
+                        },
+                        {
+                          "name": "NAME2",
+                          "templateType": "string",
+                          "length": 35
+                        },
+                        {
+                          "name": "NAME3",
+                          "templateType": "string",
+                          "length": 35
+                        },
+                        {
+                          "name": "NAME4",
+                          "templateType": "string",
+                          "length": 35
+                        },
+                        {
+                          "name": "ORT01",
+                          "templateType": "string",
+                          "length": 35
+                        },
+                        {
+                          "name": "ORT02",
+                          "templateType": "string",
+                          "length": 35
+                        },
+                        {
+                          "name": "STRAS",
+                          "templateType": "string",
+                          "length": 35
+                        },
+                        {
+                          "name": "PFACH",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "PSTLZ",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "PSTL2",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "REGIO",
+                          "templateType": "string",
+                          "length": 3
+                        },
+                        {
+                          "name": "SPRAS",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "TELBX",
+                          "templateType": "string",
+                          "length": 15
+                        },
+                        {
+                          "name": "TELF1",
+                          "templateType": "string",
+                          "length": 16
+                        },
+                        {
+                          "name": "TELF2",
+                          "templateType": "string",
+                          "length": 16
+                        },
+                        {
+                          "name": "TELFX",
+                          "templateType": "string",
+                          "length": 31
+                        },
+                        {
+                          "name": "TELTX",
+                          "templateType": "string",
+                          "length": 30
+                        },
+                        {
+                          "name": "TELX1",
+                          "templateType": "string",
+                          "length": 30
+                        },
+                        {
+                          "name": "DATLT",
+                          "templateType": "string",
+                          "length": 14
+                        },
+                        {
+                          "name": "DRNAM",
+                          "templateType": "string",
+                          "length": 4
+                        },
+                        {
+                          "name": "KHINR",
+                          "templateType": "string",
+                          "length": 12
+                        },
+                        {
+                          "name": "CCKEY",
+                          "templateType": "string",
+                          "length": 23
+                        },
+                        {
+                          "name": "KOMPL",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "STAKZ",
+                          "templateType": "string",
+                          "length": 1
+                        },
+                        {
+                          "name": "OBJNR",
+                          "templateType": "string",
+                          "length": 22
+                        },
+                        {
+                          "name": "FUNKT",
+                          "templateType": "string",
+                          "length": 3
+                        },
+                        {
+                          "name": "AFUNK",
+                          "templateType": "string",
+                          "length": 3
+                        },
+                        {
+                          "name": "CPI_TEMPL",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "CPD_TEMPL",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "FUNC_AREA",
+                          "templateType": "string",
+                          "length": 16
+                        },
+                        {
+                          "name": "SCI_TEMPL",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "SCD_TEMPL",
+                          "templateType": "string",
+                          "length": 10
+                        },
+                        {
+                          "name": "VNAME",
+                          "templateType": "string",
+                          "length": 6
+                        },
+                        {
+                          "name": "RECID",
+                          "templateType": "string",
+                          "length": 2
+                        },
+                        {
+                          "name": "ETYPE",
+                          "templateType": "string",
+                          "length": 3
+                        },
+                        {
+                          "name": "JV_OTYPE",
+                          "templateType": "string",
+                          "length": 4
+                        },
+                        {
+                          "name": "JV_JIBCL",
+                          "templateType": "string",
+                          "length": 3
+                        },
+                        {
+                          "name": "JV_JIBSA",
+                          "templateType": "string",
+                          "length": 5
+                        },
+                        {
+                          "name": "CC_DATETO",
+                          "templateType": "date"
+                        },
+                        {
+                          "name": "CC_DATEFROM",
+                          "templateType": "date"
+                        }
+                      ],
+                      "uniqueKeys": [
+                        {
+                          "attributeReferences": [
+                            "LANGU",
+                            "KOKRS",
+                            "KOSTL",
+                            "CC_DATETO"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "inports": [
+                {
+                  "name": "inTable",
+                  "type": "table",
+                  "vtype-ID": "$INLINE.projection1_outTable"
+                }
+              ]
+            }
+          }
+        },
+        "groups": [],
+        "connections": [
+          {
+            "metadata": {
+              "points": "173,142 186.5,142 186.5,163 200,163"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "source1"
+            },
+            "tgt": {
+              "port": "inTable1",
+              "process": "join1"
+            }
+          },
+          {
+            "metadata": {
+              "points": "168,240 186.5,240 186.5,181 201.5,181"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "source2"
+            },
+            "tgt": {
+              "port": "inTable2",
+              "process": "join1"
+            }
+          },
+          {
+            "metadata": {
+              "points": "325.5,172 344.5,172"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "join1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "projection1"
+            }
+          },
+          {
+            "metadata": {
+              "points": "473,172 490.5,172 490.5,177 508,177"
+            },
+            "src": {
+              "port": "outTable",
+              "process": "projection1"
+            },
+            "tgt": {
+              "port": "inTable",
+              "process": "producer1"
+            }
+          }
+        ],
+        "inports": {},
+        "outports": {},
+        "vTypes": {
+          "scalar": {
+            "string_1": {
+              "name": "string_1",
+              "description": "String(1)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 1
+            },
+            "string_4": {
+              "name": "string_4",
+              "description": "String(4)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 4
+            },
+            "string_10": {
+              "name": "string_10",
+              "description": "String(10)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 10
+            },
+            "string_8": {
+              "name": "string_8",
+              "description": "String(8)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 8
+            },
+            "string_20": {
+              "name": "string_20",
+              "description": "String(20)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 20
+            },
+            "string_40": {
+              "name": "string_40",
+              "description": "String(40)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 40
+            },
+            "string_5": {
+              "name": "string_5",
+              "description": "String(5)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 5
+            },
+            "string_12": {
+              "name": "string_12",
+              "description": "String(12)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 12
+            },
+            "string_6": {
+              "name": "string_6",
+              "description": "String(6)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 6
+            },
+            "string_15": {
+              "name": "string_15",
+              "description": "String(15)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 15
+            },
+            "string_2": {
+              "name": "string_2",
+              "description": "String(2)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 2
+            },
+            "string_3": {
+              "name": "string_3",
+              "description": "String(3)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 3
+            },
+            "string_35": {
+              "name": "string_35",
+              "description": "String(35)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 35
+            },
+            "string_16": {
+              "name": "string_16",
+              "description": "String(16)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 16
+            },
+            "string_31": {
+              "name": "string_31",
+              "description": "String(31)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 31
+            },
+            "string_30": {
+              "name": "string_30",
+              "description": "String(30)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 30
+            },
+            "string_14": {
+              "name": "string_14",
+              "description": "String(14)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 14
+            },
+            "string_23": {
+              "name": "string_23",
+              "description": "String(23)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 23
+            },
+            "string_22": {
+              "name": "string_22",
+              "description": "String(22)",
+              "vflow.type": "scalar",
+              "template": "string",
+              "value.length": 22
+            }
+          },
+          "structure": {},
+          "table": {
+            "source1_outTable": {
+              "name": "source1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "LANGU": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KOKRS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KOSTL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "DATETO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "DATEFROM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "TXTSH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "TXTMD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_40"
+                    }
+                  },
+                  {
+                    "TXTMC": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  }
+                ]
+              }
+            },
+            "source2_outTable": {
+              "name": "source2_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "KOKRS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KOSTL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "DATETO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "DATEFROM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "VERAK": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "BUKRS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "GSBER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KOSAR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "WAERS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_5"
+                    }
+                  },
+                  {
+                    "PRCTR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "BKZKP": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZKP": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "VERAK_USER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "KALSM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "TXJCD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "WERKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "LOGSYSTEM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "ERSDA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "USNAM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "BKZKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "BKZER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "BKZOB": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "VMETH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "MGEFL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "ABTEI": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "NKOST": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "KVEWE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KAPPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "KOSZSCHL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "LAND1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "ANRED": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "NAME1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME3": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME4": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "ORT01": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "ORT02": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "STRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "PFACH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "PSTLZ": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "PSTL2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "REGIO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "SPRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "TELBX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "TELF1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "TELF2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "TELFX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_31"
+                    }
+                  },
+                  {
+                    "TELTX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "TELX1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "DATLT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_14"
+                    }
+                  },
+                  {
+                    "DRNAM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KHINR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "CCKEY": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_23"
+                    }
+                  },
+                  {
+                    "KOMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "STAKZ": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "OBJNR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_22"
+                    }
+                  },
+                  {
+                    "FUNKT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "AFUNK": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "CPI_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "CPD_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "FUNC_AREA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "SCI_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "SCD_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "VNAME": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "RECID": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "ETYPE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "JV_OTYPE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "JV_JIBCL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "JV_JIBSA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_5"
+                    }
+                  }
+                ]
+              }
+            },
+            "join1_outTable": {
+              "name": "join1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "LANGU": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KOKRS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KOSTL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "DATETO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "DATEFROM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "TXTSH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "TXTMD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_40"
+                    }
+                  },
+                  {
+                    "TXTMC": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "VERAK": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "BUKRS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "GSBER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KOSAR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "WAERS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_5"
+                    }
+                  },
+                  {
+                    "PRCTR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "BKZKP": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZKP": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "VERAK_USER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "KALSM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "TXJCD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "WERKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "LOGSYSTEM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "ERSDA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "USNAM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "BKZKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "BKZER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "BKZOB": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "VMETH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "MGEFL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "ABTEI": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "NKOST": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "KVEWE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KAPPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "KOSZSCHL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "LAND1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "ANRED": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "NAME1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME3": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME4": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "ORT01": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "ORT02": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "STRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "PFACH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "PSTLZ": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "PSTL2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "REGIO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "SPRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "TELBX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "TELF1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "TELF2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "TELFX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_31"
+                    }
+                  },
+                  {
+                    "TELTX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "TELX1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "DATLT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_14"
+                    }
+                  },
+                  {
+                    "DRNAM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KHINR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "CCKEY": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_23"
+                    }
+                  },
+                  {
+                    "KOMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "STAKZ": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "OBJNR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_22"
+                    }
+                  },
+                  {
+                    "FUNKT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "AFUNK": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "CPI_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "CPD_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "FUNC_AREA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "SCI_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "SCD_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "VNAME": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "RECID": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "ETYPE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "JV_OTYPE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "JV_JIBCL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "JV_JIBSA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_5"
+                    }
+                  }
+                ]
+              }
+            },
+            "projection1_outTable": {
+              "name": "projection1_outTable",
+              "vflow.type": "table",
+              "rows": {
+                "components": [
+                  {
+                    "LANGU": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KOKRS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KOSTL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "DATETO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "DATEFROM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "TXTSH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "TXTMD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_40"
+                    }
+                  },
+                  {
+                    "TXTMC": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "VERAK": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_20"
+                    }
+                  },
+                  {
+                    "BUKRS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "GSBER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KOSAR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "WAERS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_5"
+                    }
+                  },
+                  {
+                    "PRCTR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "BKZKP": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZKP": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "VERAK_USER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "KALSM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "TXJCD": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "WERKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "LOGSYSTEM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "ERSDA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_8"
+                    }
+                  },
+                  {
+                    "USNAM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "BKZKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "BKZER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "BKZOB": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZKS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "PKZER": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "VMETH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "MGEFL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "ABTEI": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "NKOST": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "KVEWE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "KAPPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "KOSZSCHL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "LAND1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "ANRED": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "NAME1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME3": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "NAME4": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "ORT01": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "ORT02": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "STRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_35"
+                    }
+                  },
+                  {
+                    "PFACH": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "PSTLZ": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "PSTL2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "REGIO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "SPRAS": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "TELBX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_15"
+                    }
+                  },
+                  {
+                    "TELF1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "TELF2": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "TELFX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_31"
+                    }
+                  },
+                  {
+                    "TELTX": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "TELX1": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_30"
+                    }
+                  },
+                  {
+                    "DATLT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_14"
+                    }
+                  },
+                  {
+                    "DRNAM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "KHINR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_12"
+                    }
+                  },
+                  {
+                    "CCKEY": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_23"
+                    }
+                  },
+                  {
+                    "KOMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "STAKZ": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_1"
+                    }
+                  },
+                  {
+                    "OBJNR": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_22"
+                    }
+                  },
+                  {
+                    "FUNKT": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "AFUNK": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "CPI_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "CPD_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "FUNC_AREA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_16"
+                    }
+                  },
+                  {
+                    "SCI_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "SCD_TEMPL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_10"
+                    }
+                  },
+                  {
+                    "VNAME": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_6"
+                    }
+                  },
+                  {
+                    "RECID": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_2"
+                    }
+                  },
+                  {
+                    "ETYPE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "JV_OTYPE": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_4"
+                    }
+                  },
+                  {
+                    "JV_JIBCL": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_3"
+                    }
+                  },
+                  {
+                    "JV_JIBSA": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "$INLINE.string_5"
+                    }
+                  },
+                  {
+                    "CC_DATETO": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "com.sap.core.date"
+                    }
+                  },
+                  {
+                    "CC_DATEFROM": {
+                      "vflow.type": "scalar",
+                      "vtype-ID": "com.sap.core.date"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "sources": {
+        "RT_M_0COSTCENTER_TEXT": {
+          "elements": {
+            "LANGU": {},
+            "KOKRS": {},
+            "KOSTL": {},
+            "DATETO": {},
+            "DATEFROM": {},
+            "TXTSH": {},
+            "TXTMD": {},
+            "TXTMC": {}
+          }
+        },
+        "RT_M_0COSTCENTER_ATTR": {
+          "elements": {
+            "KOKRS": {},
+            "KOSTL": {},
+            "DATETO": {},
+            "DATEFROM": {},
+            "VERAK": {},
+            "BUKRS": {},
+            "GSBER": {},
+            "KOSAR": {},
+            "WAERS": {},
+            "PRCTR": {},
+            "BKZKP": {},
+            "PKZKP": {},
+            "VERAK_USER": {},
+            "KALSM": {},
+            "TXJCD": {},
+            "WERKS": {},
+            "LOGSYSTEM": {},
+            "ERSDA": {},
+            "USNAM": {},
+            "BKZKS": {},
+            "BKZER": {},
+            "BKZOB": {},
+            "PKZKS": {},
+            "PKZER": {},
+            "VMETH": {},
+            "MGEFL": {},
+            "ABTEI": {},
+            "NKOST": {},
+            "KVEWE": {},
+            "KAPPL": {},
+            "KOSZSCHL": {},
+            "LAND1": {},
+            "ANRED": {},
+            "NAME1": {},
+            "NAME2": {},
+            "NAME3": {},
+            "NAME4": {},
+            "ORT01": {},
+            "ORT02": {},
+            "STRAS": {},
+            "PFACH": {},
+            "PSTLZ": {},
+            "PSTL2": {},
+            "REGIO": {},
+            "SPRAS": {},
+            "TELBX": {},
+            "TELF1": {},
+            "TELF2": {},
+            "TELFX": {},
+            "TELTX": {},
+            "TELX1": {},
+            "DATLT": {},
+            "DRNAM": {},
+            "KHINR": {},
+            "CCKEY": {},
+            "KOMPL": {},
+            "STAKZ": {},
+            "OBJNR": {},
+            "FUNKT": {},
+            "AFUNK": {},
+            "CPI_TEMPL": {},
+            "CPD_TEMPL": {},
+            "FUNC_AREA": {},
+            "SCI_TEMPL": {},
+            "SCD_TEMPL": {},
+            "VNAME": {},
+            "RECID": {},
+            "ETYPE": {},
+            "JV_OTYPE": {},
+            "JV_JIBCL": {},
+            "JV_JIBSA": {}
+          }
+        }
+      },
+      "targets": {
+        "Cost_Center_Enrich_Data": {
+          "elements": {
+            "LANGU": {},
+            "KOKRS": {},
+            "KOSTL": {},
+            "DATETO": {},
+            "DATEFROM": {},
+            "TXTSH": {},
+            "TXTMD": {},
+            "TXTMC": {},
+            "VERAK": {},
+            "BUKRS": {},
+            "GSBER": {},
+            "KOSAR": {},
+            "WAERS": {},
+            "PRCTR": {},
+            "BKZKP": {},
+            "PKZKP": {},
+            "VERAK_USER": {},
+            "KALSM": {},
+            "TXJCD": {},
+            "WERKS": {},
+            "LOGSYSTEM": {},
+            "ERSDA": {},
+            "USNAM": {},
+            "BKZKS": {},
+            "BKZER": {},
+            "BKZOB": {},
+            "PKZKS": {},
+            "PKZER": {},
+            "VMETH": {},
+            "MGEFL": {},
+            "ABTEI": {},
+            "NKOST": {},
+            "KVEWE": {},
+            "KAPPL": {},
+            "KOSZSCHL": {},
+            "LAND1": {},
+            "ANRED": {},
+            "NAME1": {},
+            "NAME2": {},
+            "NAME3": {},
+            "NAME4": {},
+            "ORT01": {},
+            "ORT02": {},
+            "STRAS": {},
+            "PFACH": {},
+            "PSTLZ": {},
+            "PSTL2": {},
+            "REGIO": {},
+            "SPRAS": {},
+            "TELBX": {},
+            "TELF1": {},
+            "TELF2": {},
+            "TELFX": {},
+            "TELTX": {},
+            "TELX1": {},
+            "DATLT": {},
+            "DRNAM": {},
+            "KHINR": {},
+            "CCKEY": {},
+            "KOMPL": {},
+            "STAKZ": {},
+            "OBJNR": {},
+            "FUNKT": {},
+            "AFUNK": {},
+            "CPI_TEMPL": {},
+            "CPD_TEMPL": {},
+            "FUNC_AREA": {},
+            "SCI_TEMPL": {},
+            "SCD_TEMPL": {},
+            "VNAME": {},
+            "RECID": {},
+            "ETYPE": {},
+            "JV_OTYPE": {},
+            "JV_JIBCL": {},
+            "JV_JIBSA": {},
+            "CC_DATETO": {},
+            "CC_DATEFROM": {}
+          }
+        }
+      },
+      "connections": {}
+    }
+  },
+  "$version": "1.0"
+}
