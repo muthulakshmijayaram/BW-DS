@@ -133,7 +133,6 @@
                     ],
                     "key": true,
                     "notNull": true,
-                    "@Analytics.dimension": true,
                     "@Semantics.language": true
                 },
                 "KOKRS": {
@@ -150,8 +149,7 @@
                         }
                     ],
                     "key": true,
-                    "notNull": true,
-                    "@Analytics.dimension": true
+                    "notNull": true
                 },
                 "KOSTL": {
                     "@EndUserText.label": "Cost Center",
@@ -168,7 +166,6 @@
                     ],
                     "key": true,
                     "notNull": true,
-                    "@Analytics.dimension": true,
                     "@ObjectModel.text.element": [
                         {
                             "=": "TXTMD"
@@ -188,8 +185,7 @@
                         }
                     ],
                     "key": true,
-                    "notNull": true,
-                    "@Analytics.dimension": true
+                    "notNull": true
                 },
                 "DATEFROM": {
                     "@EndUserText.label": "Valid-From Date",
@@ -202,16 +198,14 @@
                         {
                             "#": "BETWEEN"
                         }
-                    ],
-                    "@Analytics.dimension": true
+                    ]
                 },
                 "TXTSH": {
                     "@EndUserText.label": "Short description",
                     "type": "cds.String",
                     "length": 20,
                     "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false,
-                    "@Analytics.dimension": true
+                    "@DataWarehouse.capabilities.filter.enabled": false
                 },
                 "TXTMD": {
                     "@EndUserText.label": "Medium description",
@@ -219,7 +213,6 @@
                     "length": 40,
                     "@DataWarehouse.native.dataType": "NVARCHAR",
                     "@DataWarehouse.capabilities.filter.enabled": false,
-                    "@Analytics.dimension": true,
                     "@Semantics.text": true
                 },
                 "TXTMC": {
@@ -227,8 +220,7 @@
                     "type": "cds.String",
                     "length": 20,
                     "@DataWarehouse.native.dataType": "NVARCHAR",
-                    "@DataWarehouse.capabilities.filter.enabled": false,
-                    "@Analytics.dimension": true
+                    "@DataWarehouse.capabilities.filter.enabled": false
                 }
             },
             "@ObjectModel.supportedCapabilities": [
@@ -259,23 +251,16 @@
     "dataflows": {
         "DF_M_0COSTCENTER_TEXT_2": {
             "kind": "sap.dis.dataflow",
-            "@EndUserText.label": "Cost center text data flow",
+            "@EndUserText.label": "Cost Center Text Data Flow",
             "contents": {
-                "properties": {},
-                "metadata": {
-                    "dwc-isPrimaryKeysProcessed": true,
-                    "dwc-restartOnFail": false
-                },
-                "parameters": {},
-                "parameterMapping": {},
                 "description": "DF_M_0COSTCENTER_TEXT_2",
                 "processes": {
                     "source1": {
                         "component": "com.sap.database.table.consumer",
                         "metadata": {
                             "label": "RT_M_0COSTCENTER_TEXT_2",
-                            "x": 12,
-                            "y": 12,
+                            "x": 40,
+                            "y": 144,
                             "height": 60,
                             "width": 120,
                             "config": {
@@ -300,80 +285,12 @@
                             ]
                         }
                     },
-                    "projection1": {
-                        "component": "com.sap.dataflow.projection",
-                        "metadata": {
-                            "label": "Projection 1",
-                            "x": 182,
-                            "y": 12,
-                            "height": 60,
-                            "width": 120,
-                            "config": {
-                                "attributeMappings": [
-                                    {
-                                        "target": "LANGU",
-                                        "expression": "\"LANGU\""
-                                    },
-                                    {
-                                        "target": "KOKRS",
-                                        "expression": "\"KOKRS\""
-                                    },
-                                    {
-                                        "target": "KOSTL",
-                                        "expression": "\"KOSTL\""
-                                    },
-                                    {
-                                        "target": "DATETO",
-                                        "expression": "\"DATETO\""
-                                    },
-                                    {
-                                        "target": "DATEFROM",
-                                        "expression": "\"DATEFROM\""
-                                    },
-                                    {
-                                        "target": "TXTSH",
-                                        "expression": "\"TXTSH\""
-                                    },
-                                    {
-                                        "target": "TXTMD",
-                                        "expression": "\"TXTMD\""
-                                    },
-                                    {
-                                        "target": "TXTMC",
-                                        "expression": "\"TXTMC\""
-                                    },
-                                    {
-                                        "target": "CC_DATE_FROM",
-                                        "expression": "TO_DATE(\"DATEFROM\")"
-                                    },
-                                    {
-                                        "target": "CC_DATE_TO",
-                                        "expression": "TO_DATE(\"DATETO\")"
-                                    }
-                                ]
-                            },
-                            "inports": [
-                                {
-                                    "name": "inTable",
-                                    "type": "table",
-                                    "vtype-ID": "$INLINE.source1_outTable"
-                                }
-                            ],
-                            "outports": [
-                                {
-                                    "name": "outTable",
-                                    "type": "table",
-                                    "vtype-ID": "$INLINE.projection1_outTable"
-                                }
-                            ]
-                        }
-                    },
                     "target1": {
                         "component": "com.sap.database.table.producer",
                         "metadata": {
                             "label": "LT_M_0COSTCENTER_TEXT_2",
-                            "x": 352,
-                            "y": 12,
+                            "x": 364,
+                            "y": 149,
                             "height": 60,
                             "width": 120,
                             "config": {
@@ -406,6 +323,14 @@
                                         "target": "KOSTL"
                                     },
                                     {
+                                        "expression": "\"DATETO\"",
+                                        "target": "DATETO"
+                                    },
+                                    {
+                                        "expression": "\"DATEFROM\"",
+                                        "target": "DATEFROM"
+                                    },
+                                    {
                                         "expression": "\"TXTSH\"",
                                         "target": "TXTSH"
                                     },
@@ -418,12 +343,12 @@
                                         "target": "TXTMC"
                                     },
                                     {
-                                        "expression": "\"CC_DATE_FROM\"",
-                                        "target": "DATEFROM"
+                                        "expression": "TO_DATE(\"DATEFROM\")",
+                                        "target": "CC_DATE_FROM"
                                     },
                                     {
-                                        "expression": "\"CC_DATE_TO\"",
-                                        "target": "DATETO"
+                                        "expression": "TO_DATE(\"DATEFROM\")",
+                                        "target": "CC_DATE_TO"
                                     }
                                 ],
                                 "hanaAdaptedDataset": {
@@ -492,13 +417,81 @@
                                 }
                             ]
                         }
+                    },
+                    "projection1": {
+                        "component": "com.sap.dataflow.projection",
+                        "metadata": {
+                            "label": "Projection 1",
+                            "x": 197,
+                            "y": 144,
+                            "height": 60,
+                            "width": 120,
+                            "config": {
+                                "attributeMappings": [
+                                    {
+                                        "target": "LANGU",
+                                        "expression": "\"LANGU\""
+                                    },
+                                    {
+                                        "target": "KOKRS",
+                                        "expression": "\"KOKRS\""
+                                    },
+                                    {
+                                        "target": "KOSTL",
+                                        "expression": "\"KOSTL\""
+                                    },
+                                    {
+                                        "target": "DATETO",
+                                        "expression": "\"DATETO\""
+                                    },
+                                    {
+                                        "target": "DATEFROM",
+                                        "expression": "\"DATEFROM\""
+                                    },
+                                    {
+                                        "target": "TXTSH",
+                                        "expression": "\"TXTSH\""
+                                    },
+                                    {
+                                        "target": "TXTMD",
+                                        "expression": "\"TXTMD\""
+                                    },
+                                    {
+                                        "target": "TXTMC",
+                                        "expression": "\"TXTMC\""
+                                    },
+                                    {
+                                        "target": "CC_DATE_FROM",
+                                        "expression": "TO_DATE(\"DATEFROM\")"
+                                    },
+                                    {
+                                        "target": "CC_DATE_TO",
+                                        "expression": "TO_DATE(\"DATEFROM\")"
+                                    }
+                                ]
+                            },
+                            "inports": [
+                                {
+                                    "name": "inTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.source1_outTable"
+                                }
+                            ],
+                            "outports": [
+                                {
+                                    "name": "outTable",
+                                    "type": "table",
+                                    "vtype-ID": "$INLINE.projection1_outTable"
+                                }
+                            ]
+                        }
                     }
                 },
                 "groups": [],
                 "connections": [
                     {
                         "metadata": {
-                            "points": "132,42 178.5,42"
+                            "points": "160,174 193.5,174"
                         },
                         "src": {
                             "port": "outTable",
@@ -511,7 +504,7 @@
                     },
                     {
                         "metadata": {
-                            "points": "302,42 348.5,42"
+                            "points": "317,176.5 360.5,176.5"
                         },
                         "src": {
                             "port": "outTable",
@@ -525,6 +518,7 @@
                 ],
                 "inports": {},
                 "outports": {},
+                "properties": {},
                 "vTypes": {
                     "scalar": {
                         "string_1": {
@@ -697,7 +691,13 @@
                             }
                         }
                     }
-                }
+                },
+                "metadata": {
+                    "dwc-isPrimaryKeysProcessed": true,
+                    "dwc-restartOnFail": false
+                },
+                "parameters": {},
+                "parameterMapping": {}
             },
             "sources": {
                 "RT_M_0COSTCENTER_TEXT_2": {
@@ -719,11 +719,11 @@
                         "LANGU": {},
                         "KOKRS": {},
                         "KOSTL": {},
+                        "DATETO": {},
+                        "DATEFROM": {},
                         "TXTSH": {},
                         "TXTMD": {},
-                        "TXTMC": {},
-                        "DATEFROM": {},
-                        "DATETO": {}
+                        "TXTMC": {}
                     }
                 }
             },

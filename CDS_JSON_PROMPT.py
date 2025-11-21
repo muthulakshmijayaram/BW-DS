@@ -9,108 +9,75 @@ Generate a **valid SAP Datasphere CDS JSON output** for the following file:
 
 You must learn the structure and transformation rules ONLY from the following four reference JSONs:
 
-1. **Reference JSON (Example 1)** → {json_input1}
-2. **Reference JSON (Example 2)** → {json_input2}
-3. **Reference JSON (Example 3)** → {json_input3}
-4. **Reference JSON (Example 4)** → {json_input4}
-
+1.Reference csv 1 - {csv_sample1} and reference json 1 - {sample_json1}
+2.1.Reference csv 2 - {csv_sample2} and reference json 2 - {sample_json2}
 These JSONs define the *pattern*, not the final values.
 ---
-Input and csv Understanding:
-
-Input csv:
-
-* Csv inculdes multiple types of tables
-* Table classified into two types - remote and local table 
-* Identify remote table with connection details mentioned in csv
-* Identify local table without connection details mentioned in csv 
-* overall the structure called data flow. Data flow included with one or more sources table and single target table 
+Reference rules:
+1.For csv
+ * Each csv includes different tables and different types of table types
+ * Table types - remote table and local tables - remote table - with connections and local tables without connections
+ * understand the each csv 
+ * Each tables has sematic types
+ * Data flow includes operations like projection,joins,unions,aggregations , script only
+ * Each table has semantic usage like text,relational dataset,fact,dimensions,hierarchy,hierarchy with directory
+2. For json
+* each json has different structure
+* It include remote and local
 * Data flow includes operations like projection,joins,unions,aggregations , script only
 * Each table has semantic usage like text,relational dataset,fact,dimensions,hierarchy,hierarchy with directory
-* Each table rules:
-   - Fields - Business Name, Technical Name, Data Type, Length, Precision, Scale, Label, Columns etc
-   - Values - it represent the values for the fields
-   - Example:
-   1.
-   	Fields:
-	    - Business Name
-	    - Technical Name
-	    - Data Type
-      * 	Values:
-	      | Business Name                     | Technical Name | Data Type  |  --> Fields
-	      | --------------------------------- | -------------- | ---------- |
-	      | Language Key                      | LANGU          | String(1)  |  
-	      | Key Field for DataSource for Text | KEY1           | String(60) | 
-          
-      * These example has 2 values for the three fields. so understood these table has 2 values 
-   2.
-      Fields:
-       - Label
-       - Column Name
-       - Data Type
-       - Length
 
-      Values: 
-         | Label           | Column Name | Data Type| Length|
-         |-----------------|-------------|----------|--------|
-         | Customer Name   | CUST_NAME   | String   | 80     |
-         | Customer Number | CUST_NO     | Integer  | 10     |
-         | Country Code    | COUNTRY     | String   | 3      |
-         | Region Code     | REGION      | String   | 5      |
+Note:
+* Reference csv 1 corresponding output is reference json 1 and Reference csv 2 corresponding output is reference json 2
+* Simple Reference csv n corresponding output is reference json n
+* Understand the tranformation between csv and json
 
-→ This table has **4 values**. 
-      - “Fields” = column headers  
-      - “Values” = number of rows  
-      - If table has **3 values** → output EXACTLY 3  
-      - If table has **4 values** → output EXACTLY 4  
-      - NEVER mix values between tables  
-      - EVERY table must be understood and counted independently  
-      - DO NOT use the examples for output  
-      * Understand every table values separately by this above table rules only
-      Note:
-      * dont update this in output this is only example , update from the csv only 
-      * note that the number of fields will vary from table to table
-* Data flow identification :
-    - Identify how many sources available in the csv 
-    - Identify the operators in the csv 
-
-CONSTANT LITERAL RULE (ULTRA-STRICT)
-If a field exists in the target CSV but not in the source CSV, and must be assigned the constant value `'EN'`:
+1.Input csv :
+* It contains Multiple source tables and single target table.
+* Table may be local or remote.
+* Local table - contains without connection details
+* Remote table - contains connection details
+* Each table has multiple fields (business name, technical name, data type, length etc) and for those fields it has corresponding values.
+* Understand the values from each table from start to end.
+* Operation may be join, projection, union etc between source and target tables.
  
-- The expression MUST be exactly:
-      "'EN'"
-- No source fields may be referenced.
-- No transformations allowed (concat, case, substr, arithmetic, etc.).
-- Use **only** the literal `'EN'`.
-- This value must exist **only** in projection/target mapping, never in the source schema
-
-For reference json:
-* Each json has differernt data flow structure
-* It include one or more sources structure and single target structure
-* It has operator like Data flow includes operations like projection,joins,unions,aggregations,script only
-* It has sematic usage like text,relational dataset,fact,dimensions,hierarchy,hierarchy with directory only
-* The overall structure involves these things. It will differ from each and every reference json
-* understand the number of values for each table in csv only not from sample
-
-For each reference follow this:
-* understand the source count
-* understand the source count the operator
-* understand the type of semantic usage for each table
-* understand the number of table
-* understand overall data in points - number of table (mention source/target),number of values for each table,type of operations,type of semantic usage for each table
+2.Input json:
+* It contains the structure and hierarchy of the cds json.
+* It contains source and target table details.
+* It contains the mapping between source and target tables.
+* It contains the operation type between source and target tables.
+* It contains local and remote table definitions.
+* It contains the field details for each table.
+* Understand the json structure from start to end.
+* Operation may be join, projection, union etc between source and target tables.
+ 
+Note:
+- The CSV Input and JSON Input together form a complete example of how to transform CSV data into a CDS JSON structure.
+- The input csv is converted into the json input (simply for the csv input is tranformed into the json input).
+ 
+### CONSTANT LITERAL RULE (STRICT)
+If a value exists in the target CSV but does NOT exist in the source CSV, and the CSV defines or implies that this value must be assigned the constant value "EN":
+- The expression for this value which is not present in source MUST be exactly:
+      "EN"    ***DO NOT SKIP THIS RULE***
+- Do NOT derive this value from any source value.
+- Do NOT use concat(), case(), substr(), arithmetic, or any transformation.
+- Do NOT map or reference any source column.
+- Use ONLY the literal constant "EN" exactly as shown.
+- The value must appear ONLY in the target mapping, never in the source.
+ 
+This rule overrides all other mapping rules.
+ 
 
 Your task:
-* follow the rules strictly and Input and csv Understanding 
-* understand the number of values for each table in csv only correctly not from sample
-* understand the source count from the csv 
-* understand the  count the operator from the csv
-* understand the type of semantic usage used for each table in the csv
-* understand the number of table in the csv
-* understand overall data in points - number of table (mention source/target),number of values for each table,type of operations,type of semantic usage for each table)
-* with the understanding of these make the json structure with accurate json structure
-
-Output format:
-* Only json "no explainations"
-
----
+- After understanding the above example pair,Generate json for the csv test input
+- Understand how {csv_sample1} is converted into {sample_json1}.
+- Understand how {csv_sample2} is converted into {sample_json2}.
+- Learn the structure, hierarchy, and mapping rules from this example pair clearly.
+- Then generate the **correct JSON output for {csv_output}** by applying the same logic, structure, and transformation rules.
+- For example
+--If source table has three values then update only three value dont mix up with other tables
+ 
+Output:
+- Dont need explanation only json output
+------
 """
